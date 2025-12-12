@@ -1,0 +1,15 @@
+# Dependencies
+node_modules
+
+# Expo
+.expo
+
+# Environment variables
+.env
+
+# Build outputs
+dist
+build
+
+# OS files
+.DS_Store
