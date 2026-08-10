@@ -1,39 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-  Download the REAL GoogleService-Info.plist from:
-  Firebase console → Project settings → Your apps → iOS app (bundle id
-  com.fitapp.workout) → GoogleService-Info.plist.
-
-  Save it as `GoogleService-Info.plist` (no `.example`) right next to this
-  file, then run `xcodegen generate` again so it's picked up as a resource.
-  It's gitignored — never commit the real one.
--->
-<plist version="1.0">
-<dict>
-    <key>API_KEY</key>
-    <string>REPLACE_ME</string>
-    <key>GCM_SENDER_ID</key>
-    <string>REPLACE_ME</string>
-    <key>PLIST_VERSION</key>
-    <string>1</string>
-    <key>BUNDLE_ID</key>
-    <string>com.fitapp.workout</string>
-    <key>PROJECT_ID</key>
-    <string>REPLACE_ME</string>
-    <key>STORAGE_BUCKET</key>
-    <string>REPLACE_ME</string>
-    <key>IS_ADS_ENABLED</key>
-    <false/>
-    <key>IS_ANALYTICS_ENABLED</key>
-    <false/>
-    <key>IS_APPINVITE_ENABLED</key>
-    <false/>
-    <key>IS_GCM_ENABLED</key>
-    <true/>
-    <key>IS_SIGNIN_ENABLED</key>
-    <true/>
-    <key>GOOGLE_APP_ID</key>
-    <string>REPLACE_ME</string>
-</dict>
-</plist>
+This project no longer uses Firebase — it was migrated to CloudKit.
+This file is obsolete and unused by project.yml; safe to delete manually
+from Finder/Explorer if you'd like (this environment couldn't delete it
+directly, see ios-native/README.md).

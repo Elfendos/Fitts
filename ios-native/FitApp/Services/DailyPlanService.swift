@@ -1,49 +1,46 @@
 import Foundation
-import FirebaseFirestore
+import CloudKit
 
-/// Mirrors hooks/useDailyPlan.ts — Firestore path: users/{uid}/dailyPlans/{dateKey}.
+/// Replaces the Firestore-backed `DailyPlanService` — mirrors
+/// hooks/useDailyPlan.ts, now reading/writing a CKRecord (type "DailyPlan",
+/// recordID `dailyPlan_{dateKey}`) in the private database instead of
+/// users/{uid}/dailyPlans/{dateKey}.
 @MainActor
 final class DailyPlanService: ObservableObject {
 
     @Published private(set) var plan: DailyPlanDoc
     @Published private(set) var isLoading = true
     @Published private(set) var isSaving = false
+    @Published private(set) var errorMessage: String?
 
-    private let db = Firestore.firestore()
+    private let db = CloudKitManager.privateDatabase
     private let dateKey: String
-    private var userId: String?
+    private var isAccountAvailable = false
 
     init(dateKey: String = DateKey.today) {
         self.dateKey = dateKey
         self.plan = .empty(dateKey: dateKey)
     }
 
-    func start(for uid: String?) {
-        userId = uid
-        Task { await load() }
-    }
-
-    private func docRef() -> DocumentReference? {
-        guard let userId else { return nil }
-        return db.collection("users").document(userId)
-            .collection("dailyPlans").document(dateKey)
-    }
-
-    func load() async {
-        guard let ref = docRef() else {
+    func start(isAccountAvailable: Bool) {
+        self.isAccountAvailable = isAccountAvailable
+        guard isAccountAvailable else {
             isLoading = false
             return
         }
+        Task { await load() }
+    }
+
+    func load() async {
         isLoading = true
+        errorMessage = nil
         do {
-            let snapshot = try await ref.getDocument()
-            if snapshot.exists, let doc = try? snapshot.data(as: DailyPlanDoc.self) {
-                plan = doc
-            } else {
-                plan = .empty(dateKey: dateKey)
-            }
+            let record = try await db.record(for: DailyPlanDoc.recordID(for: dateKey))
+            plan = DailyPlanDoc(record: record) ?? .empty(dateKey: dateKey)
+        } catch let error as CKError where error.code == .unknownItem {
+            plan = .empty(dateKey: dateKey)
         } catch {
-            print("Failed to load daily plan: \(error)")
+            errorMessage = error.localizedDescription
         }
         isLoading = false
     }
@@ -62,14 +59,21 @@ final class DailyPlanService: ObservableObject {
     }
 
     func save() async {
-        guard let ref = docRef() else { return }
+        guard isAccountAvailable else { return }
         isSaving = true
+        errorMessage = nil
         do {
-            var toSave = plan
-            toSave.updatedAt = Timestamp(date: Date())
-            try ref.setData(from: toSave, merge: true)
+            let recordID = DailyPlanDoc.recordID(for: dateKey)
+            let record: CKRecord
+            if let existing = try? await db.record(for: recordID) {
+                record = existing
+            } else {
+                record = CKRecord(recordType: CloudKitRecordType.dailyPlan, recordID: recordID)
+            }
+            plan.apply(to: record)
+            try await db.save(record)
         } catch {
-            print("Failed to save daily plan: \(error)")
+            errorMessage = error.localizedDescription
         }
         isSaving = false
     }

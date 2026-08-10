@@ -1,13 +1,17 @@
 import SwiftUI
 
-/// Mirrors app/(tabs)/profile.tsx (core: identity, stats, sign out).
-/// Not yet ported from the RN screen: photo upload to Firebase Storage
-/// (the flow that was throwing errors — see task backlog), the Edit
-/// Profile form, and the Settings/Subscription rows.
+/// Mirrors app/(tabs)/profile.tsx (core: identity, stats). CloudKit has no
+/// "sign out" concept (the private database is tied to the device's iCloud
+/// account, controlled from Settings — see LoginView), so the RN sign-out
+/// button is replaced with a rename action here instead.
+/// Not yet ported from the RN screen: profile photo upload, full Edit
+/// Profile form, Settings/Subscription rows.
 struct ProfileView: View {
-    @EnvironmentObject private var auth: AuthService
     @EnvironmentObject private var profileService: UserProfileService
     @ObservedObject private var achievementService = AchievementService.shared
+
+    @State private var isEditingName = false
+    @State private var draftName = ""
 
     var body: some View {
         NavigationStack {
@@ -16,12 +20,18 @@ struct ProfileView: View {
                     avatarSection
                     statsRow
                     achievementsPreview
-                    signOutButton
                 }
                 .padding()
             }
             .background(AppTheme.background.ignoresSafeArea())
             .navigationTitle(L("home.profile"))
+            .alert("İsmini Düzenle", isPresented: $isEditingName) {
+                TextField("İsim", text: $draftName)
+                Button(L("common.cancel"), role: .cancel) {}
+                Button(L("common.save")) {
+                    Task { await profileService.updateProfile(name: draftName) }
+                }
+            }
         }
     }
 
@@ -35,10 +45,20 @@ struct ProfileView: View {
                         .font(.title.bold())
                         .foregroundColor(AppTheme.brandAccent)
                 )
-            Text(profileService.profile?.name ?? "")
-                .font(.title3.weight(.semibold))
-                .foregroundColor(AppTheme.text)
-            Text(profileService.profile?.email ?? "")
+            Button {
+                draftName = profileService.profile?.name ?? ""
+                isEditingName = true
+            } label: {
+                HStack(spacing: 6) {
+                    Text(profileService.profile?.name ?? "")
+                        .font(.title3.weight(.semibold))
+                        .foregroundColor(AppTheme.text)
+                    Image(systemName: "pencil")
+                        .font(.caption)
+                        .foregroundColor(AppTheme.subtext)
+                }
+            }
+            Text("iCloud'a bağlı")
                 .font(.footnote)
                 .foregroundColor(AppTheme.subtext)
         }
@@ -83,18 +103,5 @@ struct ProfileView: View {
         .background(AppTheme.cardBackground)
         .overlay(RoundedRectangle(cornerRadius: 14).stroke(AppTheme.border))
         .cornerRadius(14)
-    }
-
-    private var signOutButton: some View {
-        Button(role: .destructive) {
-            auth.signOut()
-        } label: {
-            Text(L("auth.logout"))
-                .frame(maxWidth: .infinity)
-                .padding()
-        }
-        .background(Color.red.opacity(0.1))
-        .foregroundColor(.red)
-        .cornerRadius(12)
     }
 }

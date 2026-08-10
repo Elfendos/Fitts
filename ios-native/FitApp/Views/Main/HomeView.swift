@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Mirrors app/(tabs)/home.tsx — greeting header + today's workout card +
-/// quick actions. Wired to real Firestore data (UserProfileService,
+/// quick actions. Wired to real CloudKit data (UserProfileService,
 /// DailyPlanService); the RN version's AI suggestion / rest-day-swap modals
 /// (AISuggestionModal, RestDaySuggestionModal) are not ported yet.
 struct HomeView: View {
@@ -25,7 +25,7 @@ struct HomeView: View {
             .navigationBarTitleDisplayMode(.inline)
         }
         .onAppear {
-            dailyPlan.start(for: profileService.profile?.uid)
+            dailyPlan.start(isAccountAvailable: true)
         }
     }
 

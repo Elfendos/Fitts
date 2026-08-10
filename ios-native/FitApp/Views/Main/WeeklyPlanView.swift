@@ -4,11 +4,8 @@ import SwiftUI
 /// screen supporting multiple named plans, drag-reorder, AI import, and a
 /// rename/duplicate flow — out of scope for this first pass. This view
 /// covers the core loop: pick a day this week, add/remove/complete
-/// exercises for that day's Firestore daily-plan doc (same collection the
-/// RN app reads/writes, so data stays compatible).
+/// exercises for that day's CloudKit `DailyPlan` record.
 struct WeeklyPlanView: View {
-    @EnvironmentObject private var profileService: UserProfileService
-
     @State private var selectedDate = Date()
     @State private var showingExercisePicker = false
     @StateObject private var dailyPlan = DailyPlanService(dateKey: DateKey.today)
@@ -52,7 +49,7 @@ struct WeeklyPlanView: View {
     }
 
     private func reload() {
-        dailyPlan.start(for: profileService.profile?.uid)
+        dailyPlan.start(isAccountAvailable: true)
     }
 
     private var weekStrip: some View {

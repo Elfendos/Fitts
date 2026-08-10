@@ -1,35 +1,44 @@
 # FitApp — Native iOS (Swift/SwiftUI) rewrite
 
 Full native replacement for the Expo/React Native app (`../app`, `../components`, etc.),
-targeting iOS only. Same Firebase project/backend — Firestore documents and
-collection paths are unchanged, so this can run against the same data the RN
-app already wrote.
+targeting iOS only. Backend is **CloudKit** (Apple's own, private database, scoped
+to the signed-in iCloud account) — this is a deliberate break from the RN app's
+Firebase backend, so existing Firebase user data does **not** carry over automatically.
 
 ## Status (this pass)
 
 **Done**
-- Project scaffold (XcodeGen `project.yml`), Firebase SPM dependencies wired.
-- Data layer: `UserProfile`, `Exercise`, `DailyPlanDoc`/`PlannedExercise`, `AchievementDefinition` models.
-- Exercise catalog (160 exercises) and achievement catalog (17 definitions) extracted from
-  the RN `.ts` data files and bundled as `Resources/Data/{exercises,achievements}.json`.
+- Project scaffold (XcodeGen `project.yml`) with an iCloud/CloudKit entitlement,
+  no third-party SPM dependencies needed (CloudKit ships with iOS).
+- Data layer: `UserProfile`, `Exercise`, `DailyPlanDoc`/`PlannedExercise`,
+  `AchievementDefinition` models, each with `CKRecord` mapping helpers.
+- Exercise catalog (160 exercises) and achievement catalog (17 definitions) extracted
+  from the RN `.ts` data files and bundled as `Resources/Data/{exercises,achievements}.json`
+  (these are static, bundled with the app — no backend involved).
 - i18n: all 234 `en`/`tr` keys from `i18n/en.ts` / `i18n/tr.ts` converted to
   `Localizable.strings`, language auto-detected from device locale (`LocalizationManager`).
-- Auth: passwordless email-link sign-in (`AuthService`), matching `context/AuthContext.tsx`.
-- Screens: Login, Home (today's workout summary), Exercises (browse/search/detail),
-  Weekly Plan (simplified single-day editor — see below), Profile (stats + achievements
-  progress + sign out).
+- Account/session: `CloudKitAccountService` checks `CKContainer.accountStatus()` —
+  no login screen needed; the app just uses whichever iCloud account is signed in
+  on the device. `LoginView` only shows up if iCloud isn't available (prompts the
+  user to sign in via Settings).
+- Screens: Home (today's workout summary), Exercises (browse/search/detail),
+  Weekly Plan (simplified single-day editor), Profile (stats + achievements
+  progress + rename).
 
 **Not ported yet** (tracked as follow-up work)
 - Multi-plan Weekly Plan editor (`app/(tabs)/weekly-plan.tsx` is 46KB — drag reorder,
   named/multiple plans, AI import, rename/duplicate). This pass ships a single-day
-  add/remove/complete loop against the same `dailyPlans` collection.
+  add/remove/complete loop against one `DailyPlan` CKRecord per date.
 - Today/Workout timer screen, rest-day suggestions, AI suggestion modal.
 - Full Achievements/Analytics screens (analytics charts, history week strip).
-- Health onboarding (BMR/TDEE calculator), Subscription/Paywall, profile photo upload,
-  Edit Profile form — the RN screen where Firebase Storage upload was erroring;
-  worth root-causing when this is rebuilt natively rather than blindly porting the bug.
-- Achievement unlock **writes** back to Firestore (current `AchievementService` only
+- Health onboarding (BMR/TDEE calculator), Subscription/Paywall, profile photo
+  (CloudKit supports this via `CKAsset` — not wired up yet).
+- Achievement unlock **writes** back to CloudKit (current `AchievementService` only
   *reads* stats to compute progress client-side).
+- **Firebase → CloudKit data migration.** If the RN app has real production users,
+  their Firestore data needs an explicit one-time export/import step into CloudKit;
+  nothing here does that automatically (different backends, different user identity
+  model — Firebase uid vs. iCloud account).
 
 Pick these up by adding one Swift file per screen under `FitApp/Views/Main/`, following the
 pattern in `HomeView.swift`/`WeeklyPlanView.swift` (an `ObservableObject` service + a
@@ -39,26 +48,30 @@ SwiftUI view, both cross-referencing the matching RN file in a comment).
 
 1. Install XcodeGen if you don't have it: `brew install xcodegen`
 2. From this folder: `xcodegen generate` — creates `FitApp.xcodeproj`.
-3. `open FitApp.xcodeproj`, let Xcode resolve the Firebase SPM package (first
-   resolve can take a few minutes).
-4. Get your real config file: Firebase console → Project settings → Your apps →
-   add/select the iOS app with bundle ID `com.fitapp.workout` → download
-   `GoogleService-Info.plist` → save it at `FitApp/Resources/GoogleService-Info.plist`
-   (see the `.example` file next to it). Re-run `xcodegen generate` after adding it.
-5. In Firebase console → Authentication → Sign-in method, enable **Email link
-   (passwordless sign-in)** if it isn't already (the RN app uses the same method).
-6. In Xcode, set your Team under Signing & Capabilities so it can build to a device/simulator.
-7. Build & run (⌘R). Firestore data is shared with the RN app, so an existing
-   test account should show its real profile/plan/stats.
+3. `open FitApp.xcodeproj`.
+4. In Xcode → target FitApp → Signing & Capabilities: set your Team, then confirm
+   the iCloud capability (already requested via `project.yml`'s `entitlements:` block)
+   shows CloudKit checked and container `iCloud.com.fitapp.workout` selected. If Xcode
+   flags the container as missing, click the refresh/"+" to let it create that
+   container under your Apple Developer account.
+5. Build & run on a **real device or simulator signed into a real iCloud account**
+   (Settings app → your name at the top). CloudKit's private database won't work
+   without one.
+6. No server-side schema setup needed up front — the record types (`UserProfile`,
+   `DailyPlan`) and their fields are inferred automatically the first time the app
+   saves a record. You can inspect them afterward at https://icloud.developer.apple.com
+   (CloudKit Dashboard) under your container.
 
-### If your Firebase `authDomain` isn't `fitapp.firebaseapp.com`
-`AuthService.swift` defaults to that (matching the RN app's fallback). Override it by
-adding a `FirebaseAuthDomain` string key to `FitApp/Info.plist` properties in
-`project.yml`, or just edit the default string directly in `AuthService.swift`.
+### Why no login screen?
+CloudKit's private database is already scoped to whichever iCloud account is signed
+in on the device — there's no separate username/password/email-link step the way
+Firebase needed one. `LoginView` only appears if `CKContainer.accountStatus()` comes
+back `.noAccount`/`.restricted`, and just points the user at Settings.
 
 ## Re-syncing data from the RN app later
 The exercise/achievement JSON was generated by running the RN `.ts` files through
 `esbuild-register` in Node and dumping the exported arrays as JSON (they're plain
 data files, no React/Firebase imports, so this works without a device). If those
 `.ts` files change again, regenerate with the same approach and drop the new JSON
-into `FitApp/Resources/Data/`.
+into `FitApp/Resources/Data/`. This part is backend-agnostic (still applies whether
+the app talks to Firebase or CloudKit).

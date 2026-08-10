@@ -1,94 +1,92 @@
 import Foundation
-import FirebaseFirestore
-import FirebaseAuth
+import CloudKit
 
-/// Mirrors hooks/useUserProfile.ts — Firestore path: users/{uid}.
-/// Live-updates via a snapshot listener and auto-creates the profile
-/// document on first sign-in, exactly like the RN hook.
+/// Replaces the Firestore-backed `UserProfileService` — mirrors
+/// hooks/useUserProfile.ts, now reading/writing a single CKRecord
+/// ("UserProfile", fixed recordID) in the private database instead of
+/// Firestore's users/{uid} doc. CloudKit has no live listener API as
+/// convenient as Firestore's `onSnapshot`; this polls-on-demand instead
+/// (call `start()`/`refresh()`), which is fine for a single-record profile.
 @MainActor
 final class UserProfileService: ObservableObject {
 
     @Published private(set) var profile: UserProfile?
     @Published private(set) var isLoading = true
+    @Published private(set) var errorMessage: String?
 
-    private var listener: ListenerRegistration?
-    private let db = Firestore.firestore()
+    private let db = CloudKitManager.privateDatabase
 
-    func start(for uid: String?) {
-        listener?.remove()
-        guard let uid else {
+    func start(isAccountAvailable: Bool) {
+        guard isAccountAvailable else {
             profile = nil
             isLoading = false
             return
         }
+        Task { await load() }
+    }
 
+    func load() async {
         isLoading = true
-        let ref = db.collection("users").document(uid)
-
-        listener = ref.addSnapshotListener { [weak self] snapshot, error in
-            guard let self else { return }
-            Task { @MainActor in
-                if let error {
-                    print("User profile listener error: \(error)")
-                    self.isLoading = false
-                    return
-                }
-                guard let snapshot, snapshot.exists else {
-                    await self.createProfileIfNeeded(uid: uid)
-                    return
-                }
-                self.profile = try? snapshot.data(as: UserProfile.self)
-                self.isLoading = false
-            }
-        }
-    }
-
-    private func createProfileIfNeeded(uid: String) async {
-        let currentUser = Auth.auth().currentUser
-        let newProfile = UserProfile.newProfile(
-            uid: uid,
-            email: currentUser?.email,
-            displayName: currentUser?.displayName
-        )
+        errorMessage = nil
         do {
-            try db.collection("users").document(uid).setData(from: newProfile, merge: true)
-            self.profile = newProfile
+            let record = try await db.record(for: UserProfile.recordID)
+            profile = UserProfile(record: record)
+        } catch let error as CKError where error.code == .unknownItem {
+            await createProfileIfNeeded()
         } catch {
-            print("Failed to create user profile: \(error)")
+            errorMessage = error.localizedDescription
         }
-        self.isLoading = false
+        isLoading = false
     }
 
-    func updateProfile(_ fields: [String: Any]) async -> Bool {
-        guard let uid = profile?.uid else { return false }
+    private func createProfileIfNeeded() async {
+        // CloudKit doesn't expose the iCloud account's display name without
+        // a separate Sign in with Apple step; default to "User" and let the
+        // profile screen offer a rename (see ProfileView).
+        let newProfile = UserProfile.newProfile(displayName: nil)
+        let record = CKRecord(recordType: CloudKitRecordType.userProfile, recordID: UserProfile.recordID)
+        newProfile.apply(to: record)
         do {
-            var payload = fields
-            payload["updatedAt"] = FieldValue.serverTimestamp()
-            try await db.collection("users").document(uid).updateData(payload)
+            try await db.save(record)
+            profile = newProfile
+        } catch {
+            errorMessage = error.localizedDescription
+        }
+    }
+
+    func updateProfile(name: String? = nil, stats: UserStats? = nil) async -> Bool {
+        do {
+            let record = try await db.record(for: UserProfile.recordID)
+            var current = profile ?? UserProfile(record: record) ?? .newProfile(displayName: nil)
+            if let name { current.name = name }
+            if let stats { current.stats = stats }
+            current.apply(to: record)
+            try await db.save(record)
+            profile = current
             return true
         } catch {
-            print("Update profile error: \(error)")
+            errorMessage = error.localizedDescription
             return false
         }
     }
 
     func setHealthProfile(_ health: HealthProfile) async -> Bool {
-        guard let uid = profile?.uid else { return false }
         do {
-            let data = try Firestore.Encoder().encode(health)
-            try await db.collection("users").document(uid).updateData([
-                "healthProfile": data,
-                "updatedAt": FieldValue.serverTimestamp(),
-            ])
+            let record = try await db.record(for: UserProfile.recordID)
+            var current = profile ?? UserProfile(record: record) ?? .newProfile(displayName: nil)
+            current.healthProfile = health
+            current.apply(to: record)
+            try await db.save(record)
+            profile = current
             return true
         } catch {
-            print("Set health profile error: \(error)")
+            errorMessage = error.localizedDescription
             return false
         }
     }
 
     func stop() {
-        listener?.remove()
-        listener = nil
+        // No-op: CloudKit fetches are one-shot here, unlike the Firestore
+        // snapshot listener this replaces. Call `load()` again to refresh.
     }
 }
