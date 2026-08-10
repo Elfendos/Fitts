@@ -1,0 +1,62 @@
+name: FitApp
+options:
+  bundleIdPrefix: com.fitapp
+  deploymentTarget:
+    iOS: "16.0"
+  createIntermediateGroups: true
+configs:
+  Debug: debug
+  Release: release
+settings:
+  base:
+    SWIFT_VERSION: 5.0
+packages:
+  Firebase:
+    url: https://github.com/firebase/firebase-ios-sdk
+    from: 10.29.0
+targets:
+  FitApp:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - path: FitApp
+        excludes:
+          - "Resources/GoogleService-Info.plist.example"
+    resources:
+      - path: FitApp/Resources/Data
+      - path: FitApp/Resources/en.lproj
+      - path: FitApp/Resources/tr.lproj
+      - path: FitApp/Resources/GoogleService-Info.plist
+        optional: true
+    info:
+      path: FitApp/Info.plist
+      properties:
+        CFBundleDisplayName: FitApp
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSCameraUsageDescription: "This app uses the camera to take profile photos."
+        NSPhotoLibraryUsageDescription: "This app accesses your photo library to select profile photos."
+        NSPhotoLibraryAddUsageDescription: "This app saves photos to your photo library."
+        CFBundleURLTypes:
+          - CFBundleURLSchemes:
+              - fitapp
+        ITSAppUsesNonExemptEncryption: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.fitapp.workout
+        TARGETED_DEVICE_FAMILY: "1,2"
+        MARKETING_VERSION: "1.10.1"
+        CURRENT_PROJECT_VERSION: "1"
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        DEVELOPMENT_ASSET_PATHS: ""
+    dependencies:
+      - package: Firebase
+        product: FirebaseAuth
+      - package: Firebase
+        product: FirebaseFirestore
+      - package: Firebase
+        product: FirebaseStorage
+      - package: Firebase
+        product: FirebaseAnalytics

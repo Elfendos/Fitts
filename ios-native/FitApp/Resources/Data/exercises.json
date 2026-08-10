@@ -1,0 +1,4866 @@
+[
+  {
+    "id": "str_pushup",
+    "title": "Push-ups",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 10,
+    "calories": 100,
+    "equipment": [],
+    "muscles": [
+      "Chest",
+      "Triceps",
+      "Shoulders",
+      "Core"
+    ],
+    "instructions": [
+      "Start in a high plank position with hands slightly wider than shoulders",
+      "Keep your body in a straight line from head to heels",
+      "Lower your chest toward the floor by bending your elbows",
+      "Push back up to the starting position",
+      "Repeat for desired reps"
+    ],
+    "tips": [
+      "Keep core tight",
+      "Don't let hips sag",
+      "Full range of motion"
+    ],
+    "imageUrl": "https://media.giphy.com/media/H3kyniitkDEZ0KhhAe/giphy.gif",
+    "popularity": 98,
+    "variations": [
+      {
+        "id": "standard",
+        "label": {
+          "tr": "Standart Tutuş",
+          "en": "Standard Grip"
+        },
+        "cue": {
+          "tr": "Eller omuz hizasından biraz geniş, dirsekler 45°.",
+          "en": "Hands slightly wider than shoulders, elbows at 45°."
+        }
+      },
+      {
+        "id": "wide",
+        "label": {
+          "tr": "Geniş Tutuş",
+          "en": "Wide Grip"
+        },
+        "cue": {
+          "tr": "Eller omuzdan belirgin geniş; göğüs odaklı.",
+          "en": "Hands well wider than shoulders; chest-focused."
+        }
+      },
+      {
+        "id": "close",
+        "label": {
+          "tr": "Dar Tutuş",
+          "en": "Close Grip"
+        },
+        "cue": {
+          "tr": "Eller dar; dirsekleri gövdeye yakın tut, triceps yüklen.",
+          "en": "Hands close; tuck elbows to body, triceps emphasis."
+        }
+      }
+    ]
+  },
+  {
+    "id": "str_squat",
+    "title": "Bodyweight Squats",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 10,
+    "calories": 80,
+    "equipment": [],
+    "muscles": [
+      "Quadriceps",
+      "Glutes",
+      "Hamstrings",
+      "Core"
+    ],
+    "instructions": [
+      "Stand with feet shoulder-width apart",
+      "Keep chest up and core engaged",
+      "Lower down by bending knees and pushing hips back",
+      "Go down until thighs are parallel to floor",
+      "Push through heels to stand back up"
+    ],
+    "tips": [
+      "Keep knees aligned with toes",
+      "Don't let knees cave inward"
+    ],
+    "imageUrl": "https://media.giphy.com/media/aT4gLVz0A9ROxqLgI1/giphy.gif",
+    "popularity": 96,
+    "variations": [
+      {
+        "id": "standard",
+        "label": {
+          "tr": "Standart Duruş",
+          "en": "Standard Stance"
+        },
+        "cue": {
+          "tr": "Ayaklar omuz hizası, parmak uçları hafif dışa.",
+          "en": "Feet shoulder-width, toes slightly out."
+        }
+      },
+      {
+        "id": "wide",
+        "label": {
+          "tr": "Geniş Duruş",
+          "en": "Wide Stance"
+        },
+        "cue": {
+          "tr": "Ayaklar omuzdan geniş, parmak uçları daha dışa — iç bacak ve kalça çalışır.",
+          "en": "Feet wider than shoulders, toes out more — works inner thighs and glutes."
+        }
+      },
+      {
+        "id": "narrow",
+        "label": {
+          "tr": "Dar Duruş",
+          "en": "Narrow Stance"
+        },
+        "cue": {
+          "tr": "Ayaklar bitişiğe yakın — quad'lara baskı artar.",
+          "en": "Feet near together — emphasises quads."
+        }
+      }
+    ]
+  },
+  {
+    "id": "str_lunge",
+    "title": "Walking Lunges",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 12,
+    "calories": 90,
+    "equipment": [],
+    "muscles": [
+      "Quadriceps",
+      "Glutes",
+      "Hamstrings",
+      "Calves"
+    ],
+    "instructions": [
+      "Stand tall with feet hip-width apart",
+      "Step forward with one leg, lowering hips",
+      "Both knees should bend to 90 degrees",
+      "Push off front foot and step forward with back leg",
+      "Continue alternating legs"
+    ],
+    "tips": [
+      "Keep torso upright",
+      "Don't let front knee pass toes"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162438/pexels-photo-4162438.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 88
+  },
+  {
+    "id": "str_pullup",
+    "title": "Pull-ups",
+    "category": "strength",
+    "difficulty": "advanced",
+    "duration": 10,
+    "calories": 120,
+    "equipment": [
+      "Pull-up bar"
+    ],
+    "muscles": [
+      "Lats",
+      "Biceps",
+      "Rhomboids",
+      "Core"
+    ],
+    "instructions": [
+      "Hang from bar with palms facing away, hands shoulder-width apart",
+      "Engage your lats and pull yourself up",
+      "Pull until chin is over the bar",
+      "Lower yourself with control",
+      "Repeat"
+    ],
+    "tips": [
+      "Avoid swinging",
+      "Squeeze shoulder blades together"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164766/pexels-photo-4164766.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 90,
+    "variations": [
+      {
+        "id": "standard",
+        "label": {
+          "tr": "Standart Tutuş",
+          "en": "Standard Grip"
+        },
+        "cue": {
+          "tr": "Eller omuzdan biraz geniş, üstten kavra.",
+          "en": "Hands slightly wider than shoulders, overhand grip."
+        }
+      },
+      {
+        "id": "wide",
+        "label": {
+          "tr": "Geniş Tutuş",
+          "en": "Wide Grip"
+        },
+        "cue": {
+          "tr": "Geniş tutuş; üst sırt ve lat'ları daha çok hedefler.",
+          "en": "Wide grip; emphasises upper back and lats."
+        }
+      },
+      {
+        "id": "close",
+        "label": {
+          "tr": "Dar Tutuş",
+          "en": "Close Grip"
+        },
+        "cue": {
+          "tr": "Eller bitişiğe yakın, üstten tutuş — alt lat ve kola yüklenir.",
+          "en": "Hands close, overhand — loads lower lats and arms."
+        }
+      },
+      {
+        "id": "chinup",
+        "label": {
+          "tr": "Çene Çekme (Chin-up)",
+          "en": "Chin-up"
+        },
+        "cue": {
+          "tr": "Alttan kavra (avuçlar sana dönük) — biceps belirgin yüklenir.",
+          "en": "Underhand grip (palms facing you) — biceps emphasis."
+        }
+      }
+    ]
+  },
+  {
+    "id": "str_dips",
+    "title": "Tricep Dips",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 85,
+    "equipment": [
+      "Parallel bars",
+      "Bench"
+    ],
+    "muscles": [
+      "Triceps",
+      "Chest",
+      "Shoulders"
+    ],
+    "instructions": [
+      "Grip parallel bars or edge of bench behind you",
+      "Support your body with arms straight",
+      "Lower body by bending elbows to 90 degrees",
+      "Push back up to starting position",
+      "Keep core engaged throughout"
+    ],
+    "tips": [
+      "Don't flare elbows too wide",
+      "Keep chest up"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162489/pexels-photo-4162489.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 82
+  },
+  {
+    "id": "str_deadlift",
+    "title": "Romanian Deadlift",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 15,
+    "calories": 150,
+    "equipment": [
+      "Barbell",
+      "Dumbbells"
+    ],
+    "muscles": [
+      "Hamstrings",
+      "Glutes",
+      "Lower Back",
+      "Core"
+    ],
+    "instructions": [
+      "Stand with feet hip-width apart, holding weights",
+      "Keep slight bend in knees, hinge at hips",
+      "Lower weights along legs, keeping back straight",
+      "Feel stretch in hamstrings",
+      "Drive hips forward to stand"
+    ],
+    "tips": [
+      "Keep back flat",
+      "Don't round spine",
+      "Feel it in hamstrings"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164512/pexels-photo-4164512.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 85
+  },
+  {
+    "id": "str_shoulder_press",
+    "title": "Overhead Shoulder Press",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 90,
+    "equipment": [
+      "Dumbbells",
+      "Barbell"
+    ],
+    "muscles": [
+      "Shoulders",
+      "Triceps",
+      "Upper Chest"
+    ],
+    "instructions": [
+      "Hold weights at shoulder height, palms forward",
+      "Press weights straight overhead",
+      "Fully extend arms without locking elbows",
+      "Lower with control back to shoulders",
+      "Keep core tight throughout"
+    ],
+    "tips": [
+      "Don't arch back excessively",
+      "Control the movement"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162451/pexels-photo-4162451.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 84
+  },
+  {
+    "id": "str_bent_row",
+    "title": "Bent Over Rows",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 12,
+    "calories": 100,
+    "equipment": [
+      "Dumbbells",
+      "Barbell"
+    ],
+    "muscles": [
+      "Lats",
+      "Rhomboids",
+      "Biceps",
+      "Rear Delts"
+    ],
+    "instructions": [
+      "Hinge forward at hips, knees slightly bent",
+      "Hold weights with arms hanging down",
+      "Pull weights toward lower chest/waist",
+      "Squeeze shoulder blades together at top",
+      "Lower with control"
+    ],
+    "tips": [
+      "Keep back flat",
+      "Pull elbows back, not out"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164515/pexels-photo-4164515.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 86,
+    "variations": [
+      {
+        "id": "overhand",
+        "label": {
+          "tr": "Üstten Tutuş",
+          "en": "Overhand Grip"
+        },
+        "cue": {
+          "tr": "Avuçlar aşağı bakar — orta sırt ve arka omuza yüklen.",
+          "en": "Palms down — emphasises mid-back and rear delts."
+        }
+      },
+      {
+        "id": "underhand",
+        "label": {
+          "tr": "Alttan Tutuş",
+          "en": "Underhand Grip"
+        },
+        "cue": {
+          "tr": "Avuçlar yukarı bakar (Yates row) — lat ve biceps daha çok çalışır.",
+          "en": "Palms up (Yates row) — more lat and biceps."
+        }
+      },
+      {
+        "id": "wide",
+        "label": {
+          "tr": "Geniş Tutuş",
+          "en": "Wide Grip"
+        },
+        "cue": {
+          "tr": "Geniş tutuş, dirsekler dışa açık — üst sırt hedefli.",
+          "en": "Wide grip, elbows flared — targets upper back."
+        }
+      }
+    ]
+  },
+  {
+    "id": "str_bench_press",
+    "title": "Bench Press",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 15,
+    "calories": 120,
+    "equipment": [
+      "Barbell",
+      "Bench"
+    ],
+    "muscles": [
+      "Chest",
+      "Triceps",
+      "Shoulders"
+    ],
+    "instructions": [
+      "Lie on bench, grip bar slightly wider than shoulders",
+      "Unrack bar and lower to mid-chest",
+      "Keep elbows at 45-degree angle",
+      "Press bar up until arms are extended",
+      "Repeat with control"
+    ],
+    "tips": [
+      "Keep feet flat on floor",
+      "Arch back slightly",
+      "Use spotter for heavy weight"
+    ],
+    "imageUrl": "https://media.giphy.com/media/7jTs1C1JiDchQmoRMr/giphy.gif",
+    "popularity": 92,
+    "variations": [
+      {
+        "id": "standard",
+        "label": {
+          "tr": "Standart Tutuş",
+          "en": "Standard Grip"
+        },
+        "cue": {
+          "tr": "Eller omuzdan biraz geniş; dirsek ~45°.",
+          "en": "Hands slightly wider than shoulders; elbows ~45°."
+        }
+      },
+      {
+        "id": "wide",
+        "label": {
+          "tr": "Geniş Tutuş",
+          "en": "Wide Grip"
+        },
+        "cue": {
+          "tr": "Tutuş geniş; göğsün dış kısmına odaklan, omuza dikkat.",
+          "en": "Wide grip; outer chest focus, mind your shoulders."
+        }
+      },
+      {
+        "id": "close",
+        "label": {
+          "tr": "Dar Tutuş",
+          "en": "Close Grip"
+        },
+        "cue": {
+          "tr": "Eller omuz hizasından dar; dirsekleri gövdeye yakın — triceps belirgin.",
+          "en": "Hands within shoulder width; tuck elbows — triceps emphasis."
+        }
+      }
+    ]
+  },
+  {
+    "id": "str_bicep_curl",
+    "title": "Bicep Curls",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 60,
+    "equipment": [
+      "Dumbbells"
+    ],
+    "muscles": [
+      "Biceps",
+      "Forearms"
+    ],
+    "instructions": [
+      "Stand with dumbbells at sides, palms forward",
+      "Keep elbows close to body",
+      "Curl weights toward shoulders",
+      "Squeeze biceps at the top",
+      "Lower with control"
+    ],
+    "tips": [
+      "Don't swing weights",
+      "Control the negative"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162456/pexels-photo-4162456.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 88
+  },
+  {
+    "id": "str_tricep_extension",
+    "title": "Tricep Extensions",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 55,
+    "equipment": [
+      "Dumbbell"
+    ],
+    "muscles": [
+      "Triceps"
+    ],
+    "instructions": [
+      "Hold dumbbell overhead with both hands",
+      "Keep upper arms stationary and close to head",
+      "Lower weight behind head by bending elbows",
+      "Extend arms back to starting position",
+      "Squeeze triceps at the top"
+    ],
+    "tips": [
+      "Keep elbows pointing forward",
+      "Don't flare elbows"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162500/pexels-photo-4162500.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 78
+  },
+  {
+    "id": "str_lat_pulldown",
+    "title": "Lat Pulldown",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 10,
+    "calories": 80,
+    "equipment": [
+      "Cable machine"
+    ],
+    "muscles": [
+      "Lats",
+      "Biceps",
+      "Rear Delts"
+    ],
+    "instructions": [
+      "Sit at lat pulldown machine, grip bar wider than shoulders",
+      "Lean back slightly, chest up",
+      "Pull bar down to upper chest",
+      "Squeeze lats at bottom",
+      "Return bar with control"
+    ],
+    "tips": [
+      "Don't pull behind neck",
+      "Lead with elbows"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164518/pexels-photo-4164518.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 85,
+    "variations": [
+      {
+        "id": "wide",
+        "label": {
+          "tr": "Geniş Tutuş",
+          "en": "Wide Grip"
+        },
+        "cue": {
+          "tr": "Geniş üst tutuş — üst lat ve V şekli için.",
+          "en": "Wide overhand grip — upper lats and V-taper."
+        }
+      },
+      {
+        "id": "standard",
+        "label": {
+          "tr": "Standart Tutuş",
+          "en": "Standard Grip"
+        },
+        "cue": {
+          "tr": "Omuzdan biraz geniş, üstten tutuş.",
+          "en": "Slightly wider than shoulders, overhand grip."
+        }
+      },
+      {
+        "id": "close",
+        "label": {
+          "tr": "Dar Tutuş",
+          "en": "Close Grip"
+        },
+        "cue": {
+          "tr": "V-handle veya dar tutuş — orta sırt ve alt lat.",
+          "en": "V-handle or close grip — mid-back and lower lats."
+        }
+      },
+      {
+        "id": "reverse",
+        "label": {
+          "tr": "Ters Tutuş",
+          "en": "Reverse Grip"
+        },
+        "cue": {
+          "tr": "Alttan tutuş; biceps daha aktif, alt lat'a iyi gelir.",
+          "en": "Underhand grip; more biceps, hits lower lats."
+        }
+      }
+    ]
+  },
+  {
+    "id": "str_leg_press",
+    "title": "Leg Press",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 12,
+    "calories": 100,
+    "equipment": [
+      "Leg press machine"
+    ],
+    "muscles": [
+      "Quadriceps",
+      "Glutes",
+      "Hamstrings"
+    ],
+    "instructions": [
+      "Sit in leg press machine, feet shoulder-width on platform",
+      "Release safety handles",
+      "Lower weight by bending knees to 90 degrees",
+      "Push through heels to extend legs",
+      "Don't lock knees at top"
+    ],
+    "tips": [
+      "Keep lower back pressed against seat",
+      "Full range of motion"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164520/pexels-photo-4164520.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 82,
+    "variations": [
+      {
+        "id": "standard",
+        "label": {
+          "tr": "Standart Yerleşim",
+          "en": "Standard Placement"
+        },
+        "cue": {
+          "tr": "Ayaklar omuz hizası, platformun ortasında.",
+          "en": "Feet shoulder-width, mid-platform."
+        }
+      },
+      {
+        "id": "high",
+        "label": {
+          "tr": "Yüksek Ayak",
+          "en": "High Foot Placement"
+        },
+        "cue": {
+          "tr": "Ayaklar platformda yüksekte — kalça ve hamstring odaklı.",
+          "en": "Feet high on platform — glute and hamstring focus."
+        }
+      },
+      {
+        "id": "low",
+        "label": {
+          "tr": "Alçak Ayak",
+          "en": "Low Foot Placement"
+        },
+        "cue": {
+          "tr": "Ayaklar platformda alçakta — quad'lara yüklenir, dizleri zorlama.",
+          "en": "Feet low on platform — emphasises quads, mind your knees."
+        }
+      },
+      {
+        "id": "wide",
+        "label": {
+          "tr": "Geniş Duruş",
+          "en": "Wide Stance"
+        },
+        "cue": {
+          "tr": "Ayaklar geniş, parmak uçları dışa — iç bacak.",
+          "en": "Wide stance, toes out — inner thighs."
+        }
+      }
+    ]
+  },
+  {
+    "id": "str_calf_raise",
+    "title": "Calf Raises",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 6,
+    "calories": 40,
+    "equipment": [],
+    "muscles": [
+      "Calves"
+    ],
+    "instructions": [
+      "Stand with feet hip-width apart",
+      "Rise up onto balls of feet",
+      "Squeeze calves at the top",
+      "Lower heels back down slowly",
+      "Repeat for desired reps"
+    ],
+    "tips": [
+      "Use wall for balance if needed",
+      "Go slow and controlled"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162445/pexels-photo-4162445.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 72
+  },
+  {
+    "id": "str_chest_fly",
+    "title": "Dumbbell Chest Fly",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 70,
+    "equipment": [
+      "Dumbbells",
+      "Bench"
+    ],
+    "muscles": [
+      "Chest",
+      "Shoulders"
+    ],
+    "instructions": [
+      "Lie on bench with dumbbells above chest",
+      "Keep slight bend in elbows throughout",
+      "Lower arms out to sides in arc motion",
+      "Feel stretch in chest",
+      "Bring weights back together over chest"
+    ],
+    "tips": [
+      "Don't go too deep",
+      "Control the weight"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162453/pexels-photo-4162453.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 76
+  },
+  {
+    "id": "str_cable_fly",
+    "title": "Cable Fly",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 75,
+    "equipment": [
+      "Cable Machine"
+    ],
+    "muscles": [
+      "Chest",
+      "Shoulders"
+    ],
+    "instructions": [
+      "Set both cable pulleys to chest height",
+      "Step forward with handles in each hand, slight bend in elbows",
+      "Bring hands together in front of chest in an arc motion",
+      "Squeeze chest at the peak",
+      "Slowly return to starting position with controlled stretch"
+    ],
+    "tips": [
+      "Keep elbows soft, not locked",
+      "Lead with the chest, not the shoulders"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162453/pexels-photo-4162453.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 78
+  },
+  {
+    "id": "str_goblet_squat",
+    "title": "Goblet Squat",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 10,
+    "calories": 90,
+    "equipment": [
+      "Dumbbell",
+      "Kettlebell"
+    ],
+    "muscles": [
+      "Quadriceps",
+      "Glutes",
+      "Core"
+    ],
+    "instructions": [
+      "Hold weight at chest with both hands",
+      "Stand with feet shoulder-width apart",
+      "Squat down, keeping chest up",
+      "Elbows track inside knees",
+      "Stand back up, squeezing glutes"
+    ],
+    "tips": [
+      "Great for learning squat form",
+      "Keep weight close to body"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164761/pexels-photo-4164761.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 80
+  },
+  {
+    "id": "str_pike_pushup",
+    "title": "Pike Push-ups",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 80,
+    "equipment": [],
+    "muscles": [
+      "Shoulders",
+      "Triceps",
+      "Core"
+    ],
+    "instructions": [
+      "Start in downward dog position",
+      "Hands shoulder-width apart",
+      "Bend elbows and lower head toward floor",
+      "Push back up to start",
+      "Keep hips high throughout"
+    ],
+    "tips": [
+      "Great shoulder builder",
+      "Progress to handstand pushups"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162485/pexels-photo-4162485.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 74
+  },
+  {
+    "id": "str_sumo_squat",
+    "title": "Sumo Squats",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 10,
+    "calories": 85,
+    "equipment": [],
+    "muscles": [
+      "Inner Thighs",
+      "Glutes",
+      "Quadriceps"
+    ],
+    "instructions": [
+      "Stand with feet wider than shoulders, toes out",
+      "Keep chest up and core tight",
+      "Lower by bending knees outward",
+      "Go as low as comfortable",
+      "Stand back up, squeezing glutes"
+    ],
+    "tips": [
+      "Great for inner thighs",
+      "Keep knees tracking over toes"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164761/pexels-photo-4164761.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 78
+  },
+  {
+    "id": "str_reverse_lunge",
+    "title": "Reverse Lunges",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 10,
+    "calories": 80,
+    "equipment": [],
+    "muscles": [
+      "Quadriceps",
+      "Glutes",
+      "Hamstrings"
+    ],
+    "instructions": [
+      "Stand tall with feet together",
+      "Step one foot backward into lunge",
+      "Lower until both knees at 90 degrees",
+      "Push through front foot to stand",
+      "Alternate legs"
+    ],
+    "tips": [
+      "Easier on knees than forward lunges",
+      "Keep torso upright"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162438/pexels-photo-4162438.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 82
+  },
+  {
+    "id": "str_wall_sit",
+    "title": "Wall Sit",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 5,
+    "calories": 50,
+    "equipment": [],
+    "muscles": [
+      "Quadriceps",
+      "Glutes",
+      "Calves"
+    ],
+    "instructions": [
+      "Stand with back against wall",
+      "Slide down until thighs parallel to floor",
+      "Keep knees at 90 degrees",
+      "Hold position for desired time",
+      "Keep back flat against wall"
+    ],
+    "tips": [
+      "Great isometric exercise",
+      "Challenge yourself with longer holds"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164761/pexels-photo-4164761.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 75
+  },
+  {
+    "id": "str_conv_deadlift",
+    "title": "Conventional Deadlift",
+    "category": "strength",
+    "difficulty": "advanced",
+    "duration": 12,
+    "calories": 130,
+    "equipment": [
+      "Barbell"
+    ],
+    "muscles": [
+      "Hamstrings",
+      "Glutes",
+      "Lower Back",
+      "Traps",
+      "Forearms"
+    ],
+    "instructions": [
+      "Stand with feet hip-width apart, barbell over mid-foot",
+      "Hinge at hips and bend knees to grip the bar just outside your knees",
+      "Brace core, flatten back, and pull the bar up by driving through your heels",
+      "Keep the bar close to your body as you stand fully upright",
+      "Lower the bar with control by hinging at the hips first"
+    ],
+    "tips": [
+      "Keep neutral spine throughout",
+      "Bar should travel in a straight vertical line",
+      "Don't round lower back"
+    ],
+    "imageUrl": "https://media.giphy.com/media/96bSRJ07MfGeggTlV9/giphy.gif",
+    "popularity": 92,
+    "variations": [
+      {
+        "id": "conventional",
+        "label": {
+          "tr": "Klasik Duruş",
+          "en": "Conventional Stance"
+        },
+        "cue": {
+          "tr": "Ayaklar kalça hizası, eller diz dışında — hamstring ve sırt dominant.",
+          "en": "Feet hip-width, hands outside knees — hamstring and back dominant."
+        }
+      },
+      {
+        "id": "sumo",
+        "label": {
+          "tr": "Sumo Duruş",
+          "en": "Sumo Stance"
+        },
+        "cue": {
+          "tr": "Ayaklar omuzdan geniş, parmak uçları dışa; eller dizin içinden kavra — quad ve iç bacak.",
+          "en": "Feet wider than shoulders, toes out; hands inside knees — quads and inner thighs."
+        }
+      }
+    ]
+  },
+  {
+    "id": "str_incline_db_press",
+    "title": "Incline Dumbbell Press",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 90,
+    "equipment": [
+      "Dumbbells",
+      "Incline Bench"
+    ],
+    "muscles": [
+      "Upper Chest",
+      "Shoulders",
+      "Triceps"
+    ],
+    "instructions": [
+      "Set bench to 30â€“45Â° incline and lie back with a dumbbell in each hand",
+      "Start with dumbbells at shoulder level, palms facing forward",
+      "Press the dumbbells up and slightly together until arms are extended",
+      "Lower with control to chest level",
+      "Keep core tight and feet planted"
+    ],
+    "tips": [
+      "Higher angle hits more shoulder",
+      "Don't flare elbows past 75Â°",
+      "Squeeze chest at the top"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/3837781/pexels-photo-3837781.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 88
+  },
+  {
+    "id": "str_chest_press_machine",
+    "title": "Chest Press Machine",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 80,
+    "equipment": [
+      "Machine"
+    ],
+    "muscles": [
+      "Chest",
+      "Triceps",
+      "Shoulders"
+    ],
+    "instructions": [
+      "Adjust seat so handles are aligned with mid-chest",
+      "Sit with back flat against pad, grip handles",
+      "Press handles forward until arms are nearly extended",
+      "Pause briefly, then return slowly to start",
+      "Keep shoulders down and back throughout"
+    ],
+    "tips": [
+      "Great for beginners â€” fixed path of motion",
+      "Don't lock out elbows",
+      "Control the negative"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162453/pexels-photo-4162453.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 80
+  },
+  {
+    "id": "str_tricep_pushdown",
+    "title": "Triceps Rope Pushdown",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 70,
+    "equipment": [
+      "Cable Machine",
+      "Rope Attachment"
+    ],
+    "muscles": [
+      "Triceps"
+    ],
+    "instructions": [
+      "Attach rope to high pulley, grip with both hands, palms facing each other",
+      "Tuck elbows close to your ribs",
+      "Push rope down and apart at the bottom, fully extending arms",
+      "Squeeze triceps at the bottom",
+      "Return slowly to start without letting elbows flare"
+    ],
+    "tips": [
+      "Keep elbows pinned to sides",
+      "Spread the rope at the bottom for full contraction",
+      "Don't lean over the cable"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162500/pexels-photo-4162500.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 86,
+    "variations": [
+      {
+        "id": "rope",
+        "label": {
+          "tr": "Halat",
+          "en": "Rope"
+        },
+        "cue": {
+          "tr": "Halat ataşmanı; dipte halatı dışa aç — uzun başa daha iyi gelir.",
+          "en": "Rope attachment; spread rope at the bottom — better long-head contraction."
+        }
+      },
+      {
+        "id": "straight",
+        "label": {
+          "tr": "Düz Bar",
+          "en": "Straight Bar"
+        },
+        "cue": {
+          "tr": "Düz bar; eller omuz hizası, dirsekler gövdede.",
+          "en": "Straight bar; hands shoulder-width, elbows pinned."
+        }
+      },
+      {
+        "id": "vbar",
+        "label": {
+          "tr": "V-Bar",
+          "en": "V-Bar"
+        },
+        "cue": {
+          "tr": "V-bar; nötr tutuş — bilek için rahat.",
+          "en": "V-bar; neutral grip — wrist-friendly."
+        }
+      },
+      {
+        "id": "reverse",
+        "label": {
+          "tr": "Ters Tutuş",
+          "en": "Reverse Grip"
+        },
+        "cue": {
+          "tr": "Alttan tutuş düz bar — mediyal başa odak.",
+          "en": "Underhand straight bar — medial head focus."
+        }
+      }
+    ]
+  },
+  {
+    "id": "str_overhead_tricep_ext",
+    "title": "Dumbbell Overhead Tricep Extension",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 70,
+    "equipment": [
+      "Dumbbell"
+    ],
+    "muscles": [
+      "Triceps",
+      "Long Head Triceps"
+    ],
+    "instructions": [
+      "Sit or stand holding one dumbbell with both hands",
+      "Press it overhead with arms fully extended",
+      "Lower the dumbbell behind your head by bending elbows",
+      "Keep upper arms vertical and close to your ears",
+      "Extend back to start"
+    ],
+    "tips": [
+      "Targets long head of triceps",
+      "Don't flare elbows out",
+      "Use a controlled tempo"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162500/pexels-photo-4162500.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 78
+  },
+  {
+    "id": "str_seated_cable_row",
+    "title": "Seated Cable Row",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 10,
+    "calories": 85,
+    "equipment": [
+      "Cable Machine",
+      "V-Handle"
+    ],
+    "muscles": [
+      "Mid Back",
+      "Lats",
+      "Biceps",
+      "Rear Delts"
+    ],
+    "instructions": [
+      "Sit at the cable row station, feet on platform, knees slightly bent",
+      "Grip the handle with arms extended and back straight",
+      "Pull the handle to your lower abdomen, squeezing shoulder blades together",
+      "Pause briefly, then return slowly to start",
+      "Keep torso upright â€” don't rock"
+    ],
+    "tips": [
+      "Lead with elbows, not hands",
+      "Don't round your back at the bottom",
+      "Squeeze shoulder blades at the top of the pull"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164515/pexels-photo-4164515.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 87,
+    "variations": [
+      {
+        "id": "vhandle",
+        "label": {
+          "tr": "Nötr V-Handle",
+          "en": "Neutral V-Handle"
+        },
+        "cue": {
+          "tr": "Standart nötr tutuş — orta sırt ve lat.",
+          "en": "Standard neutral grip — mid-back and lats."
+        }
+      },
+      {
+        "id": "wide",
+        "label": {
+          "tr": "Geniş Tutuş",
+          "en": "Wide Grip"
+        },
+        "cue": {
+          "tr": "Geniş düz bar; dirsekler dışa açık — üst sırt.",
+          "en": "Wide straight bar; elbows flared — upper back."
+        }
+      },
+      {
+        "id": "close",
+        "label": {
+          "tr": "Dar Tutuş",
+          "en": "Close Grip"
+        },
+        "cue": {
+          "tr": "Dar tutuş; dirsekler gövdede — lat'a yüklenir.",
+          "en": "Close grip; elbows tucked — loads lats."
+        }
+      },
+      {
+        "id": "underhand",
+        "label": {
+          "tr": "Alttan Tutuş",
+          "en": "Underhand Grip"
+        },
+        "cue": {
+          "tr": "Düz bar alttan; biceps daha aktif, alt lat.",
+          "en": "Underhand straight bar; more biceps, lower lats."
+        }
+      }
+    ]
+  },
+  {
+    "id": "str_chest_supported_row",
+    "title": "Chest Supported Dumbbell Row",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 80,
+    "equipment": [
+      "Dumbbells",
+      "Incline Bench"
+    ],
+    "muscles": [
+      "Mid Back",
+      "Lats",
+      "Rear Delts",
+      "Biceps"
+    ],
+    "instructions": [
+      "Set bench to 30â€“45Â° incline and lie face down with chest on the pad",
+      "Hold a dumbbell in each hand, arms hanging straight down",
+      "Row the dumbbells up by driving elbows back and squeezing shoulder blades",
+      "Pause at the top, then lower under control",
+      "Keep neck neutral and chest planted"
+    ],
+    "tips": [
+      "Bench takes lower-back stress out of the lift",
+      "Don't shrug â€” lead with elbows",
+      "Full stretch at the bottom"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164515/pexels-photo-4164515.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 80
+  },
+  {
+    "id": "str_hammer_curl",
+    "title": "Hammer Curl",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 65,
+    "equipment": [
+      "Dumbbells"
+    ],
+    "muscles": [
+      "Biceps",
+      "Brachialis",
+      "Forearms"
+    ],
+    "instructions": [
+      "Stand with a dumbbell in each hand, palms facing your body (neutral grip)",
+      "Keep elbows pinned at your sides",
+      "Curl both dumbbells up without rotating wrists",
+      "Squeeze at the top, then lower with control",
+      "Keep shoulders relaxed throughout"
+    ],
+    "tips": [
+      "Hits brachialis for thicker arms",
+      "Don't swing â€” strict form",
+      "Can be alternated arm-by-arm"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162456/pexels-photo-4162456.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 84
+  },
+  {
+    "id": "str_lateral_raise",
+    "title": "Dumbbell Lateral Raise",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 65,
+    "equipment": [
+      "Dumbbells"
+    ],
+    "muscles": [
+      "Side Delts",
+      "Shoulders"
+    ],
+    "instructions": [
+      "Stand with a dumbbell in each hand at your sides, slight elbow bend",
+      "Raise dumbbells out to the sides until arms are roughly parallel to floor",
+      "Lead with elbows, not hands",
+      "Pause briefly at the top",
+      "Lower with control to start"
+    ],
+    "tips": [
+      "Use lighter weight than you think â€” form first",
+      "Don't shrug shoulders up",
+      "Slight forward tilt of pinky helps target side delts"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162451/pexels-photo-4162451.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 88
+  },
+  {
+    "id": "str_face_pull",
+    "title": "Face Pull",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 65,
+    "equipment": [
+      "Cable Machine",
+      "Rope Attachment"
+    ],
+    "muscles": [
+      "Rear Delts",
+      "Upper Back",
+      "Rotator Cuff"
+    ],
+    "instructions": [
+      "Set cable to slightly above head height, attach rope",
+      "Grip rope with palms facing each other, step back to create tension",
+      "Pull the rope toward your face, separating hands as you pull",
+      "Externally rotate so hands end up beside your ears",
+      "Squeeze upper back and rear delts, return slowly"
+    ],
+    "tips": [
+      "Excellent for posture and shoulder health",
+      "Use lighter weight â€” control over heaviness",
+      "Lead with elbows up and out"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164515/pexels-photo-4164515.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 82
+  },
+  {
+    "id": "str_leg_extension",
+    "title": "Leg Extension",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 75,
+    "equipment": [
+      "Machine"
+    ],
+    "muscles": [
+      "Quadriceps"
+    ],
+    "instructions": [
+      "Sit on machine with back against pad, ankles behind the roller",
+      "Adjust so knees align with the pivot point",
+      "Extend legs until knees are nearly straight",
+      "Squeeze quads at the top",
+      "Lower with control to start"
+    ],
+    "tips": [
+      "Isolation movement — strict form",
+      "Don't slam the weight down",
+      "Slight pause at the top boosts contraction"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164520/pexels-photo-4164520.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 81
+  },
+  {
+    "id": "str_db_bench_press",
+    "title": "Dumbbell Bench Press",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 95,
+    "equipment": [
+      "Dumbbells",
+      "Bench"
+    ],
+    "muscles": [
+      "Chest",
+      "Triceps",
+      "Shoulders"
+    ],
+    "instructions": [
+      "Lie on bench, dumbbells at chest level",
+      "Press both up until arms extended over chest",
+      "Lower with control to chest level",
+      "Repeat for desired reps"
+    ],
+    "tips": [
+      "Keep wrists stacked over elbows",
+      "Don't flare elbows past 75°"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/3837781/pexels-photo-3837781.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 86
+  },
+  {
+    "id": "str_decline_bench_press",
+    "title": "Decline Bench Press",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 95,
+    "equipment": [
+      "Barbell",
+      "Decline Bench"
+    ],
+    "muscles": [
+      "Chest",
+      "Triceps"
+    ],
+    "instructions": [
+      "Lie on decline bench, secure feet",
+      "Unrack bar over lower chest",
+      "Lower bar to lower chest with control",
+      "Press back up to lockout"
+    ],
+    "tips": [
+      "Targets lower chest fibers",
+      "Use a spotter on heavy sets"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/3837781/pexels-photo-3837781.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 72
+  },
+  {
+    "id": "str_cable_crossover",
+    "title": "Cable Crossover",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 75,
+    "equipment": [
+      "Cable Machine"
+    ],
+    "muscles": [
+      "Chest",
+      "Shoulders"
+    ],
+    "instructions": [
+      "Set cables at high position, grab handles",
+      "Step forward, slight forward lean",
+      "Bring hands down and together in front of waist in arc",
+      "Squeeze chest, return slowly"
+    ],
+    "tips": [
+      "Lead with elbows soft, not locked",
+      "Cross hands slightly for extra contraction"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162453/pexels-photo-4162453.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 75
+  },
+  {
+    "id": "str_pec_deck",
+    "title": "Pec Deck Machine",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 10,
+    "calories": 70,
+    "equipment": [
+      "Pec Deck Machine"
+    ],
+    "muscles": [
+      "Chest"
+    ],
+    "instructions": [
+      "Sit with back against pad, grip handles",
+      "Bring handles together in front of chest",
+      "Squeeze chest at peak",
+      "Return slowly with control"
+    ],
+    "tips": [
+      "Keep elbows slightly bent throughout",
+      "Don't let weights slam at the start"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162453/pexels-photo-4162453.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 70
+  },
+  {
+    "id": "str_incline_pushup",
+    "title": "Incline Push-ups",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 70,
+    "equipment": [
+      "Bench"
+    ],
+    "muscles": [
+      "Chest",
+      "Triceps",
+      "Shoulders"
+    ],
+    "instructions": [
+      "Place hands on elevated surface (bench/box)",
+      "Body straight from head to heels",
+      "Lower chest to surface",
+      "Push back up to start"
+    ],
+    "tips": [
+      "Higher surface = easier",
+      "Great regression for standard push-ups"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162485/pexels-photo-4162485.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 76
+  },
+  {
+    "id": "str_wide_pushup",
+    "title": "Wide-Grip Push-ups",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 80,
+    "equipment": [],
+    "muscles": [
+      "Chest",
+      "Shoulders"
+    ],
+    "instructions": [
+      "Plank position with hands wider than shoulders",
+      "Keep core tight, body straight",
+      "Lower chest toward floor",
+      "Push back up explosively"
+    ],
+    "tips": [
+      "Wider stance hits chest more",
+      "Don't let elbows splay too wide"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162485/pexels-photo-4162485.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 75
+  },
+  {
+    "id": "str_t_bar_row",
+    "title": "T-Bar Row",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 95,
+    "equipment": [
+      "T-Bar",
+      "Barbell"
+    ],
+    "muscles": [
+      "Back",
+      "Lats",
+      "Biceps"
+    ],
+    "instructions": [
+      "Stand over bar, hinge at hips, neutral spine",
+      "Grab handles with both hands",
+      "Row bar to lower chest, squeeze shoulder blades",
+      "Lower under control"
+    ],
+    "tips": [
+      "Keep chest up, don't round back",
+      "Drive elbows back, not up"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164515/pexels-photo-4164515.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 80
+  },
+  {
+    "id": "str_one_arm_db_row",
+    "title": "Single-Arm Dumbbell Row",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 10,
+    "calories": 80,
+    "equipment": [
+      "Dumbbell",
+      "Bench"
+    ],
+    "muscles": [
+      "Back",
+      "Lats",
+      "Biceps"
+    ],
+    "instructions": [
+      "Place one knee and hand on bench, flat back",
+      "Hold dumbbell in opposite hand",
+      "Row dumbbell to hip, elbow close to body",
+      "Lower with control, repeat"
+    ],
+    "tips": [
+      "Don't rotate torso",
+      "Pull from elbow, not hand"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164515/pexels-photo-4164515.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 84
+  },
+  {
+    "id": "str_inverted_row",
+    "title": "Inverted Row",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 10,
+    "calories": 75,
+    "equipment": [
+      "Barbell",
+      "Rack"
+    ],
+    "muscles": [
+      "Back",
+      "Lats",
+      "Biceps"
+    ],
+    "instructions": [
+      "Set bar at waist height, hang underneath",
+      "Grip bar slightly wider than shoulders",
+      "Pull chest to bar, body straight",
+      "Lower with control"
+    ],
+    "tips": [
+      "Higher bar = easier",
+      "Squeeze shoulder blades together"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164766/pexels-photo-4164766.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 72
+  },
+  {
+    "id": "str_pendlay_row",
+    "title": "Pendlay Row",
+    "category": "strength",
+    "difficulty": "advanced",
+    "duration": 10,
+    "calories": 95,
+    "equipment": [
+      "Barbell"
+    ],
+    "muscles": [
+      "Back",
+      "Lats"
+    ],
+    "instructions": [
+      "Hinge at hips, torso parallel to floor",
+      "Bar on floor, grip overhand",
+      "Explosively row bar to lower chest",
+      "Reset on floor between every rep"
+    ],
+    "tips": [
+      "Strict — no hip drive",
+      "Reset each rep, no bouncing"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164515/pexels-photo-4164515.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 70
+  },
+  {
+    "id": "str_reverse_fly",
+    "title": "Reverse Fly",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 60,
+    "equipment": [
+      "Dumbbells"
+    ],
+    "muscles": [
+      "Rear Delts",
+      "Back"
+    ],
+    "instructions": [
+      "Hinge at hips, slight bend in knees",
+      "Hold dumbbells with palms facing each other",
+      "Raise arms out to sides until parallel to floor",
+      "Squeeze shoulder blades, lower slowly"
+    ],
+    "tips": [
+      "Light weight — form over load",
+      "Don't arch your back"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164515/pexels-photo-4164515.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 68
+  },
+  {
+    "id": "str_shrugs",
+    "title": "Shrugs",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 60,
+    "equipment": [
+      "Dumbbells",
+      "Barbell"
+    ],
+    "muscles": [
+      "Back",
+      "Shoulders"
+    ],
+    "instructions": [
+      "Stand tall holding dumbbells/barbell at sides",
+      "Elevate shoulders straight up toward ears",
+      "Hold at top for a second",
+      "Lower under control"
+    ],
+    "tips": [
+      "Don't roll shoulders — straight up only",
+      "Avoid using arms or neck"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164515/pexels-photo-4164515.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 72
+  },
+  {
+    "id": "str_straight_arm_pulldown",
+    "title": "Straight-Arm Pulldown",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 70,
+    "equipment": [
+      "Cable Machine"
+    ],
+    "muscles": [
+      "Lats",
+      "Back"
+    ],
+    "instructions": [
+      "Stand facing cable, grip straight bar at chest height",
+      "Slight bend in elbows, hinge slightly forward",
+      "Pull bar down to thighs in arc",
+      "Slowly return to start"
+    ],
+    "tips": [
+      "Keep arms nearly straight",
+      "Lats do the work, not triceps"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164518/pexels-photo-4164518.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 70
+  },
+  {
+    "id": "str_hyperextension",
+    "title": "Hyperextension",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 60,
+    "equipment": [
+      "Hyperextension Bench"
+    ],
+    "muscles": [
+      "Lower Back",
+      "Glutes",
+      "Hamstrings"
+    ],
+    "instructions": [
+      "Position hips on pad, feet anchored",
+      "Cross arms or hold weight at chest",
+      "Lower torso down, hinge at hips",
+      "Raise back to neutral, don't hyperextend"
+    ],
+    "tips": [
+      "Stop at neutral spine, not rounded back",
+      "Slow tempo"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164512/pexels-photo-4164512.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 68
+  },
+  {
+    "id": "str_cable_pullover",
+    "title": "Cable Pullover",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 75,
+    "equipment": [
+      "Cable Machine"
+    ],
+    "muscles": [
+      "Lats",
+      "Back"
+    ],
+    "instructions": [
+      "Set cable to high position with rope/bar",
+      "Kneel or stand, slight forward lean",
+      "Pull bar down to thighs, arms straight",
+      "Slowly return overhead"
+    ],
+    "tips": [
+      "Lead with lats, not triceps",
+      "Keep elbows soft but locked angle"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164518/pexels-photo-4164518.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 70
+  },
+  {
+    "id": "str_db_shoulder_press",
+    "title": "Dumbbell Shoulder Press",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 85,
+    "equipment": [
+      "Dumbbells",
+      "Bench"
+    ],
+    "muscles": [
+      "Shoulders",
+      "Triceps"
+    ],
+    "instructions": [
+      "Sit upright, dumbbells at shoulder height",
+      "Press both up until arms extended overhead",
+      "Lower with control back to shoulders",
+      "Repeat"
+    ],
+    "tips": [
+      "Don't arch lower back",
+      "Keep core braced"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162451/pexels-photo-4162451.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 82
+  },
+  {
+    "id": "str_front_raise",
+    "title": "Front Raise",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 55,
+    "equipment": [
+      "Dumbbells"
+    ],
+    "muscles": [
+      "Shoulders",
+      "Upper Chest"
+    ],
+    "instructions": [
+      "Stand tall, dumbbells in front of thighs",
+      "Raise one or both arms to shoulder height",
+      "Pause briefly at top",
+      "Lower slowly"
+    ],
+    "tips": [
+      "No swinging — strict tempo",
+      "Slight bend in elbows"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162451/pexels-photo-4162451.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 65
+  },
+  {
+    "id": "str_arnold_press",
+    "title": "Arnold Press",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 85,
+    "equipment": [
+      "Dumbbells"
+    ],
+    "muscles": [
+      "Shoulders",
+      "Triceps"
+    ],
+    "instructions": [
+      "Start with palms facing you at chin level",
+      "Press up while rotating palms outward",
+      "Finish with palms forward, arms extended",
+      "Reverse motion to start"
+    ],
+    "tips": [
+      "Smooth rotation throughout the press",
+      "Control the negative"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162451/pexels-photo-4162451.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 75
+  },
+  {
+    "id": "str_upright_row",
+    "title": "Upright Row",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 65,
+    "equipment": [
+      "Barbell",
+      "Dumbbells"
+    ],
+    "muscles": [
+      "Shoulders",
+      "Back"
+    ],
+    "instructions": [
+      "Stand tall, hold weight in front of thighs, narrow grip",
+      "Pull bar up along body to upper chest",
+      "Elbows lead, higher than wrists",
+      "Lower with control"
+    ],
+    "tips": [
+      "Don't go above shoulder height — saves shoulders",
+      "Wider grip is safer than very narrow"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162451/pexels-photo-4162451.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 65
+  },
+  {
+    "id": "str_reverse_pec_deck",
+    "title": "Reverse Pec Deck",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 60,
+    "equipment": [
+      "Pec Deck Machine"
+    ],
+    "muscles": [
+      "Rear Delts",
+      "Back"
+    ],
+    "instructions": [
+      "Sit facing the pad, grab handles",
+      "Pull arms back in arc, squeezing rear delts",
+      "Pause briefly at full stretch back",
+      "Return slowly"
+    ],
+    "tips": [
+      "Lead with elbows, not hands",
+      "Light weight, focus on contraction"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162451/pexels-photo-4162451.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 65
+  },
+  {
+    "id": "str_push_press",
+    "title": "Push Press",
+    "category": "strength",
+    "difficulty": "advanced",
+    "duration": 10,
+    "calories": 100,
+    "equipment": [
+      "Barbell",
+      "Dumbbells"
+    ],
+    "muscles": [
+      "Shoulders",
+      "Triceps",
+      "Quads"
+    ],
+    "instructions": [
+      "Bar at shoulder height, feet hip-width",
+      "Quick dip with knees, then drive up",
+      "Use leg drive to press bar overhead",
+      "Lower to shoulders with control"
+    ],
+    "tips": [
+      "Dip is short and shallow",
+      "Lock out arms at the top"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162451/pexels-photo-4162451.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 70
+  },
+  {
+    "id": "str_cable_lateral_raise",
+    "title": "Cable Lateral Raise",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 60,
+    "equipment": [
+      "Cable Machine"
+    ],
+    "muscles": [
+      "Side Delts",
+      "Shoulders"
+    ],
+    "instructions": [
+      "Set cable to low, grip handle in opposite hand",
+      "Raise arm out to side to shoulder height",
+      "Pause briefly, lead with elbow",
+      "Lower slowly"
+    ],
+    "tips": [
+      "Constant tension beats dumbbells",
+      "Slight forward lean of arm"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162451/pexels-photo-4162451.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 68
+  },
+  {
+    "id": "str_preacher_curl",
+    "title": "Preacher Curl",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 60,
+    "equipment": [
+      "Preacher Bench",
+      "EZ-Bar"
+    ],
+    "muscles": [
+      "Biceps"
+    ],
+    "instructions": [
+      "Sit at preacher bench, arms over pad",
+      "Grip bar shoulder-width",
+      "Curl bar up toward shoulders",
+      "Lower slowly to full stretch"
+    ],
+    "tips": [
+      "Don't bounce off pad at bottom",
+      "Keep elbows planted on pad"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162456/pexels-photo-4162456.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 75
+  },
+  {
+    "id": "str_concentration_curl",
+    "title": "Concentration Curl",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 55,
+    "equipment": [
+      "Dumbbell",
+      "Bench"
+    ],
+    "muscles": [
+      "Biceps"
+    ],
+    "instructions": [
+      "Sit on bench, lean forward, elbow on inner thigh",
+      "Hold dumbbell with palm up",
+      "Curl up to shoulder, squeeze peak",
+      "Lower slowly to full extension"
+    ],
+    "tips": [
+      "Maximum bicep peak focus",
+      "Don't rock or use momentum"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162456/pexels-photo-4162456.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 70
+  },
+  {
+    "id": "str_cable_curl",
+    "title": "Cable Curl",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 10,
+    "calories": 60,
+    "equipment": [
+      "Cable Machine"
+    ],
+    "muscles": [
+      "Biceps"
+    ],
+    "instructions": [
+      "Stand facing cable, low setting, grip bar/handle",
+      "Elbows at sides, curl up toward shoulders",
+      "Squeeze biceps at top",
+      "Lower with control"
+    ],
+    "tips": [
+      "Constant tension throughout",
+      "Don't swing torso"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162456/pexels-photo-4162456.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 72
+  },
+  {
+    "id": "str_incline_curl",
+    "title": "Incline Dumbbell Curl",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 60,
+    "equipment": [
+      "Dumbbells",
+      "Incline Bench"
+    ],
+    "muscles": [
+      "Biceps"
+    ],
+    "instructions": [
+      "Lie back on incline bench, dumbbells hanging at sides",
+      "Curl both up toward shoulders",
+      "Squeeze at top, palms up",
+      "Lower slowly to full stretch"
+    ],
+    "tips": [
+      "Big stretch at the bottom — long head focus",
+      "Keep elbows back, don't drift forward"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162456/pexels-photo-4162456.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 73
+  },
+  {
+    "id": "str_ezbar_curl",
+    "title": "EZ-Bar Curl",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 10,
+    "calories": 65,
+    "equipment": [
+      "EZ-Bar"
+    ],
+    "muscles": [
+      "Biceps"
+    ],
+    "instructions": [
+      "Stand tall, grip EZ-bar at angled grips",
+      "Elbows at sides, curl up to shoulders",
+      "Squeeze at top",
+      "Lower with control"
+    ],
+    "tips": [
+      "EZ-bar is wrist-friendly vs straight bar",
+      "No body english"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162456/pexels-photo-4162456.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 76,
+    "variations": [
+      {
+        "id": "narrow",
+        "label": {
+          "tr": "Dar Tutuş",
+          "en": "Narrow Grip"
+        },
+        "cue": {
+          "tr": "Dar tutuş (içe eğimli noktalar) — uzun başa daha çok yüklenir.",
+          "en": "Narrow grip (inner angles) — long head emphasis."
+        }
+      },
+      {
+        "id": "wide",
+        "label": {
+          "tr": "Geniş Tutuş",
+          "en": "Wide Grip"
+        },
+        "cue": {
+          "tr": "Geniş tutuş (dışa eğimli noktalar) — kısa başa yüklenir.",
+          "en": "Wide grip (outer angles) — short head emphasis."
+        }
+      }
+    ]
+  },
+  {
+    "id": "str_spider_curl",
+    "title": "Spider Curl",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 55,
+    "equipment": [
+      "Incline Bench",
+      "Dumbbells"
+    ],
+    "muscles": [
+      "Biceps"
+    ],
+    "instructions": [
+      "Lie face-down on incline bench, arms hanging straight down",
+      "Hold dumbbells, palms up",
+      "Curl up toward shoulders",
+      "Lower slowly under control"
+    ],
+    "tips": [
+      "Strict — no momentum possible",
+      "Squeeze hard at the top"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162456/pexels-photo-4162456.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 65
+  },
+  {
+    "id": "str_reverse_curl",
+    "title": "Reverse Curl",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 55,
+    "equipment": [
+      "Barbell",
+      "EZ-Bar"
+    ],
+    "muscles": [
+      "Biceps",
+      "Forearms"
+    ],
+    "instructions": [
+      "Stand tall, overhand grip on bar, hands shoulder-width",
+      "Curl bar up toward shoulders",
+      "Squeeze forearms at top",
+      "Lower with control"
+    ],
+    "tips": [
+      "Lighter weight than regular curls",
+      "Keeps forearms working"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162456/pexels-photo-4162456.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 60
+  },
+  {
+    "id": "str_21s",
+    "title": "21s",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 70,
+    "equipment": [
+      "Barbell",
+      "EZ-Bar",
+      "Dumbbells"
+    ],
+    "muscles": [
+      "Biceps"
+    ],
+    "instructions": [
+      "Do 7 reps from bottom to halfway up",
+      "Do 7 reps from halfway to top",
+      "Finish with 7 full-range reps",
+      "All 21 reps with no rest"
+    ],
+    "tips": [
+      "Use lighter weight than usual",
+      "Strict tempo in each phase"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162456/pexels-photo-4162456.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 68
+  },
+  {
+    "id": "str_skull_crusher",
+    "title": "Skull Crusher",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 70,
+    "equipment": [
+      "EZ-Bar",
+      "Bench"
+    ],
+    "muscles": [
+      "Triceps"
+    ],
+    "instructions": [
+      "Lie on bench, hold bar with arms straight over chest",
+      "Bend elbows, lower bar toward forehead",
+      "Keep upper arms still",
+      "Extend arms back to start"
+    ],
+    "tips": [
+      "Elbows stay pointing up, not flaring",
+      "Use a spotter or light weight"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162500/pexels-photo-4162500.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 78
+  },
+  {
+    "id": "str_close_grip_bench",
+    "title": "Close-Grip Bench Press",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 90,
+    "equipment": [
+      "Barbell",
+      "Bench"
+    ],
+    "muscles": [
+      "Triceps",
+      "Chest"
+    ],
+    "instructions": [
+      "Lie on bench, grip bar shoulder-width or slightly narrower",
+      "Lower bar to lower chest, elbows close to body",
+      "Press back up to lockout",
+      "Repeat"
+    ],
+    "tips": [
+      "Grip not too narrow — protects wrists",
+      "Elbows close, not flared"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/3837781/pexels-photo-3837781.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 78
+  },
+  {
+    "id": "str_tricep_kickback",
+    "title": "Tricep Kickback",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 55,
+    "equipment": [
+      "Dumbbells"
+    ],
+    "muscles": [
+      "Triceps"
+    ],
+    "instructions": [
+      "Hinge forward at hips, dumbbells at chest",
+      "Upper arm parallel to floor, elbow tucked",
+      "Extend forearm back until arm is straight",
+      "Squeeze triceps, lower slowly"
+    ],
+    "tips": [
+      "Upper arm stays still",
+      "Squeeze hard at full extension"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162500/pexels-photo-4162500.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 65
+  },
+  {
+    "id": "str_bench_dip",
+    "title": "Bench Dip",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 70,
+    "equipment": [
+      "Bench"
+    ],
+    "muscles": [
+      "Triceps",
+      "Chest"
+    ],
+    "instructions": [
+      "Sit on edge of bench, hands gripping behind hips",
+      "Slide off, support body with arms, legs out",
+      "Lower body by bending elbows to 90°",
+      "Press back up"
+    ],
+    "tips": [
+      "Keep elbows pointing back, not flaring",
+      "Bent knees = easier, straight legs = harder"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162500/pexels-photo-4162500.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 72
+  },
+  {
+    "id": "str_diamond_pushup",
+    "title": "Diamond Push-ups",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 80,
+    "equipment": [],
+    "muscles": [
+      "Triceps",
+      "Chest"
+    ],
+    "instructions": [
+      "Plank position with hands together, thumbs touching",
+      "Keep elbows close to body",
+      "Lower chest to hands",
+      "Push back up to start"
+    ],
+    "tips": [
+      "Triceps emphasis when hands are close",
+      "Drop to knees if too hard"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162485/pexels-photo-4162485.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 78
+  },
+  {
+    "id": "str_hip_thrust",
+    "title": "Hip Thrust",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 85,
+    "equipment": [
+      "Barbell",
+      "Bench"
+    ],
+    "muscles": [
+      "Glutes",
+      "Hamstrings"
+    ],
+    "instructions": [
+      "Sit with upper back against bench, bar across hips",
+      "Feet flat, knees bent",
+      "Drive hips up, squeeze glutes at top",
+      "Lower with control"
+    ],
+    "tips": [
+      "Use a pad — bar is heavy on hips",
+      "Tuck chin, don't hyperextend back"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164512/pexels-photo-4164512.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 82
+  },
+  {
+    "id": "str_bulgarian_split_squat",
+    "title": "Bulgarian Split Squat",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 90,
+    "equipment": [
+      "Bench",
+      "Dumbbells"
+    ],
+    "muscles": [
+      "Quads",
+      "Glutes"
+    ],
+    "instructions": [
+      "Rear foot elevated on bench, front leg forward",
+      "Lower front knee toward floor",
+      "Drive through front heel to stand",
+      "Complete reps then switch legs"
+    ],
+    "tips": [
+      "Front knee tracks over toe",
+      "Stay tall, don't lean too far forward"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162438/pexels-photo-4162438.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 80
+  },
+  {
+    "id": "str_front_squat",
+    "title": "Front Squat",
+    "category": "strength",
+    "difficulty": "advanced",
+    "duration": 12,
+    "calories": 110,
+    "equipment": [
+      "Barbell"
+    ],
+    "muscles": [
+      "Quads",
+      "Glutes",
+      "Core"
+    ],
+    "instructions": [
+      "Bar resting on front delts, elbows up",
+      "Feet shoulder-width, toes slightly out",
+      "Squat down keeping torso upright",
+      "Drive up through heels"
+    ],
+    "tips": [
+      "Elbows high — bar won't roll",
+      "More quad-dominant than back squat"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164761/pexels-photo-4164761.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 75
+  },
+  {
+    "id": "str_step_up",
+    "title": "Step-ups",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 10,
+    "calories": 80,
+    "equipment": [
+      "Box",
+      "Dumbbells"
+    ],
+    "muscles": [
+      "Quads",
+      "Glutes"
+    ],
+    "instructions": [
+      "Stand in front of box, dumbbells at sides",
+      "Step up with one foot, drive through heel",
+      "Stand fully on top, then step down",
+      "Alternate or finish all reps one side first"
+    ],
+    "tips": [
+      "Don't push off back leg — let front leg do the work",
+      "Box around knee height"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162438/pexels-photo-4162438.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 70
+  },
+  {
+    "id": "str_glute_bridge",
+    "title": "Glute Bridge",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 60,
+    "equipment": [],
+    "muscles": [
+      "Glutes",
+      "Hamstrings"
+    ],
+    "instructions": [
+      "Lie on back, knees bent, feet flat",
+      "Drive hips up, squeeze glutes hard",
+      "Hold for a beat at the top",
+      "Lower slowly"
+    ],
+    "tips": [
+      "Squeeze glutes — don't hyperextend lower back",
+      "Add weight on hips for progression"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164512/pexels-photo-4164512.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 76
+  },
+  {
+    "id": "str_hamstring_curl",
+    "title": "Hamstring Curl",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 10,
+    "calories": 70,
+    "equipment": [
+      "Leg Curl Machine"
+    ],
+    "muscles": [
+      "Hamstrings"
+    ],
+    "instructions": [
+      "Lie face down on machine, ankles under pad",
+      "Curl heels toward glutes",
+      "Squeeze hamstrings at the top",
+      "Lower with control"
+    ],
+    "tips": [
+      "Don't lift hips — keep them pinned",
+      "Slow on the negative"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164520/pexels-photo-4164520.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 75
+  },
+  {
+    "id": "str_good_morning",
+    "title": "Good Morning",
+    "category": "strength",
+    "difficulty": "advanced",
+    "duration": 10,
+    "calories": 80,
+    "equipment": [
+      "Barbell"
+    ],
+    "muscles": [
+      "Hamstrings",
+      "Lower Back",
+      "Glutes"
+    ],
+    "instructions": [
+      "Bar across upper back like a squat",
+      "Hinge at hips, slight knee bend",
+      "Lower torso until parallel to floor",
+      "Drive hips forward to return"
+    ],
+    "tips": [
+      "Light weight first — hamstring stretch is intense",
+      "Neutral spine throughout"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164512/pexels-photo-4164512.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 65
+  },
+  {
+    "id": "str_seated_calf_raise",
+    "title": "Seated Calf Raise",
+    "category": "strength",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 55,
+    "equipment": [
+      "Seated Calf Machine"
+    ],
+    "muscles": [
+      "Calves"
+    ],
+    "instructions": [
+      "Sit, knees under pad, balls of feet on platform",
+      "Lower heels for full stretch",
+      "Press up onto toes, squeeze calves",
+      "Slow down on the way back"
+    ],
+    "tips": [
+      "Targets soleus more than standing version",
+      "Pause at the top for max contraction"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162445/pexels-photo-4162445.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 68
+  },
+  {
+    "id": "car_running",
+    "title": "Running/Jogging",
+    "category": "cardio",
+    "difficulty": "beginner",
+    "duration": 30,
+    "calories": 300,
+    "equipment": [],
+    "muscles": [
+      "Quadriceps",
+      "Hamstrings",
+      "Calves",
+      "Core"
+    ],
+    "instructions": [
+      "Start with light warm-up walk",
+      "Gradually increase pace to comfortable jog",
+      "Maintain steady breathing rhythm",
+      "Land midfoot, roll through to toes",
+      "Keep arms at 90 degrees, swing naturally"
+    ],
+    "tips": [
+      "Start slow, build endurance",
+      "Stay hydrated"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/2803158/pexels-photo-2803158.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 95
+  },
+  {
+    "id": "car_jumping_jacks",
+    "title": "Jumping Jacks",
+    "category": "cardio",
+    "difficulty": "beginner",
+    "duration": 10,
+    "calories": 100,
+    "equipment": [],
+    "muscles": [
+      "Full Body",
+      "Shoulders",
+      "Calves"
+    ],
+    "instructions": [
+      "Stand with feet together, arms at sides",
+      "Jump feet apart while raising arms overhead",
+      "Jump feet back together, lower arms",
+      "Repeat at steady pace",
+      "Keep core engaged throughout"
+    ],
+    "tips": [
+      "Great warm-up exercise",
+      "Land softly"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162579/pexels-photo-4162579.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 90
+  },
+  {
+    "id": "car_burpees",
+    "title": "Burpees",
+    "category": "cardio",
+    "difficulty": "advanced",
+    "duration": 10,
+    "calories": 150,
+    "equipment": [],
+    "muscles": [
+      "Full Body",
+      "Chest",
+      "Legs",
+      "Core"
+    ],
+    "instructions": [
+      "Start standing, drop into squat, hands on floor",
+      "Jump feet back into plank position",
+      "Perform a push-up (optional)",
+      "Jump feet forward to hands",
+      "Explosively jump up with arms overhead"
+    ],
+    "tips": [
+      "Full body burner",
+      "Modify by stepping instead of jumping"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162582/pexels-photo-4162582.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 85
+  },
+  {
+    "id": "car_mountain_climbers",
+    "title": "Mountain Climbers",
+    "category": "cardio",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 120,
+    "equipment": [],
+    "muscles": [
+      "Core",
+      "Shoulders",
+      "Hip Flexors",
+      "Quads"
+    ],
+    "instructions": [
+      "Start in high plank position",
+      "Drive one knee toward chest",
+      "Quickly switch legs, like running in place",
+      "Keep hips down and core tight",
+      "Maintain steady, fast pace"
+    ],
+    "tips": [
+      "Great core and cardio combo",
+      "Keep shoulders over wrists"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162584/pexels-photo-4162584.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 88
+  },
+  {
+    "id": "car_high_knees",
+    "title": "High Knees",
+    "category": "cardio",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 100,
+    "equipment": [],
+    "muscles": [
+      "Hip Flexors",
+      "Core",
+      "Quads",
+      "Calves"
+    ],
+    "instructions": [
+      "Stand with feet hip-width apart",
+      "Run in place, driving knees up high",
+      "Aim for waist height with each knee",
+      "Pump arms opposite to legs",
+      "Keep core engaged, stay light on feet"
+    ],
+    "tips": [
+      "Great warm-up",
+      "Increase speed for more intensity"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162586/pexels-photo-4162586.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 84
+  },
+  {
+    "id": "car_jump_rope",
+    "title": "Jump Rope",
+    "category": "cardio",
+    "difficulty": "intermediate",
+    "duration": 15,
+    "calories": 200,
+    "equipment": [
+      "Jump rope"
+    ],
+    "muscles": [
+      "Calves",
+      "Shoulders",
+      "Core",
+      "Forearms"
+    ],
+    "instructions": [
+      "Hold rope handles at hip height",
+      "Swing rope overhead and jump as it passes under",
+      "Land softly on balls of feet",
+      "Keep elbows close to body",
+      "Use wrists to turn the rope"
+    ],
+    "tips": [
+      "Start slow, master timing first",
+      "Great fat burner"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162588/pexels-photo-4162588.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 82
+  },
+  {
+    "id": "car_box_jumps",
+    "title": "Box Jumps",
+    "category": "cardio",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 120,
+    "equipment": [
+      "Plyo box",
+      "Sturdy platform"
+    ],
+    "muscles": [
+      "Quads",
+      "Glutes",
+      "Calves",
+      "Core"
+    ],
+    "instructions": [
+      "Stand facing box, feet shoulder-width apart",
+      "Swing arms and jump explosively onto box",
+      "Land softly with both feet, knees slightly bent",
+      "Stand fully, then step back down",
+      "Reset and repeat"
+    ],
+    "tips": [
+      "Start with lower height",
+      "Step down to protect knees"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162590/pexels-photo-4162590.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 78
+  },
+  {
+    "id": "car_cycling",
+    "title": "Stationary Cycling",
+    "category": "cardio",
+    "difficulty": "beginner",
+    "duration": 30,
+    "calories": 250,
+    "equipment": [
+      "Stationary bike"
+    ],
+    "muscles": [
+      "Quads",
+      "Hamstrings",
+      "Calves",
+      "Glutes"
+    ],
+    "instructions": [
+      "Adjust seat to proper height",
+      "Start pedaling at moderate pace",
+      "Increase resistance for intensity",
+      "Maintain steady cadence",
+      "Keep core engaged, don't bounce"
+    ],
+    "tips": [
+      "Low impact option",
+      "Great for all fitness levels"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162592/pexels-photo-4162592.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 80
+  },
+  {
+    "id": "car_rowing",
+    "title": "Rowing Machine",
+    "category": "cardio",
+    "difficulty": "intermediate",
+    "duration": 20,
+    "calories": 220,
+    "equipment": [
+      "Rowing machine"
+    ],
+    "muscles": [
+      "Back",
+      "Arms",
+      "Legs",
+      "Core"
+    ],
+    "instructions": [
+      "Sit on rower, feet strapped in",
+      "Grab handle with overhand grip",
+      "Push with legs first, then pull with arms",
+      "Extend fully, then reverse the motion",
+      "Maintain smooth, continuous motion"
+    ],
+    "tips": [
+      "Full body workout",
+      "Focus on leg drive"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162594/pexels-photo-4162594.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 76
+  },
+  {
+    "id": "car_stair_climber",
+    "title": "Stair Climber",
+    "category": "cardio",
+    "difficulty": "intermediate",
+    "duration": 20,
+    "calories": 200,
+    "equipment": [
+      "Stair climber machine"
+    ],
+    "muscles": [
+      "Quads",
+      "Glutes",
+      "Calves",
+      "Core"
+    ],
+    "instructions": [
+      "Step onto machine, hold rails lightly",
+      "Begin stepping at moderate pace",
+      "Keep upright posture",
+      "Drive through heels",
+      "Avoid leaning on rails"
+    ],
+    "tips": [
+      "Great glute builder",
+      "Don't lean on handrails"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162596/pexels-photo-4162596.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 74
+  },
+  {
+    "id": "car_squat_jumps",
+    "title": "Squat Jumps",
+    "category": "cardio",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 100,
+    "equipment": [],
+    "muscles": [
+      "Quads",
+      "Glutes",
+      "Calves",
+      "Core"
+    ],
+    "instructions": [
+      "Start in squat position",
+      "Explosively jump as high as possible",
+      "Land softly back in squat",
+      "Immediately jump again",
+      "Keep core tight throughout"
+    ],
+    "tips": [
+      "Land softly",
+      "Great plyometric exercise"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164761/pexels-photo-4164761.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 80
+  },
+  {
+    "id": "car_butt_kicks",
+    "title": "Butt Kicks",
+    "category": "cardio",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 80,
+    "equipment": [],
+    "muscles": [
+      "Hamstrings",
+      "Quads",
+      "Calves"
+    ],
+    "instructions": [
+      "Stand with feet hip-width apart",
+      "Jog in place, kicking heels to glutes",
+      "Pump arms naturally",
+      "Stay on balls of feet",
+      "Maintain quick, steady pace"
+    ],
+    "tips": [
+      "Great dynamic stretch",
+      "Good warm-up exercise"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/2803158/pexels-photo-2803158.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 76
+  },
+  {
+    "id": "car_speed_skaters",
+    "title": "Speed Skaters",
+    "category": "cardio",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 120,
+    "equipment": [],
+    "muscles": [
+      "Glutes",
+      "Quads",
+      "Inner/Outer Thighs",
+      "Core"
+    ],
+    "instructions": [
+      "Start standing on one leg",
+      "Jump laterally to other foot",
+      "Swing arms across body",
+      "Land softly, immediately jump back",
+      "Continue alternating sides"
+    ],
+    "tips": [
+      "Great for lateral movement",
+      "Land softly each time"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162579/pexels-photo-4162579.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 78
+  },
+  {
+    "id": "car_tuck_jumps",
+    "title": "Tuck Jumps",
+    "category": "cardio",
+    "difficulty": "advanced",
+    "duration": 6,
+    "calories": 100,
+    "equipment": [],
+    "muscles": [
+      "Quads",
+      "Core",
+      "Hip Flexors",
+      "Calves"
+    ],
+    "instructions": [
+      "Stand with feet shoulder-width apart",
+      "Jump explosively, bringing knees to chest",
+      "Grab knees briefly at top",
+      "Land softly, knees slightly bent",
+      "Immediately jump again"
+    ],
+    "tips": [
+      "Very intense",
+      "Land softly to protect joints"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162590/pexels-photo-4162590.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 70
+  },
+  {
+    "id": "car_lateral_shuffle",
+    "title": "Lateral Shuffles",
+    "category": "cardio",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 80,
+    "equipment": [],
+    "muscles": [
+      "Quads",
+      "Glutes",
+      "Inner/Outer Thighs"
+    ],
+    "instructions": [
+      "Stand in athletic stance, knees bent",
+      "Shuffle quickly to one side",
+      "Stay low, don't cross feet",
+      "Shuffle back to other side",
+      "Continue back and forth"
+    ],
+    "tips": [
+      "Great agility drill",
+      "Stay low throughout"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/2803158/pexels-photo-2803158.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 72
+  },
+  {
+    "id": "cor_plank",
+    "title": "Plank Hold",
+    "category": "core",
+    "difficulty": "beginner",
+    "duration": 5,
+    "calories": 40,
+    "equipment": [],
+    "muscles": [
+      "Core",
+      "Shoulders",
+      "Glutes"
+    ],
+    "instructions": [
+      "Start in forearm plank position",
+      "Keep body in straight line from head to heels",
+      "Engage core, squeeze glutes",
+      "Don't let hips sag or pike up",
+      "Hold for desired time"
+    ],
+    "tips": [
+      "Quality over duration",
+      "Breathe steadily"
+    ],
+    "imageUrl": "https://media.giphy.com/media/ZcteOOkovIh9HaVFjT/giphy.gif",
+    "popularity": 95
+  },
+  {
+    "id": "cor_crunches",
+    "title": "Crunches",
+    "category": "core",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 50,
+    "equipment": [],
+    "muscles": [
+      "Upper Abs"
+    ],
+    "instructions": [
+      "Lie on back, knees bent, feet flat",
+      "Place hands behind head or across chest",
+      "Curl shoulders off floor toward knees",
+      "Focus on contracting abs",
+      "Lower with control"
+    ],
+    "tips": [
+      "Don't pull on neck",
+      "Exhale as you crunch up"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162623/pexels-photo-4162623.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 88
+  },
+  {
+    "id": "cor_russian_twist",
+    "title": "Russian Twists",
+    "category": "core",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 60,
+    "equipment": [
+      "Weight (optional)"
+    ],
+    "muscles": [
+      "Obliques",
+      "Core"
+    ],
+    "instructions": [
+      "Sit with knees bent, feet off floor (or on floor for easier)",
+      "Lean back slightly, keeping back straight",
+      "Rotate torso side to side",
+      "Touch floor on each side (or weight)",
+      "Keep core engaged throughout"
+    ],
+    "tips": [
+      "Keep chest up",
+      "Control the rotation"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162625/pexels-photo-4162625.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 85
+  },
+  {
+    "id": "cor_leg_raises",
+    "title": "Lying Leg Raises",
+    "category": "core",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 55,
+    "equipment": [],
+    "muscles": [
+      "Lower Abs",
+      "Hip Flexors"
+    ],
+    "instructions": [
+      "Lie flat on back, legs straight",
+      "Place hands under lower back for support",
+      "Raise legs together until perpendicular to floor",
+      "Lower legs slowly without touching floor",
+      "Repeat"
+    ],
+    "tips": [
+      "Keep lower back pressed down",
+      "Control the descent"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162627/pexels-photo-4162627.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 82
+  },
+  {
+    "id": "cor_bicycle_crunch",
+    "title": "Bicycle Crunches",
+    "category": "core",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 65,
+    "equipment": [],
+    "muscles": [
+      "Obliques",
+      "Upper Abs",
+      "Lower Abs"
+    ],
+    "instructions": [
+      "Lie on back, hands behind head",
+      "Lift shoulders off floor",
+      "Bring one knee to chest while extending other leg",
+      "Rotate elbow toward bent knee",
+      "Alternate sides in cycling motion"
+    ],
+    "tips": [
+      "Don't pull on neck",
+      "Touch elbow to opposite knee"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162629/pexels-photo-4162629.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 86
+  },
+  {
+    "id": "cor_dead_bug",
+    "title": "Dead Bug",
+    "category": "core",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 45,
+    "equipment": [],
+    "muscles": [
+      "Core",
+      "Hip Flexors"
+    ],
+    "instructions": [
+      "Lie on back, arms extended toward ceiling",
+      "Lift legs with knees bent at 90 degrees",
+      "Lower opposite arm and leg toward floor",
+      "Keep lower back pressed into floor",
+      "Return and alternate sides"
+    ],
+    "tips": [
+      "Great for core stability",
+      "Move slowly and controlled"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162631/pexels-photo-4162631.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 78
+  },
+  {
+    "id": "cor_side_plank",
+    "title": "Side Plank",
+    "category": "core",
+    "difficulty": "intermediate",
+    "duration": 5,
+    "calories": 35,
+    "equipment": [],
+    "muscles": [
+      "Obliques",
+      "Core",
+      "Shoulders"
+    ],
+    "instructions": [
+      "Lie on side, forearm on floor under shoulder",
+      "Stack feet or stagger them",
+      "Lift hips to form straight line",
+      "Hold position, keep hips up",
+      "Switch sides"
+    ],
+    "tips": [
+      "Don't let hips drop",
+      "Keep body in straight line"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162633/pexels-photo-4162633.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 80
+  },
+  {
+    "id": "cor_v_ups",
+    "title": "V-Ups",
+    "category": "core",
+    "difficulty": "advanced",
+    "duration": 8,
+    "calories": 70,
+    "equipment": [],
+    "muscles": [
+      "Upper Abs",
+      "Lower Abs",
+      "Hip Flexors"
+    ],
+    "instructions": [
+      "Lie flat on back, arms overhead",
+      "Simultaneously lift legs and torso",
+      "Reach hands toward toes at top",
+      "Form V-shape with body",
+      "Lower with control"
+    ],
+    "tips": [
+      "Keep legs straight",
+      "Modify by bending knees"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162635/pexels-photo-4162635.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 75
+  },
+  {
+    "id": "cor_hollow_hold",
+    "title": "Hollow Body Hold",
+    "category": "core",
+    "difficulty": "intermediate",
+    "duration": 5,
+    "calories": 40,
+    "equipment": [],
+    "muscles": [
+      "Core",
+      "Hip Flexors"
+    ],
+    "instructions": [
+      "Lie on back, arms overhead",
+      "Press lower back into floor",
+      "Lift shoulders and legs slightly off floor",
+      "Keep body in banana shape",
+      "Hold position"
+    ],
+    "tips": [
+      "Lower back must stay flat",
+      "Great gymnastics exercise"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162637/pexels-photo-4162637.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 72
+  },
+  {
+    "id": "cor_superman",
+    "title": "Superman Hold",
+    "category": "core",
+    "difficulty": "beginner",
+    "duration": 5,
+    "calories": 35,
+    "equipment": [],
+    "muscles": [
+      "Lower Back",
+      "Glutes",
+      "Upper Back"
+    ],
+    "instructions": [
+      "Lie face down, arms extended overhead",
+      "Simultaneously lift arms, chest, and legs",
+      "Squeeze lower back and glutes",
+      "Hold at top position",
+      "Lower with control"
+    ],
+    "tips": [
+      "Don't hyperextend neck",
+      "Great for back strength"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162639/pexels-photo-4162639.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 78
+  },
+  {
+    "id": "cor_flutter_kicks",
+    "title": "Flutter Kicks",
+    "category": "core",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 55,
+    "equipment": [],
+    "muscles": [
+      "Lower Abs",
+      "Hip Flexors"
+    ],
+    "instructions": [
+      "Lie on back, legs extended",
+      "Place hands under lower back",
+      "Lift legs slightly off floor",
+      "Alternately kick legs up and down",
+      "Keep core engaged, back flat"
+    ],
+    "tips": [
+      "Small, controlled movements",
+      "Keep lower back down"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162627/pexels-photo-4162627.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 76
+  },
+  {
+    "id": "cor_mountain_climber_twist",
+    "title": "Cross-Body Mountain Climbers",
+    "category": "core",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 80,
+    "equipment": [],
+    "muscles": [
+      "Obliques",
+      "Core",
+      "Shoulders"
+    ],
+    "instructions": [
+      "Start in high plank position",
+      "Drive knee toward opposite elbow",
+      "Return and switch legs",
+      "Maintain quick pace",
+      "Keep hips level"
+    ],
+    "tips": [
+      "Great for obliques",
+      "Don't let hips rotate too much"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162584/pexels-photo-4162584.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 74
+  },
+  {
+    "id": "cor_plank_shoulder_tap",
+    "title": "Plank Shoulder Taps",
+    "category": "core",
+    "difficulty": "intermediate",
+    "duration": 6,
+    "calories": 50,
+    "equipment": [],
+    "muscles": [
+      "Core",
+      "Shoulders",
+      "Chest"
+    ],
+    "instructions": [
+      "Start in high plank position",
+      "Tap right hand to left shoulder",
+      "Return hand to floor",
+      "Tap left hand to right shoulder",
+      "Keep hips stable, don't rock"
+    ],
+    "tips": [
+      "Widen feet for more stability",
+      "Anti-rotation exercise"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162621/pexels-photo-4162621.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 78
+  },
+  {
+    "id": "cor_reverse_crunch",
+    "title": "Reverse Crunches",
+    "category": "core",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 55,
+    "equipment": [],
+    "muscles": [
+      "Lower Abs"
+    ],
+    "instructions": [
+      "Lie on back, knees bent, feet off floor",
+      "Place hands at sides or under hips",
+      "Curl knees toward chest, lifting hips",
+      "Squeeze abs at top",
+      "Lower with control"
+    ],
+    "tips": [
+      "Focus on lower abs",
+      "Use momentum as little as possible"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162623/pexels-photo-4162623.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 80
+  },
+  {
+    "id": "cor_bird_dog",
+    "title": "Bird Dog",
+    "category": "core",
+    "difficulty": "beginner",
+    "duration": 6,
+    "calories": 35,
+    "equipment": [],
+    "muscles": [
+      "Core",
+      "Lower Back",
+      "Glutes"
+    ],
+    "instructions": [
+      "Start on all fours, hands under shoulders",
+      "Extend right arm forward, left leg back",
+      "Keep spine neutral, core engaged",
+      "Hold briefly, return to start",
+      "Alternate sides"
+    ],
+    "tips": [
+      "Great for stability",
+      "Don't arch back"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162631/pexels-photo-4162631.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 75
+  },
+  {
+    "id": "cor_cable_crunch",
+    "title": "Cable Crunch",
+    "category": "core",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 70,
+    "equipment": [
+      "Cable Machine",
+      "Rope Attachment"
+    ],
+    "muscles": [
+      "Abs",
+      "Obliques"
+    ],
+    "instructions": [
+      "Attach rope to high pulley, kneel facing the machine",
+      "Hold rope on either side of your head, hips back",
+      "Crunch down by contracting abs â€” bring elbows toward thighs",
+      "Keep hips stationary; the movement comes from your spine flexing",
+      "Return slowly under control to start"
+    ],
+    "tips": [
+      "Don't pull with arms — abs do the work",
+      "Round your back, not bow at hips",
+      "Keep tension on the cable throughout"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162623/pexels-photo-4162623.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 78
+  },
+  {
+    "id": "cor_hanging_leg_raise",
+    "title": "Hanging Leg Raise",
+    "category": "core",
+    "difficulty": "advanced",
+    "duration": 8,
+    "calories": 60,
+    "equipment": [
+      "Pull-up Bar"
+    ],
+    "muscles": [
+      "Lower Abs",
+      "Core"
+    ],
+    "instructions": [
+      "Hang from bar with overhand grip",
+      "Keep legs straight, raise them to 90° or higher",
+      "Pause briefly at the top",
+      "Lower slowly without swinging"
+    ],
+    "tips": [
+      "No momentum — strict tempo",
+      "Bend knees if too hard"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162627/pexels-photo-4162627.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 75
+  },
+  {
+    "id": "cor_ab_rollout",
+    "title": "Ab Wheel Rollout",
+    "category": "core",
+    "difficulty": "advanced",
+    "duration": 8,
+    "calories": 70,
+    "equipment": [
+      "Ab Wheel"
+    ],
+    "muscles": [
+      "Core",
+      "Abs",
+      "Lats"
+    ],
+    "instructions": [
+      "Kneel on floor, grip ab wheel with both hands",
+      "Roll forward, extending body until almost flat",
+      "Brace core hard at full extension",
+      "Roll back to start"
+    ],
+    "tips": [
+      "Don't let lower back sag",
+      "Start with short range until strong enough"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162621/pexels-photo-4162621.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 70
+  },
+  {
+    "id": "cor_toe_touches",
+    "title": "Toe Touches",
+    "category": "core",
+    "difficulty": "beginner",
+    "duration": 6,
+    "calories": 50,
+    "equipment": [],
+    "muscles": [
+      "Upper Abs",
+      "Core"
+    ],
+    "instructions": [
+      "Lie on back, legs straight up toward ceiling",
+      "Reach hands toward toes, lifting shoulders off floor",
+      "Squeeze abs at top",
+      "Lower slowly to start"
+    ],
+    "tips": [
+      "Use abs to lift, not neck",
+      "Slow tempo beats fast reps"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162623/pexels-photo-4162623.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 65
+  },
+  {
+    "id": "flex_downward_dog",
+    "title": "Downward Facing Dog",
+    "category": "flexibility",
+    "difficulty": "beginner",
+    "duration": 5,
+    "calories": 25,
+    "equipment": [
+      "Yoga mat"
+    ],
+    "muscles": [
+      "Hamstrings",
+      "Calves",
+      "Shoulders",
+      "Back"
+    ],
+    "instructions": [
+      "Start on all fours",
+      "Lift hips up and back, forming inverted V",
+      "Press hands into floor, spread fingers",
+      "Straighten legs as much as comfortable",
+      "Let head hang between arms"
+    ],
+    "tips": [
+      "Pedal feet to deepen stretch",
+      "Okay to bend knees"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 90
+  },
+  {
+    "id": "flex_cat_cow",
+    "title": "Cat-Cow Stretch",
+    "category": "flexibility",
+    "difficulty": "beginner",
+    "duration": 5,
+    "calories": 20,
+    "equipment": [
+      "Yoga mat"
+    ],
+    "muscles": [
+      "Spine",
+      "Core",
+      "Neck"
+    ],
+    "instructions": [
+      "Start on all fours, wrists under shoulders",
+      "Inhale: Drop belly, lift chest and tailbone (Cow)",
+      "Exhale: Round spine, tuck chin and tailbone (Cat)",
+      "Flow between positions with breath",
+      "Move slowly and controlled"
+    ],
+    "tips": [
+      "Great spine mobility",
+      "Coordinate with breath"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4056535/pexels-photo-4056535.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 88
+  },
+  {
+    "id": "flex_childs_pose",
+    "title": "Child's Pose",
+    "category": "flexibility",
+    "difficulty": "beginner",
+    "duration": 5,
+    "calories": 15,
+    "equipment": [
+      "Yoga mat"
+    ],
+    "muscles": [
+      "Lower Back",
+      "Hips",
+      "Thighs"
+    ],
+    "instructions": [
+      "Kneel on floor, big toes touching",
+      "Sit back on heels",
+      "Fold forward, arms extended or at sides",
+      "Rest forehead on floor",
+      "Breathe deeply and relax"
+    ],
+    "tips": [
+      "Great rest pose",
+      "Widen knees for deeper stretch"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4056539/pexels-photo-4056539.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 92
+  },
+  {
+    "id": "flex_hip_flexor",
+    "title": "Hip Flexor Stretch",
+    "category": "flexibility",
+    "difficulty": "beginner",
+    "duration": 5,
+    "calories": 20,
+    "equipment": [],
+    "muscles": [
+      "Hip Flexors",
+      "Quads"
+    ],
+    "instructions": [
+      "Kneel on one knee, other foot forward",
+      "Keep torso upright",
+      "Push hips forward gently",
+      "Feel stretch in front of hip",
+      "Hold, then switch sides"
+    ],
+    "tips": [
+      "Don't arch back too much",
+      "Squeeze glutes for deeper stretch"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4056541/pexels-photo-4056541.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 85
+  },
+  {
+    "id": "flex_hamstring",
+    "title": "Standing Hamstring Stretch",
+    "category": "flexibility",
+    "difficulty": "beginner",
+    "duration": 5,
+    "calories": 20,
+    "equipment": [],
+    "muscles": [
+      "Hamstrings",
+      "Lower Back"
+    ],
+    "instructions": [
+      "Stand with feet hip-width apart",
+      "Hinge at hips, reach toward toes",
+      "Keep slight bend in knees if needed",
+      "Let head hang, relax neck",
+      "Hold and breathe deeply"
+    ],
+    "tips": [
+      "Don't bounce",
+      "Bend knees if hamstrings are tight"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4056543/pexels-photo-4056543.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 86
+  },
+  {
+    "id": "flex_pigeon",
+    "title": "Pigeon Pose",
+    "category": "flexibility",
+    "difficulty": "intermediate",
+    "duration": 5,
+    "calories": 20,
+    "equipment": [
+      "Yoga mat"
+    ],
+    "muscles": [
+      "Glutes",
+      "Hip Flexors",
+      "Piriformis"
+    ],
+    "instructions": [
+      "From all fours, bring one knee behind same wrist",
+      "Extend other leg straight back",
+      "Square hips toward front",
+      "Fold forward over front leg",
+      "Hold, then switch sides"
+    ],
+    "tips": [
+      "Use pillow under hip if needed",
+      "Great hip opener"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4056545/pexels-photo-4056545.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 82
+  },
+  {
+    "id": "flex_spinal_twist",
+    "title": "Seated Spinal Twist",
+    "category": "flexibility",
+    "difficulty": "beginner",
+    "duration": 5,
+    "calories": 20,
+    "equipment": [
+      "Yoga mat"
+    ],
+    "muscles": [
+      "Spine",
+      "Obliques",
+      "Glutes"
+    ],
+    "instructions": [
+      "Sit with legs extended",
+      "Bend one knee, place foot outside opposite thigh",
+      "Twist toward bent knee",
+      "Place opposite elbow outside bent knee",
+      "Hold, then switch sides"
+    ],
+    "tips": [
+      "Keep spine tall",
+      "Twist from mid-back"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4056547/pexels-photo-4056547.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 80
+  },
+  {
+    "id": "flex_shoulder_stretch",
+    "title": "Cross-Body Shoulder Stretch",
+    "category": "flexibility",
+    "difficulty": "beginner",
+    "duration": 3,
+    "calories": 10,
+    "equipment": [],
+    "muscles": [
+      "Shoulders",
+      "Upper Back"
+    ],
+    "instructions": [
+      "Bring one arm across chest",
+      "Use other hand to gently pull arm closer",
+      "Keep shoulder down, don't shrug",
+      "Hold for 20-30 seconds",
+      "Switch arms"
+    ],
+    "tips": [
+      "Don't pull too hard",
+      "Keep breathing"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4056549/pexels-photo-4056549.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 85
+  },
+  {
+    "id": "flex_cobra",
+    "title": "Cobra Stretch",
+    "category": "flexibility",
+    "difficulty": "beginner",
+    "duration": 5,
+    "calories": 20,
+    "equipment": [
+      "Yoga mat"
+    ],
+    "muscles": [
+      "Abs",
+      "Chest",
+      "Spine"
+    ],
+    "instructions": [
+      "Lie face down, hands under shoulders",
+      "Press hands into floor, lift chest",
+      "Keep hips and legs on floor",
+      "Straighten arms as comfortable",
+      "Hold and breathe"
+    ],
+    "tips": [
+      "Don't strain neck",
+      "Keep shoulders down"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4056551/pexels-photo-4056551.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 84
+  },
+  {
+    "id": "flex_butterfly",
+    "title": "Butterfly Stretch",
+    "category": "flexibility",
+    "difficulty": "beginner",
+    "duration": 5,
+    "calories": 20,
+    "equipment": [
+      "Yoga mat"
+    ],
+    "muscles": [
+      "Inner Thighs",
+      "Hips",
+      "Groin"
+    ],
+    "instructions": [
+      "Sit with soles of feet together",
+      "Let knees fall out to sides",
+      "Hold feet with hands",
+      "Gently press knees toward floor",
+      "Keep spine tall"
+    ],
+    "tips": [
+      "Don't force knees down",
+      "Use elbows to press if needed"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4056553/pexels-photo-4056553.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 82
+  },
+  {
+    "id": "flex_neck_stretch",
+    "title": "Neck Stretches",
+    "category": "flexibility",
+    "difficulty": "beginner",
+    "duration": 3,
+    "calories": 10,
+    "equipment": [],
+    "muscles": [
+      "Neck",
+      "Upper Trapezius"
+    ],
+    "instructions": [
+      "Sit or stand tall",
+      "Tilt ear toward shoulder",
+      "Use hand to gently increase stretch",
+      "Hold 20-30 seconds",
+      "Repeat on other side"
+    ],
+    "tips": [
+      "Never force",
+      "Keep shoulders relaxed"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4056555/pexels-photo-4056555.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 80
+  },
+  {
+    "id": "flex_quad_stretch",
+    "title": "Standing Quad Stretch",
+    "category": "flexibility",
+    "difficulty": "beginner",
+    "duration": 3,
+    "calories": 15,
+    "equipment": [],
+    "muscles": [
+      "Quadriceps",
+      "Hip Flexors"
+    ],
+    "instructions": [
+      "Stand on one leg (hold wall if needed)",
+      "Grab opposite ankle behind you",
+      "Pull heel toward glutes",
+      "Keep knees together",
+      "Hold, then switch legs"
+    ],
+    "tips": [
+      "Keep standing leg slightly bent",
+      "Don't arch back"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4056557/pexels-photo-4056557.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 88
+  },
+  {
+    "id": "flex_figure_four",
+    "title": "Figure Four Stretch",
+    "category": "flexibility",
+    "difficulty": "beginner",
+    "duration": 5,
+    "calories": 20,
+    "equipment": [
+      "Yoga mat"
+    ],
+    "muscles": [
+      "Glutes",
+      "Piriformis",
+      "Outer Hip"
+    ],
+    "instructions": [
+      "Lie on back, knees bent",
+      "Cross one ankle over opposite knee",
+      "Pull uncrossed leg toward chest",
+      "Feel stretch in outer hip of crossed leg",
+      "Hold, then switch"
+    ],
+    "tips": [
+      "Great for tight hips",
+      "Keep head on floor"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4056545/pexels-photo-4056545.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 84
+  },
+  {
+    "id": "flex_chest_opener",
+    "title": "Chest Opener Stretch",
+    "category": "flexibility",
+    "difficulty": "beginner",
+    "duration": 3,
+    "calories": 15,
+    "equipment": [],
+    "muscles": [
+      "Chest",
+      "Shoulders",
+      "Biceps"
+    ],
+    "instructions": [
+      "Stand in doorway or corner",
+      "Place forearms on walls/door frame",
+      "Lean forward through opening",
+      "Feel stretch across chest",
+      "Hold and breathe"
+    ],
+    "tips": [
+      "Great for desk workers",
+      "Keep core engaged"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4056549/pexels-photo-4056549.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 78
+  },
+  {
+    "id": "flex_tricep_stretch",
+    "title": "Overhead Tricep Stretch",
+    "category": "flexibility",
+    "difficulty": "beginner",
+    "duration": 3,
+    "calories": 10,
+    "equipment": [],
+    "muscles": [
+      "Triceps",
+      "Shoulders"
+    ],
+    "instructions": [
+      "Raise one arm overhead",
+      "Bend elbow, hand reaching toward opposite shoulder blade",
+      "Use other hand to gently push elbow",
+      "Hold 20-30 seconds",
+      "Switch arms"
+    ],
+    "tips": [
+      "Keep shoulder down",
+      "Don't pull too hard"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4056549/pexels-photo-4056549.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 76
+  },
+  {
+    "id": "hiit_tabata",
+    "title": "Tabata Intervals",
+    "category": "hiit",
+    "difficulty": "advanced",
+    "duration": 4,
+    "calories": 120,
+    "equipment": [],
+    "muscles": [
+      "Full Body"
+    ],
+    "instructions": [
+      "Choose an exercise (burpees, squats, etc.)",
+      "Work at maximum intensity for 20 seconds",
+      "Rest for 10 seconds",
+      "Repeat for 8 rounds (4 minutes total)",
+      "Rest 1 minute between different exercises"
+    ],
+    "tips": [
+      "Go all out during work intervals",
+      "True HIIT is very intense"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162582/pexels-photo-4162582.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 88
+  },
+  {
+    "id": "hiit_amrap",
+    "title": "AMRAP Circuit",
+    "category": "hiit",
+    "difficulty": "intermediate",
+    "duration": 15,
+    "calories": 200,
+    "equipment": [],
+    "muscles": [
+      "Full Body"
+    ],
+    "instructions": [
+      "Set timer for 15-20 minutes",
+      "Perform circuit: 10 squats, 10 pushups, 10 situps",
+      "Complete as many rounds as possible (AMRAP)",
+      "Rest only when needed",
+      "Track your rounds for progress"
+    ],
+    "tips": [
+      "Pace yourself",
+      "Quality over speed"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162584/pexels-photo-4162584.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 82
+  },
+  {
+    "id": "hiit_emom",
+    "title": "EMOM Workout",
+    "category": "hiit",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 150,
+    "equipment": [],
+    "muscles": [
+      "Full Body"
+    ],
+    "instructions": [
+      "Set timer for 10 minutes",
+      "At the start of Every Minute On the Minute",
+      "Perform set number of reps (e.g., 10 burpees)",
+      "Rest remainder of the minute",
+      "Repeat each minute"
+    ],
+    "tips": [
+      "Choose reps that allow 15-20 sec rest",
+      "Consistent pace is key"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162579/pexels-photo-4162579.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 80
+  },
+  {
+    "id": "hiit_30_30",
+    "title": "30-30 Intervals",
+    "category": "hiit",
+    "difficulty": "intermediate",
+    "duration": 12,
+    "calories": 180,
+    "equipment": [],
+    "muscles": [
+      "Full Body"
+    ],
+    "instructions": [
+      "Work hard for 30 seconds",
+      "Rest for 30 seconds",
+      "Repeat for 12-15 rounds",
+      "Use any cardio exercise",
+      "Maintain high intensity during work"
+    ],
+    "tips": [
+      "Great for beginners to HIIT",
+      "Build up rounds over time"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162586/pexels-photo-4162586.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 78
+  },
+  {
+    "id": "hiit_ladder",
+    "title": "Rep Ladder",
+    "category": "hiit",
+    "difficulty": "advanced",
+    "duration": 15,
+    "calories": 200,
+    "equipment": [],
+    "muscles": [
+      "Full Body"
+    ],
+    "instructions": [
+      "Start with 1 rep of each exercise",
+      "Next round do 2 reps, then 3, etc.",
+      "Go up to 10 reps then back down",
+      "Exercises: burpees, squats, pushups",
+      "Minimal rest between exercises"
+    ],
+    "tips": [
+      "Very challenging",
+      "Scale reps to fitness level"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162582/pexels-photo-4162582.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 75
+  },
+  {
+    "id": "hiit_sprint_intervals",
+    "title": "Sprint Intervals",
+    "category": "hiit",
+    "difficulty": "advanced",
+    "duration": 20,
+    "calories": 250,
+    "equipment": [],
+    "muscles": [
+      "Legs",
+      "Core",
+      "Cardiovascular"
+    ],
+    "instructions": [
+      "Warm up with 5 min light jog",
+      "Sprint at 90-100% effort for 30 seconds",
+      "Walk or slow jog for 60-90 seconds",
+      "Repeat 8-10 times",
+      "Cool down with 5 min walk"
+    ],
+    "tips": [
+      "Proper warm-up essential",
+      "True sprints are very hard"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/2803158/pexels-photo-2803158.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 85
+  },
+  {
+    "id": "hiit_battle_ropes",
+    "title": "Battle Rope HIIT",
+    "category": "hiit",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 150,
+    "equipment": [
+      "Battle ropes"
+    ],
+    "muscles": [
+      "Arms",
+      "Shoulders",
+      "Core",
+      "Cardio"
+    ],
+    "instructions": [
+      "Hold rope ends in each hand",
+      "Alternate arms in wave motion",
+      "Work for 30 seconds, rest 30 seconds",
+      "Variations: slams, circles, side-to-side",
+      "Complete 10-15 rounds"
+    ],
+    "tips": [
+      "Keep core engaged",
+      "Use whole body not just arms"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164515/pexels-photo-4164515.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 76
+  },
+  {
+    "id": "hiit_kettlebell",
+    "title": "Kettlebell HIIT",
+    "category": "hiit",
+    "difficulty": "intermediate",
+    "duration": 15,
+    "calories": 200,
+    "equipment": [
+      "Kettlebell"
+    ],
+    "muscles": [
+      "Full Body"
+    ],
+    "instructions": [
+      "Circuit: swings, goblet squats, clean & press",
+      "40 seconds work, 20 seconds rest",
+      "Complete 3-4 rounds of circuit",
+      "1 minute rest between rounds",
+      "Choose appropriate weight"
+    ],
+    "tips": [
+      "Focus on form",
+      "Kettlebells are very effective"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164512/pexels-photo-4164512.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 80
+  },
+  {
+    "id": "hiit_cardio_core",
+    "title": "Cardio Core HIIT",
+    "category": "hiit",
+    "difficulty": "intermediate",
+    "duration": 12,
+    "calories": 160,
+    "equipment": [],
+    "muscles": [
+      "Core",
+      "Cardiovascular"
+    ],
+    "instructions": [
+      "Mountain climbers - 30 sec",
+      "Plank hold - 30 sec",
+      "Bicycle crunches - 30 sec",
+      "Rest - 30 sec",
+      "Repeat 4-5 rounds"
+    ],
+    "tips": [
+      "Great core and cardio combo",
+      "Keep transitions quick"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162584/pexels-photo-4162584.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 82
+  },
+  {
+    "id": "hiit_death_by",
+    "title": "Death By Burpees",
+    "category": "hiit",
+    "difficulty": "advanced",
+    "duration": 15,
+    "calories": 220,
+    "equipment": [],
+    "muscles": [
+      "Full Body"
+    ],
+    "instructions": [
+      "Minute 1: 1 burpee",
+      "Minute 2: 2 burpees",
+      "Minute 3: 3 burpees, etc.",
+      "Continue until you can't complete reps in minute",
+      "Track how far you get"
+    ],
+    "tips": [
+      "Very challenging benchmark",
+      "Can use any exercise"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162582/pexels-photo-4162582.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 72
+  },
+  {
+    "id": "plyo_depth_jump",
+    "title": "Depth Jumps",
+    "category": "plyometric",
+    "difficulty": "advanced",
+    "duration": 8,
+    "calories": 100,
+    "equipment": [
+      "Box or platform"
+    ],
+    "muscles": [
+      "Quads",
+      "Glutes",
+      "Calves"
+    ],
+    "instructions": [
+      "Stand on box, step off (don't jump)",
+      "Land on both feet",
+      "Immediately jump as high as possible",
+      "Land softly and reset",
+      "Start with low box height"
+    ],
+    "tips": [
+      "Advanced exercise",
+      "Focus on reactive jump"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162590/pexels-photo-4162590.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 70
+  },
+  {
+    "id": "plyo_broad_jump",
+    "title": "Broad Jumps",
+    "category": "plyometric",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 90,
+    "equipment": [],
+    "muscles": [
+      "Quads",
+      "Glutes",
+      "Core"
+    ],
+    "instructions": [
+      "Stand with feet shoulder-width",
+      "Swing arms back, bend knees",
+      "Explosively jump forward",
+      "Land softly on both feet",
+      "Reset and repeat"
+    ],
+    "tips": [
+      "Use arm swing for power",
+      "Stick the landing"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162590/pexels-photo-4162590.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 75
+  },
+  {
+    "id": "plyo_single_leg_hop",
+    "title": "Single Leg Hops",
+    "category": "plyometric",
+    "difficulty": "intermediate",
+    "duration": 6,
+    "calories": 70,
+    "equipment": [],
+    "muscles": [
+      "Quads",
+      "Calves",
+      "Balance"
+    ],
+    "instructions": [
+      "Stand on one leg",
+      "Hop forward, landing on same leg",
+      "Immediately hop again",
+      "Complete reps, switch legs",
+      "Focus on controlled landings"
+    ],
+    "tips": [
+      "Great for single leg power",
+      "Start with small hops"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162438/pexels-photo-4162438.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 72
+  },
+  {
+    "id": "plyo_lateral_bounds",
+    "title": "Lateral Bounds",
+    "category": "plyometric",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 85,
+    "equipment": [],
+    "muscles": [
+      "Glutes",
+      "Quads",
+      "Adductors"
+    ],
+    "instructions": [
+      "Start on one leg",
+      "Jump laterally to opposite leg",
+      "Land softly, absorb impact",
+      "Immediately bound back",
+      "Continue alternating"
+    ],
+    "tips": [
+      "Like speed skaters but bigger",
+      "Builds lateral power"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162579/pexels-photo-4162579.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 74
+  },
+  {
+    "id": "plyo_clap_pushups",
+    "title": "Clap Push-ups",
+    "category": "plyometric",
+    "difficulty": "advanced",
+    "duration": 6,
+    "calories": 80,
+    "equipment": [],
+    "muscles": [
+      "Chest",
+      "Triceps",
+      "Shoulders"
+    ],
+    "instructions": [
+      "Start in push-up position",
+      "Lower chest to floor",
+      "Push up explosively",
+      "Clap hands in mid-air",
+      "Land and immediately lower"
+    ],
+    "tips": [
+      "Very advanced",
+      "Master regular pushups first"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162485/pexels-photo-4162485.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 68
+  },
+  {
+    "id": "plyo_lunge_jumps",
+    "title": "Jump Lunges",
+    "category": "plyometric",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 100,
+    "equipment": [],
+    "muscles": [
+      "Quads",
+      "Glutes",
+      "Calves"
+    ],
+    "instructions": [
+      "Start in lunge position",
+      "Jump explosively upward",
+      "Switch legs in mid-air",
+      "Land in opposite lunge",
+      "Continue alternating"
+    ],
+    "tips": [
+      "High impact on knees",
+      "Land softly"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162438/pexels-photo-4162438.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 78
+  },
+  {
+    "id": "plyo_power_skips",
+    "title": "Power Skips",
+    "category": "plyometric",
+    "difficulty": "beginner",
+    "duration": 8,
+    "calories": 80,
+    "equipment": [],
+    "muscles": [
+      "Hip Flexors",
+      "Calves",
+      "Core"
+    ],
+    "instructions": [
+      "Skip forward driving knee high",
+      "Use arm drive for height",
+      "Focus on vertical height",
+      "Alternate legs like skipping",
+      "Cover ground with each skip"
+    ],
+    "tips": [
+      "Great warm-up plyo",
+      "Emphasize height"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/2803158/pexels-photo-2803158.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 75
+  },
+  {
+    "id": "plyo_ankle_hops",
+    "title": "Ankle Hops",
+    "category": "plyometric",
+    "difficulty": "beginner",
+    "duration": 5,
+    "calories": 50,
+    "equipment": [],
+    "muscles": [
+      "Calves",
+      "Ankles"
+    ],
+    "instructions": [
+      "Stand with feet together",
+      "Hop using only ankle flexion",
+      "Keep legs straight, minimize knee bend",
+      "Quick, small bounces",
+      "Stay on balls of feet"
+    ],
+    "tips": [
+      "Builds calf reactivity",
+      "Great for runners"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162445/pexels-photo-4162445.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 70
+  },
+  {
+    "id": "bal_single_leg_stand",
+    "title": "Single Leg Stand",
+    "category": "balance",
+    "difficulty": "beginner",
+    "duration": 5,
+    "calories": 20,
+    "equipment": [],
+    "muscles": [
+      "Core",
+      "Ankles",
+      "Stabilizers"
+    ],
+    "instructions": [
+      "Stand on one foot",
+      "Keep standing leg slightly bent",
+      "Hold for 30-60 seconds",
+      "Arms out for balance if needed",
+      "Switch legs"
+    ],
+    "tips": [
+      "Close eyes for extra challenge",
+      "Focus on fixed point"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162438/pexels-photo-4162438.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 78
+  },
+  {
+    "id": "bal_bosu_squat",
+    "title": "BOSU Ball Squats",
+    "category": "balance",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 60,
+    "equipment": [
+      "BOSU ball"
+    ],
+    "muscles": [
+      "Quads",
+      "Core",
+      "Stabilizers"
+    ],
+    "instructions": [
+      "Stand on BOSU ball dome side up",
+      "Find your balance",
+      "Perform squat while balancing",
+      "Keep core tight throughout",
+      "Return to standing"
+    ],
+    "tips": [
+      "Start with partial squats",
+      "Hold wall if needed"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164761/pexels-photo-4164761.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 72
+  },
+  {
+    "id": "bal_tandem_stance",
+    "title": "Tandem Stance",
+    "category": "balance",
+    "difficulty": "beginner",
+    "duration": 4,
+    "calories": 15,
+    "equipment": [],
+    "muscles": [
+      "Core",
+      "Ankles"
+    ],
+    "instructions": [
+      "Place one foot directly in front of other",
+      "Heel to toe position",
+      "Hold for 30 seconds",
+      "Arms at sides or out for balance",
+      "Switch foot positions"
+    ],
+    "tips": [
+      "Like walking tightrope",
+      "Good for vestibular system"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162438/pexels-photo-4162438.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 70
+  },
+  {
+    "id": "bal_single_leg_deadlift",
+    "title": "Single Leg Deadlift",
+    "category": "balance",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 60,
+    "equipment": [],
+    "muscles": [
+      "Hamstrings",
+      "Glutes",
+      "Core"
+    ],
+    "instructions": [
+      "Stand on one leg",
+      "Hinge at hip, reaching toward floor",
+      "Extend free leg behind you",
+      "Keep back straight",
+      "Return to standing"
+    ],
+    "tips": [
+      "Great balance and strength",
+      "Use weight for more challenge"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164512/pexels-photo-4164512.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 80
+  },
+  {
+    "id": "bal_warrior_3",
+    "title": "Warrior III Pose",
+    "category": "balance",
+    "difficulty": "intermediate",
+    "duration": 5,
+    "calories": 25,
+    "equipment": [],
+    "muscles": [
+      "Core",
+      "Glutes",
+      "Hamstrings"
+    ],
+    "instructions": [
+      "Stand on one leg",
+      "Lean forward, extending arms ahead",
+      "Lift back leg parallel to floor",
+      "Body forms T-shape",
+      "Hold, then switch sides"
+    ],
+    "tips": [
+      "Keep hips square",
+      "Gaze at floor for balance"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 75
+  },
+  {
+    "id": "bal_stability_ball_plank",
+    "title": "Stability Ball Plank",
+    "category": "balance",
+    "difficulty": "intermediate",
+    "duration": 5,
+    "calories": 35,
+    "equipment": [
+      "Stability ball"
+    ],
+    "muscles": [
+      "Core",
+      "Shoulders",
+      "Stabilizers"
+    ],
+    "instructions": [
+      "Place forearms on stability ball",
+      "Walk feet back to plank position",
+      "Keep body in straight line",
+      "Engage core to minimize ball movement",
+      "Hold for time"
+    ],
+    "tips": [
+      "Very challenging core work",
+      "Start with shorter holds"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162621/pexels-photo-4162621.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 73
+  },
+  {
+    "id": "bal_tree_pose",
+    "title": "Tree Pose",
+    "category": "balance",
+    "difficulty": "beginner",
+    "duration": 4,
+    "calories": 20,
+    "equipment": [],
+    "muscles": [
+      "Core",
+      "Hips",
+      "Ankles"
+    ],
+    "instructions": [
+      "Stand on one leg",
+      "Place other foot on inner thigh or calf",
+      "Never place foot on knee",
+      "Bring hands to prayer or overhead",
+      "Hold, then switch sides"
+    ],
+    "tips": [
+      "Classic yoga balance pose",
+      "Use wall if needed"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 82
+  },
+  {
+    "id": "bal_clock_reaches",
+    "title": "Clock Reaches",
+    "category": "balance",
+    "difficulty": "intermediate",
+    "duration": 6,
+    "calories": 40,
+    "equipment": [],
+    "muscles": [
+      "Full Body",
+      "Stability"
+    ],
+    "instructions": [
+      "Stand on one leg",
+      "Reach other leg to 12 o'clock",
+      "Return, reach to 3 o'clock",
+      "Continue to 6, 9 o'clock positions",
+      "Switch standing leg"
+    ],
+    "tips": [
+      "Great for hip stability",
+      "Touch ground lightly if needed"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162438/pexels-photo-4162438.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 70
+  },
+  {
+    "id": "func_turkish_getup",
+    "title": "Turkish Get-Up",
+    "category": "functional",
+    "difficulty": "advanced",
+    "duration": 10,
+    "calories": 80,
+    "equipment": [
+      "Kettlebell",
+      "Dumbbell"
+    ],
+    "muscles": [
+      "Full Body"
+    ],
+    "instructions": [
+      "Lie on back, weight in one hand extended up",
+      "Roll to elbow, then to hand",
+      "Lift hips, sweep leg under",
+      "Rise to standing, reverse to return",
+      "Keep arm locked out throughout"
+    ],
+    "tips": [
+      "Learn without weight first",
+      "Very functional movement"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164512/pexels-photo-4164512.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 72
+  },
+  {
+    "id": "func_farmers_carry",
+    "title": "Farmer's Carry",
+    "category": "functional",
+    "difficulty": "beginner",
+    "duration": 5,
+    "calories": 50,
+    "equipment": [
+      "Dumbbells",
+      "Kettlebells"
+    ],
+    "muscles": [
+      "Grip",
+      "Core",
+      "Shoulders",
+      "Legs"
+    ],
+    "instructions": [
+      "Pick up heavy weights in each hand",
+      "Stand tall, shoulders back",
+      "Walk with controlled steps",
+      "Keep core braced",
+      "Walk for distance or time"
+    ],
+    "tips": [
+      "Simple but effective",
+      "Go heavy"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162456/pexels-photo-4162456.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 80
+  },
+  {
+    "id": "func_sled_push",
+    "title": "Sled Push",
+    "category": "functional",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 150,
+    "equipment": [
+      "Sled"
+    ],
+    "muscles": [
+      "Quads",
+      "Glutes",
+      "Core",
+      "Shoulders"
+    ],
+    "instructions": [
+      "Load sled with appropriate weight",
+      "Grip handles, lean into sled",
+      "Drive with legs, push forward",
+      "Keep core tight, hips low",
+      "Push for distance or time"
+    ],
+    "tips": [
+      "Great conditioning",
+      "Minimal joint stress"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164520/pexels-photo-4164520.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 75
+  },
+  {
+    "id": "func_medicine_ball_slam",
+    "title": "Medicine Ball Slams",
+    "category": "functional",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 100,
+    "equipment": [
+      "Medicine ball"
+    ],
+    "muscles": [
+      "Core",
+      "Shoulders",
+      "Lats"
+    ],
+    "instructions": [
+      "Hold med ball overhead",
+      "Slam ball to ground with full force",
+      "Squat to pick up ball",
+      "Return to overhead position",
+      "Repeat with intensity"
+    ],
+    "tips": [
+      "Great stress relief",
+      "Use non-bounce ball"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162451/pexels-photo-4162451.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 78
+  },
+  {
+    "id": "func_wood_chop",
+    "title": "Cable Wood Chops",
+    "category": "functional",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 70,
+    "equipment": [
+      "Cable machine",
+      "Band"
+    ],
+    "muscles": [
+      "Obliques",
+      "Core",
+      "Shoulders"
+    ],
+    "instructions": [
+      "Set cable high, stand sideways",
+      "Grip handle with both hands",
+      "Pull diagonally across body to opposite hip",
+      "Rotate through core, not arms",
+      "Control return, switch sides"
+    ],
+    "tips": [
+      "Rotation power exercise",
+      "Control the movement"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162625/pexels-photo-4162625.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 74
+  },
+  {
+    "id": "func_pallof_press",
+    "title": "Pallof Press",
+    "category": "functional",
+    "difficulty": "beginner",
+    "duration": 6,
+    "calories": 40,
+    "equipment": [
+      "Cable machine",
+      "Band"
+    ],
+    "muscles": [
+      "Core",
+      "Obliques"
+    ],
+    "instructions": [
+      "Stand sideways to cable/band anchor",
+      "Hold handle at chest with both hands",
+      "Press arms straight out",
+      "Resist rotation, hold briefly",
+      "Return to chest, repeat"
+    ],
+    "tips": [
+      "Anti-rotation exercise",
+      "Great for core stability"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162621/pexels-photo-4162621.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 76
+  },
+  {
+    "id": "func_bear_crawl",
+    "title": "Bear Crawl",
+    "category": "functional",
+    "difficulty": "intermediate",
+    "duration": 6,
+    "calories": 60,
+    "equipment": [],
+    "muscles": [
+      "Core",
+      "Shoulders",
+      "Quads"
+    ],
+    "instructions": [
+      "Start on hands and knees",
+      "Lift knees slightly off floor",
+      "Crawl forward: opposite hand and foot",
+      "Keep hips level, core tight",
+      "Crawl forward and backward"
+    ],
+    "tips": [
+      "Harder than it looks",
+      "Great full body exercise"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162621/pexels-photo-4162621.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 72
+  },
+  {
+    "id": "func_landmine_press",
+    "title": "Landmine Press",
+    "category": "functional",
+    "difficulty": "intermediate",
+    "duration": 8,
+    "calories": 60,
+    "equipment": [
+      "Barbell",
+      "Landmine attachment"
+    ],
+    "muscles": [
+      "Shoulders",
+      "Chest",
+      "Core"
+    ],
+    "instructions": [
+      "Place barbell end in corner or landmine",
+      "Hold bar end at shoulder height",
+      "Press up and forward",
+      "Control the descent",
+      "Can do single or double arm"
+    ],
+    "tips": [
+      "Shoulder-friendly pressing",
+      "Great arc of motion"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162451/pexels-photo-4162451.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 70
+  },
+  {
+    "id": "func_sandbag_clean",
+    "title": "Sandbag Clean",
+    "category": "functional",
+    "difficulty": "intermediate",
+    "duration": 10,
+    "calories": 90,
+    "equipment": [
+      "Sandbag"
+    ],
+    "muscles": [
+      "Full Body"
+    ],
+    "instructions": [
+      "Straddle sandbag, squat down",
+      "Grab handles or bag itself",
+      "Explosively stand and pull to chest",
+      "Catch in front rack position",
+      "Drop and repeat"
+    ],
+    "tips": [
+      "Awkward weight builds real strength",
+      "Great conditioning"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4164512/pexels-photo-4164512.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 68
+  },
+  {
+    "id": "func_loaded_carry_variations",
+    "title": "Overhead Carry",
+    "category": "functional",
+    "difficulty": "intermediate",
+    "duration": 5,
+    "calories": 50,
+    "equipment": [
+      "Dumbbell",
+      "Kettlebell"
+    ],
+    "muscles": [
+      "Core",
+      "Shoulders",
+      "Stability"
+    ],
+    "instructions": [
+      "Press weight overhead",
+      "Lock out arm, keep core tight",
+      "Walk with controlled steps",
+      "Keep ribcage down",
+      "Switch arms halfway"
+    ],
+    "tips": [
+      "Great for shoulder stability",
+      "Lighter weight than farmer carry"
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4162451/pexels-photo-4162451.jpeg?auto=compress&w=400&h=300&fit=crop",
+    "popularity": 72
+  }
+]
