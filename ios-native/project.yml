@@ -19,6 +19,7 @@ targets:
       - path: FitApp
     resources:
       - path: FitApp/Resources/Data
+      - path: FitApp/Resources/Sounds
       - path: FitApp/Resources/en.lproj
       - path: FitApp/Resources/tr.lproj
     info:

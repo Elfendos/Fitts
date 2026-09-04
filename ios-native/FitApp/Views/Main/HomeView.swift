@@ -7,6 +7,7 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject private var profileService: UserProfileService
     @StateObject private var dailyPlan = DailyPlanService(dateKey: DateKey.today)
+    @State private var showingRestTimer = false
 
     var body: some View {
         NavigationStack {
@@ -26,6 +27,9 @@ struct HomeView: View {
         }
         .onAppear {
             dailyPlan.start(isAccountAvailable: true)
+        }
+        .sheet(isPresented: $showingRestTimer) {
+            RestTimerView()
         }
     }
 
@@ -79,12 +83,22 @@ struct HomeView: View {
                 .font(.headline)
                 .foregroundColor(AppTheme.text)
 
-            HStack(spacing: 12) {
-                NavigationLink(destination: ExercisesView()) {
-                    quickActionChip(icon: "figure.strengthtraining.traditional", label: L("home.browse"))
-                }
-                NavigationLink(destination: WeeklyPlanView()) {
-                    quickActionChip(icon: "calendar", label: L("home.weeklyPlan"))
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 12) {
+                    NavigationLink(destination: ExercisesView()) {
+                        quickActionChip(icon: "figure.strengthtraining.traditional", label: L("home.browse"))
+                    }
+                    NavigationLink(destination: WeeklyPlanView()) {
+                        quickActionChip(icon: "calendar", label: L("home.weeklyPlan"))
+                    }
+                    Button {
+                        showingRestTimer = true
+                    } label: {
+                        quickActionChip(icon: "timer", label: "Dinlenme")
+                    }
+                    NavigationLink(destination: MuscleMapView()) {
+                        quickActionChip(icon: "figure.arms.open", label: "Kas Haritası")
+                    }
                 }
             }
         }
@@ -97,7 +111,7 @@ struct HomeView: View {
             Text(label)
                 .font(.footnote)
         }
-        .frame(maxWidth: .infinity)
+        .frame(width: 92)
         .padding()
         .background(AppTheme.cardBackground)
         .overlay(RoundedRectangle(cornerRadius: 14).stroke(AppTheme.border))

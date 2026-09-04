@@ -7,6 +7,7 @@ import SwiftUI
 struct ExerciseDetailView: View {
     let exercise: Exercise
     @State private var selectedVariation: ExerciseVariation?
+    @State private var showingRestTimer = false
 
     var body: some View {
         ScrollView {
@@ -28,6 +29,21 @@ struct ExerciseDetailView: View {
                 }
                 .font(.footnote)
                 .foregroundColor(AppTheme.subtext)
+
+                Button {
+                    showingRestTimer = true
+                } label: {
+                    Label("Dinlenme Sayacı Başlat", systemImage: "timer")
+                        .font(.subheadline.weight(.semibold))
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 10)
+                }
+                .background(AppTheme.tint.opacity(0.12))
+                .foregroundColor(AppTheme.tint)
+                .cornerRadius(12)
+                .sheet(isPresented: $showingRestTimer) {
+                    RestTimerView()
+                }
 
                 if let variations = exercise.variations, !variations.isEmpty {
                     variationPicker(variations)

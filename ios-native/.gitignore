@@ -1,0 +1,6 @@
+.DS_Store
+FitApp.xcodeproj/
+xcuserdata/
+DerivedData/
+.swiftpm/
+FitApp/Resources/GoogleService-Info.plist

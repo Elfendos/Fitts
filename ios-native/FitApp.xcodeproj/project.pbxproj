@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA0000000000000000100004 /* FitAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100003 /* FitAppApp.swift */; };
+		FA0000000000000000100007 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100006 /* Achievement.swift */; };
+		FA0000000000000000100009 /* DailyPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100008 /* DailyPlan.swift */; };
+		FA000000000000000010000B /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA000000000000000010000A /* Exercise.swift */; };
+		FA000000000000000010000D /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA000000000000000010000C /* UserProfile.swift */; };
+		FA0000000000000000100010 /* AchievementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA000000000000000010000F /* AchievementService.swift */; };
+		FA0000000000000000100012 /* CloudKitAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100011 /* CloudKitAccountService.swift */; };
+		FA0000000000000000100014 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100013 /* CloudKitManager.swift */; };
+		FA0000000000000000100016 /* DailyPlanService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100015 /* DailyPlanService.swift */; };
+		FA0000000000000000100018 /* ExerciseDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100017 /* ExerciseDataStore.swift */; };
+		FA000000000000000010001A /* LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100019 /* LocalizationManager.swift */; };
+		FA000000000000000010001C /* MuscleMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA000000000000000010001B /* MuscleMapService.swift */; };
+		FA000000000000000010001E /* RestTimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA000000000000000010001D /* RestTimerService.swift */; };
+		FA0000000000000000100020 /* UserProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA000000000000000010001F /* UserProfileService.swift */; };
+		FA0000000000000000100025 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100024 /* LoginView.swift */; };
+		FA0000000000000000100028 /* BodyDiagramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100027 /* BodyDiagramView.swift */; };
+		FA000000000000000010002A /* ExerciseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100029 /* ExerciseDetailView.swift */; };
+		FA000000000000000010002C /* ExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA000000000000000010002B /* ExercisesView.swift */; };
+		FA000000000000000010002E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA000000000000000010002D /* HomeView.swift */; };
+		FA0000000000000000100030 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA000000000000000010002F /* MainTabView.swift */; };
+		FA0000000000000000100032 /* MuscleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100031 /* MuscleMapView.swift */; };
+		FA0000000000000000100034 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100033 /* ProfileView.swift */; };
+		FA0000000000000000100036 /* RestTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100035 /* RestTimerView.swift */; };
+		FA0000000000000000100038 /* WeeklyPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100037 /* WeeklyPlanView.swift */; };
+		FA000000000000000010003B /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA000000000000000010003A /* RootView.swift */; };
+		FA000000000000000010003E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA000000000000000010003D /* Theme.swift */; };
+		FA0000000000000000100042 /* exercises.json in Resources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100041 /* exercises.json */; };
+		FA0000000000000000100044 /* achievements.json in Resources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100043 /* achievements.json */; };
+		FA0000000000000000100047 /* rest_timer_beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100046 /* rest_timer_beep.wav */; };
+		FA000000000000000010004C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA000000000000000010004B /* Localizable.strings */; };
+		FA000000000000000010004E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA000000000000000010004D /* CloudKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FA0000000000000000100003 /* FitAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitAppApp.swift; sourceTree = "<group>"; };
+		FA0000000000000000100006 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		FA0000000000000000100008 /* DailyPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPlan.swift; sourceTree = "<group>"; };
+		FA000000000000000010000A /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		FA000000000000000010000C /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		FA000000000000000010000F /* AchievementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementService.swift; sourceTree = "<group>"; };
+		FA0000000000000000100011 /* CloudKitAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitAccountService.swift; sourceTree = "<group>"; };
+		FA0000000000000000100013 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		FA0000000000000000100015 /* DailyPlanService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPlanService.swift; sourceTree = "<group>"; };
+		FA0000000000000000100017 /* ExerciseDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDataStore.swift; sourceTree = "<group>"; };
+		FA0000000000000000100019 /* LocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationManager.swift; sourceTree = "<group>"; };
+		FA000000000000000010001B /* MuscleMapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleMapService.swift; sourceTree = "<group>"; };
+		FA000000000000000010001D /* RestTimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTimerService.swift; sourceTree = "<group>"; };
+		FA000000000000000010001F /* UserProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileService.swift; sourceTree = "<group>"; };
+		FA0000000000000000100021 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		FA0000000000000000100024 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FA0000000000000000100027 /* BodyDiagramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyDiagramView.swift; sourceTree = "<group>"; };
+		FA0000000000000000100029 /* ExerciseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailView.swift; sourceTree = "<group>"; };
+		FA000000000000000010002B /* ExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesView.swift; sourceTree = "<group>"; };
+		FA000000000000000010002D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FA000000000000000010002F /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		FA0000000000000000100031 /* MuscleMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleMapView.swift; sourceTree = "<group>"; };
+		FA0000000000000000100033 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FA0000000000000000100035 /* RestTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTimerView.swift; sourceTree = "<group>"; };
+		FA0000000000000000100037 /* WeeklyPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyPlanView.swift; sourceTree = "<group>"; };
+		FA000000000000000010003A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		FA000000000000000010003D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		FA0000000000000000100041 /* exercises.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = exercises.json; sourceTree = "<group>"; };
+		FA0000000000000000100043 /* achievements.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = achievements.json; sourceTree = "<group>"; };
+		FA0000000000000000100046 /* rest_timer_beep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rest_timer_beep.wav; sourceTree = "<group>"; };
+		FA0000000000000000100048 /* FitApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FitApp.entitlements; sourceTree = "<group>"; };
+		FA0000000000000000100049 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA000000000000000010004A /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA000000000000000010004D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		FA0000000000000000100050 /* FitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA0000000000000000100055 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA000000000000000010004E /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA0000000000000000100001 /* FitApp */ = {
+			isa = PBXGroup;
+			children = (
+				FA0000000000000000100002 /* App */,
+				FA0000000000000000100005 /* Models */,
+				FA000000000000000010000E /* Services */,
+				FA0000000000000000100022 /* Views */,
+				FA000000000000000010003F /* Resources */,
+			);
+			path = FitApp;
+			sourceTree = "<group>";
+		};
+		FA0000000000000000100002 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FA0000000000000000100003 /* FitAppApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FA0000000000000000100005 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA0000000000000000100006 /* Achievement.swift */,
+				FA0000000000000000100008 /* DailyPlan.swift */,
+				FA000000000000000010000A /* Exercise.swift */,
+				FA000000000000000010000C /* UserProfile.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA000000000000000010000E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA000000000000000010000F /* AchievementService.swift */,
+				FA0000000000000000100011 /* CloudKitAccountService.swift */,
+				FA0000000000000000100013 /* CloudKitManager.swift */,
+				FA0000000000000000100015 /* DailyPlanService.swift */,
+				FA0000000000000000100017 /* ExerciseDataStore.swift */,
+				FA0000000000000000100019 /* LocalizationManager.swift */,
+				FA000000000000000010001B /* MuscleMapService.swift */,
+				FA000000000000000010001D /* RestTimerService.swift */,
+				FA000000000000000010001F /* UserProfileService.swift */,
+				FA0000000000000000100021 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FA0000000000000000100022 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA0000000000000000100023 /* Auth */,
+				FA0000000000000000100026 /* Main */,
+				FA0000000000000000100039 /* Root */,
+				FA000000000000000010003C /* Theme */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA0000000000000000100023 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				FA0000000000000000100024 /* LoginView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		FA0000000000000000100026 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FA0000000000000000100027 /* BodyDiagramView.swift */,
+				FA0000000000000000100029 /* ExerciseDetailView.swift */,
+				FA000000000000000010002B /* ExercisesView.swift */,
+				FA000000000000000010002D /* HomeView.swift */,
+				FA000000000000000010002F /* MainTabView.swift */,
+				FA0000000000000000100031 /* MuscleMapView.swift */,
+				FA0000000000000000100033 /* ProfileView.swift */,
+				FA0000000000000000100035 /* RestTimerView.swift */,
+				FA0000000000000000100037 /* WeeklyPlanView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FA0000000000000000100039 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				FA000000000000000010003A /* RootView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		FA000000000000000010003C /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				FA000000000000000010003D /* Theme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		FA000000000000000010003F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA0000000000000000100040 /* Data */,
+				FA0000000000000000100045 /* Sounds */,
+				FA0000000000000000100048 /* FitApp.entitlements */,
+				FA000000000000000010004B /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FA0000000000000000100040 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FA0000000000000000100041 /* exercises.json */,
+				FA0000000000000000100043 /* achievements.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FA0000000000000000100045 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				FA0000000000000000100046 /* rest_timer_beep.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		FA000000000000000010004F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA000000000000000010004D /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA0000000000000000100051 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA0000000000000000100050 /* FitApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA0000000000000000100052 = {
+			isa = PBXGroup;
+			children = (
+				FA0000000000000000100001 /* FitApp */,
+				FA0000000000000000100051 /* Products */,
+				FA000000000000000010004F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA000000000000000010005C /* FitApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA000000000000000010005B /* Build configuration list for PBXNativeTarget "FitApp" */;
+			buildPhases = (
+				FA0000000000000000100053 /* Sources */,
+				FA0000000000000000100055 /* Frameworks */,
+				FA0000000000000000100054 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FitApp;
+			productName = FitApp;
+			productReference = FA0000000000000000100050 /* FitApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA000000000000000010005D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					FA000000000000000010005C = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = FA000000000000000010005A /* Build configuration list for PBXProject "FitApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				tr,
+				Base,
+			);
+			mainGroup = FA0000000000000000100052;
+			productRefGroup = FA0000000000000000100051 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA000000000000000010005C /* FitApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA0000000000000000100054 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA0000000000000000100042 /* exercises.json in Resources */,
+				FA0000000000000000100044 /* achievements.json in Resources */,
+				FA0000000000000000100047 /* rest_timer_beep.wav in Resources */,
+				FA000000000000000010004C /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA0000000000000000100053 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA0000000000000000100004 /* FitAppApp.swift in Sources */,
+				FA0000000000000000100007 /* Achievement.swift in Sources */,
+				FA0000000000000000100009 /* DailyPlan.swift in Sources */,
+				FA000000000000000010000B /* Exercise.swift in Sources */,
+				FA000000000000000010000D /* UserProfile.swift in Sources */,
+				FA0000000000000000100010 /* AchievementService.swift in Sources */,
+				FA0000000000000000100012 /* CloudKitAccountService.swift in Sources */,
+				FA0000000000000000100014 /* CloudKitManager.swift in Sources */,
+				FA0000000000000000100016 /* DailyPlanService.swift in Sources */,
+				FA0000000000000000100018 /* ExerciseDataStore.swift in Sources */,
+				FA000000000000000010001A /* LocalizationManager.swift in Sources */,
+				FA000000000000000010001C /* MuscleMapService.swift in Sources */,
+				FA000000000000000010001E /* RestTimerService.swift in Sources */,
+				FA0000000000000000100020 /* UserProfileService.swift in Sources */,
+				FA0000000000000000100025 /* LoginView.swift in Sources */,
+				FA0000000000000000100028 /* BodyDiagramView.swift in Sources */,
+				FA000000000000000010002A /* ExerciseDetailView.swift in Sources */,
+				FA000000000000000010002C /* ExercisesView.swift in Sources */,
+				FA000000000000000010002E /* HomeView.swift in Sources */,
+				FA0000000000000000100030 /* MainTabView.swift in Sources */,
+				FA0000000000000000100032 /* MuscleMapView.swift in Sources */,
+				FA0000000000000000100034 /* ProfileView.swift in Sources */,
+				FA0000000000000000100036 /* RestTimerView.swift in Sources */,
+				FA0000000000000000100038 /* WeeklyPlanView.swift in Sources */,
+				FA000000000000000010003B /* RootView.swift in Sources */,
+				FA000000000000000010003E /* Theme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FA000000000000000010004B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA0000000000000000100049 /* en */,
+				FA000000000000000010004A /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA0000000000000000100056 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				ENABLE_TESTABILITY = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		FA0000000000000000100057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA0000000000000000100058 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = FitApp/Resources/FitApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FitApp;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to take profile photos.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app saves photos to your photo library.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app accesses your photo library to select profile photos.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.10.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fitapp.workout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA0000000000000000100059 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = FitApp/Resources/FitApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FitApp;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to take profile photos.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app saves photos to your photo library.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app accesses your photo library to select profile photos.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.10.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fitapp.workout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA000000000000000010005A /* Build configuration list for PBXProject "FitApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA0000000000000000100056 /* Debug */,
+				FA0000000000000000100057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA000000000000000010005B /* Build configuration list for PBXNativeTarget "FitApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA0000000000000000100058 /* Debug */,
+				FA0000000000000000100059 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = FA000000000000000010005D /* Project object */;
+}

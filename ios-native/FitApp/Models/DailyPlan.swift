@@ -23,6 +23,12 @@ struct PlannedExercise: Codable, Identifiable, Equatable {
     var maxWeight: Double?
     var variationId: String?
 
+    /// See `PrimaryMuscleResolver` (Exercise.swift) — used by the muscle-map
+    /// screen to bucket each planned exercise into a body region.
+    var resolvedPrimaryMuscle: PrimaryMuscle {
+        PrimaryMuscleResolver.resolve(id: id, category: category, muscles: muscles)
+    }
+
     init(from exercise: Exercise, sets: Int = 3, reps: Int = 8) {
         self.plannedId = "p_\(UUID().uuidString.prefix(12))"
         self.id = exercise.id
