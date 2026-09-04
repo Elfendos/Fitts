@@ -44,7 +44,7 @@ struct WeeklyPlanView: View {
                 }
             }
             .onAppear { reload() }
-            .onChange(of: selectedDate) { _, _ in reload() }
+            .onChange(of: selectedDate) { _ in reload() }
         }
     }
 

@@ -50,9 +50,37 @@ Firebase backend, so existing Firebase user data does **not** carry over automat
   the table was ported. Weekly aggregation fetches the week's 7 `DailyPlan`
   records by known recordID (`CKDatabase.records(for:)`, no query index
   needed) and merges their items.
+- **App icon** (placeholder): `Resources/Assets.xcassets/AppIcon.appiconset` —
+  a plain 1024×1024 flat-color barbell glyph (brand purple `#5A62F2` + white),
+  generated programmatically since there was no real app icon at all before
+  (App Store Connect validation rejects builds with a missing icon, so this
+  was a real blocker for TestFlight, not just cosmetic). Swap
+  `icon-1024.png` for a real design whenever one exists — no other project
+  changes needed, Xcode regenerates every smaller size from that one image.
 - **Warning: the checked-in `FitApp.xcodeproj` was hand-authored** (see Setup
   below) and hasn't been opened in real Xcode yet — flag anything that
   doesn't parse and it'll get patched.
+
+**Before you can actually submit to TestFlight** (none of this is something
+I can do from here — all Apple-account-side steps):
+1. An active **Apple Developer Program** membership (paid) on the account
+   you'll sign in with in Xcode — TestFlight/Archive distribution doesn't
+   work on a free account.
+2. **CloudKit schema → Production.** The container (`iCloud.com.fitapp.workout`)
+   auto-creates its `UserProfile`/`DailyPlan` record types in the
+   *Development* CloudKit environment the first time the app saves a record
+   from a debug build. A TestFlight build is *release*-signed, which makes
+   CloudKit talk to the *Production* environment instead — and that's empty
+   until you explicitly promote it. So: run the app once from Xcode on your
+   own device/simulator (creates a profile → creates the schema in Dev),
+   then go to the [CloudKit Dashboard](https://icloud.developer.apple.com) →
+   your container → **Deploy Schema to Production**. Skip this and every
+   CloudKit read/write in the TestFlight build will silently fail.
+3. In App Store Connect, an app record for bundle ID `com.fitapp.workout`
+   (reuse the existing one if the RN app was already there — same bundle ID).
+4. Xcode → Signing & Capabilities → set your Team (Automatic signing handles
+   the rest, including the iCloud container, once a paid-account Team is set).
+5. Product → Archive → Distribute App → TestFlight & App Store.
 
 **Not ported yet** (tracked as follow-up work)
 - Multi-plan Weekly Plan editor (`app/(tabs)/weekly-plan.tsx` is 46KB — drag reorder,

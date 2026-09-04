@@ -20,7 +20,9 @@ struct RootView: View {
                 LoginView()
             }
         }
-        .onChange(of: account.status) { _, newStatus in
+        // Single-parameter form — the (oldValue, newValue) overload is iOS 17+;
+        // this target's deployment floor is iOS 16.
+        .onChange(of: account.status) { newStatus in
             profileService.start(isAccountAvailable: newStatus == .available)
         }
     }

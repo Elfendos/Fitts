@@ -38,7 +38,7 @@ struct MuscleMapView: View {
             .navigationTitle("Kas Haritası")
             .navigationBarTitleDisplayMode(.inline)
             .task { await service.loadToday() }
-            .onChange(of: period) { _, newValue in
+            .onChange(of: period) { newValue in
                 Task {
                     if newValue == .week { await service.loadThisWeek() }
                     else { await service.loadToday() }
