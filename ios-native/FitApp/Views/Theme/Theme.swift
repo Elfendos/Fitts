@@ -25,6 +25,41 @@ enum AppTheme {
     static let statOrange = Color(hex: "FCEAD2")
 }
 
+/// Shared by ExercisesView's row and ExerciseDetailView's hero. The bundled
+/// catalog's `imageUrl` values were placeholder Giphy/Pexels links (never
+/// meant for production) and have been cleared to "" — this renders a
+/// neutral icon in their place until real artwork is added per exercise.
+struct ExerciseThumbnail: View {
+    let imageUrl: String
+    /// nil width fills available horizontal space (hero use); a fixed
+    /// value produces a square row thumbnail.
+    var width: CGFloat? = 56
+    var height: CGFloat = 56
+    var cornerRadius: CGFloat = 12
+
+    var body: some View {
+        Group {
+            if imageUrl.isEmpty {
+                RoundedRectangle(cornerRadius: cornerRadius)
+                    .fill(AppTheme.brandAccent.opacity(0.1))
+                    .overlay(
+                        Image(systemName: "dumbbell.fill")
+                            .font(.system(size: height * 0.35))
+                            .foregroundColor(AppTheme.brandAccent)
+                    )
+            } else {
+                AsyncImage(url: URL(string: imageUrl)) { image in
+                    image.resizable().scaledToFill()
+                } placeholder: {
+                    AppTheme.border
+                }
+            }
+        }
+        .frame(width: width, height: height)
+        .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
+    }
+}
+
 extension Color {
     init(hex: String) {
         let cleaned = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)

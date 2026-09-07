@@ -17,13 +17,8 @@ struct ExerciseDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
-                AsyncImage(url: URL(string: exercise.imageUrl)) { image in
-                    image.resizable().scaledToFill()
-                } placeholder: {
-                    AppTheme.border
-                }
-                .frame(height: 220)
-                .clipShape(RoundedRectangle(cornerRadius: 16))
+                ExerciseThumbnail(imageUrl: exercise.imageUrl, width: nil, height: 220, cornerRadius: 16)
+                    .frame(maxWidth: .infinity)
 
                 HStack {
                     Label(exercise.difficulty.rawValue.capitalized, systemImage: "gauge")

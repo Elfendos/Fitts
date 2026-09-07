@@ -45,15 +45,19 @@ final class MuscleMapService: ObservableObject {
 
     @Published private(set) var today = MuscleActivation()
     @Published private(set) var thisWeek = MuscleActivation()
+    @Published private(set) var thisMonth = MuscleActivation()
     @Published private(set) var isLoading = false
     @Published private(set) var errorMessage: String?
 
     private let db = CloudKitManager.privateDatabase
 
+    /// Only *completed* exercises count as "trained" — a planned-but-not-
+    /// done item shouldn't light up the muscle map. This is what future
+    /// "which muscles haven't been worked" recommendations will read.
     func loadToday() async {
         isLoading = true
         errorMessage = nil
-        let items = await fetchItems(dateKey: DateKey.today)
+        let items = await fetchCompletedItems(dateKeys: [DateKey.today])
         today = MuscleActivation.from(items)
         isLoading = false
     }
@@ -67,29 +71,45 @@ final class MuscleMapService: ObservableObject {
             guard let date = calendar.date(byAdding: .day, value: offset, to: startOfWeek) else { return nil }
             return DateKey.from(date)
         }
+        let items = await fetchCompletedItems(dateKeys: dateKeys)
+        thisWeek = MuscleActivation.from(items)
+        isLoading = false
+    }
 
+    func loadThisMonth() async {
+        isLoading = true
+        errorMessage = nil
+        let calendar = Calendar.current
+        let now = Date()
+        guard let monthInterval = calendar.dateInterval(of: .month, for: now) else {
+            isLoading = false
+            return
+        }
+        var dateKeys: [String] = []
+        var cursor = monthInterval.start
+        while cursor <= now {
+            dateKeys.append(DateKey.from(cursor))
+            guard let next = calendar.date(byAdding: .day, value: 1, to: cursor) else { break }
+            cursor = next
+        }
+        let items = await fetchCompletedItems(dateKeys: dateKeys)
+        thisMonth = MuscleActivation.from(items)
+        isLoading = false
+    }
+
+    private func fetchCompletedItems(dateKeys: [String]) async -> [PlannedExercise] {
         let recordIDs = dateKeys.map { DailyPlanDoc.recordID(for: $0) }
         var allItems: [PlannedExercise] = []
         do {
             let results = try await db.records(for: recordIDs)
             for id in recordIDs {
                 if case .success(let record) = results[id], let doc = DailyPlanDoc(record: record) {
-                    allItems.append(contentsOf: doc.items)
+                    allItems.append(contentsOf: doc.items.filter(\.completed))
                 }
             }
         } catch {
             errorMessage = error.localizedDescription
         }
-        thisWeek = MuscleActivation.from(allItems)
-        isLoading = false
-    }
-
-    private func fetchItems(dateKey: String) async -> [PlannedExercise] {
-        do {
-            let record = try await db.record(for: DailyPlanDoc.recordID(for: dateKey))
-            return DailyPlanDoc(record: record)?.items ?? []
-        } catch {
-            return []
-        }
+        return allItems
     }
 }

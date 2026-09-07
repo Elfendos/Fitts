@@ -8,6 +8,7 @@ struct MuscleMapView: View {
     private enum Period: String, CaseIterable, Identifiable {
         case today = "Bugün"
         case week = "Bu Hafta"
+        case month = "Bu Ay"
         var id: String { rawValue }
     }
 
@@ -15,7 +16,11 @@ struct MuscleMapView: View {
     @State private var period: Period = .today
 
     private var activation: MuscleActivation {
-        period == .today ? service.today : service.thisWeek
+        switch period {
+        case .today: return service.today
+        case .week: return service.thisWeek
+        case .month: return service.thisMonth
+        }
     }
 
     var body: some View {
@@ -40,8 +45,11 @@ struct MuscleMapView: View {
             .task { await service.loadToday() }
             .onChange(of: period) { newValue in
                 Task {
-                    if newValue == .week { await service.loadThisWeek() }
-                    else { await service.loadToday() }
+                    switch newValue {
+                    case .today: await service.loadToday()
+                    case .week: await service.loadThisWeek()
+                    case .month: await service.loadThisMonth()
+                    }
                 }
             }
         }
@@ -78,9 +86,17 @@ struct MuscleMapView: View {
 
     private let trackedMuscles: [PrimaryMuscle] = [.chest, .back, .shoulders, .biceps, .triceps, .legs, .core]
 
+    private var legendTitle: String {
+        switch period {
+        case .today: return "Bugün Çalışılanlar"
+        case .week: return "Bu Hafta Çalışılanlar"
+        case .month: return "Bu Ay Çalışılanlar"
+        }
+    }
+
     private var legend: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(period == .today ? "Bugün Çalışılanlar" : "Bu Hafta Çalışılanlar")
+            Text(legendTitle)
                 .font(.headline)
                 .foregroundColor(AppTheme.text)
 

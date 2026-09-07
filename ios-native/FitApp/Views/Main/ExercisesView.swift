@@ -73,13 +73,7 @@ private struct ExerciseRow: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            AsyncImage(url: URL(string: exercise.imageUrl)) { image in
-                image.resizable().scaledToFill()
-            } placeholder: {
-                AppTheme.border
-            }
-            .frame(width: 56, height: 56)
-            .clipShape(RoundedRectangle(cornerRadius: 12))
+            ExerciseThumbnail(imageUrl: exercise.imageUrl, width: 56, height: 56)
 
             VStack(alignment: .leading, spacing: 4) {
                 Text(exercise.title)
