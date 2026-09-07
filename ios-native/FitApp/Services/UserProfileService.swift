@@ -54,9 +54,24 @@ final class UserProfileService: ObservableObject {
         }
     }
 
+    /// Fetches the profile record, creating it on the spot if it doesn't
+    /// exist yet — same fallback `updateProfile`/`setHealthProfile` need as
+    /// DailyPlanService.save()/WorkoutPlanService.save() already have.
+    /// Without this, calling either method before `createProfileIfNeeded()`
+    /// has had a chance to run (or if that earlier save silently failed)
+    /// threw `.unknownItem` and dropped every field the caller was trying
+    /// to write — the onboarding flow's "start ediyor" bug: setHealthProfile
+    /// failed silently, then the next `load()` re-created a blank profile.
+    private func fetchOrCreateRecord() async -> CKRecord {
+        if let existing = try? await db.record(for: UserProfile.recordID) {
+            return existing
+        }
+        return CKRecord(recordType: CloudKitRecordType.userProfile, recordID: UserProfile.recordID)
+    }
+
     func updateProfile(name: String? = nil, stats: UserStats? = nil) async -> Bool {
         do {
-            let record = try await db.record(for: UserProfile.recordID)
+            let record = await fetchOrCreateRecord()
             var current = profile ?? UserProfile(record: record) ?? .newProfile(displayName: nil)
             if let name { current.name = name }
             if let stats { current.stats = stats }
@@ -72,7 +87,7 @@ final class UserProfileService: ObservableObject {
 
     func setHealthProfile(_ health: HealthProfile) async -> Bool {
         do {
-            let record = try await db.record(for: UserProfile.recordID)
+            let record = await fetchOrCreateRecord()
             var current = profile ?? UserProfile(record: record) ?? .newProfile(displayName: nil)
             current.healthProfile = health
             current.apply(to: record)

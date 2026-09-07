@@ -28,6 +28,7 @@ struct OnboardingView: View {
     @State private var concerns: Set<String> = ["none"]
     @State private var activityIndex: Double = 1
     @State private var generationProgress: [Bool] = [false, false, false]
+    @State private var generationError: String?
 
     private var bmi: Double {
         let h = heightCm / 100
@@ -514,6 +515,27 @@ struct OnboardingView: View {
                 label: L("onboarding.pickingExercises"),
                 value: generationProgress[2] ? L("onboarding.fullBody") : ""
             )
+
+            if let generationError {
+                VStack(spacing: 12) {
+                    Text(generationError)
+                        .font(.footnote)
+                        .foregroundColor(.red)
+                        .multilineTextAlignment(.center)
+                    Button {
+                        Task { await runGeneration() }
+                    } label: {
+                        Text(L("common.next"))
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 14)
+                            .background(AppTheme.text)
+                            .cornerRadius(24)
+                    }
+                }
+                .padding(.top, 8)
+            }
             Spacer()
         }
         .padding(.horizontal)
@@ -558,6 +580,7 @@ struct OnboardingView: View {
 
     private func runGeneration() async {
         generationProgress = [false, false, false]
+        generationError = nil
 
         try? await Task.sleep(nanoseconds: 500_000_000)
         generationProgress[0] = true
@@ -584,9 +607,22 @@ struct OnboardingView: View {
             bmr: computedBMR,
             tdee: computedTDEE
         )
-        _ = await profileService.setHealthProfile(health)
 
+        // Must succeed before we leave onboarding — otherwise the next
+        // profile reload finds no healthProfile and RootView sends the user
+        // straight back to step one. See fetchOrCreateRecord's doc comment.
+        let saved = await profileService.setHealthProfile(health)
+        guard saved else {
+            generationError = profileService.errorMessage ?? L("common.error")
+            return
+        }
+
+        // start() marks the service account-available (needed for save() to
+        // actually persist) but kicks off its load as a detached Task, so
+        // plans.isEmpty right after calling it can't be trusted yet —
+        // explicitly await load() too before checking.
         workoutPlanService.start(isAccountAvailable: true)
+        await workoutPlanService.load()
         if workoutPlanService.plans.isEmpty {
             let split = WorkoutTemplateGenerator.resolvedWeeklySplit()
             workoutPlanService.addPlan(name: L("onboarding.firstPlanName"), days: split)
@@ -596,7 +632,7 @@ struct OnboardingView: View {
         if let todayItems = WorkoutTemplateGenerator.resolvedWeeklySplit()[todayAbbrev], !todayItems.isEmpty {
             let daily = DailyPlanService(dateKey: DateKey.today)
             daily.start(isAccountAvailable: true)
-            try? await Task.sleep(nanoseconds: 300_000_000)
+            await daily.load()
             for item in todayItems {
                 if let exercise = ExerciseDataStore.shared.exercise(id: item.id) {
                     daily.addExercise(exercise, sets: item.sets, reps: item.reps)
@@ -605,7 +641,6 @@ struct OnboardingView: View {
             await daily.save()
         }
 
-        try? await Task.sleep(nanoseconds: 400_000_000)
         onFinished()
     }
 }
