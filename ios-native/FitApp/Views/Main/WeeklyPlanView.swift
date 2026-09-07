@@ -109,7 +109,8 @@ struct WeeklyPlanView: View {
     }
 }
 
-private struct ExercisePickerSheet: View {
+/// Shared by WeeklyPlanView and TodayWorkoutView.
+struct ExercisePickerSheet: View {
     @ObservedObject private var store = ExerciseDataStore.shared
     @Environment(\.dismiss) private var dismiss
     let onPick: (Exercise) -> Void

@@ -62,6 +62,18 @@
 "home.lastWorkoutSub" = "{count} egzersiz tamamlandı";
 "home.daysAgo" = "{count} gün önce";
 "home.yesterday" = "Dün";
+"home.startWeight" = "Başlangıç kilo";
+"home.goal" = "Hedef";
+"home.dailyCalories" = "Günlük kalori";
+
+/* workout (Bugünün Antrenmanı detayı) */
+"workout.progress" = "İlerleme";
+"workout.exercisesCompleted" = "egzersiz tamamlandı";
+"workout.of" = "/";
+"workout.maxWeight" = "Maks. Ağırlık";
+"workout.save" = "Kaydet";
+"workout.markAsDone" = "Tamamlandı Olarak İşaretle";
+"workout.addMoreExercises" = "Daha Fazla Egzersiz Ekle";
 
 /* exercises */
 "exercises.title" = "Egzersizler";

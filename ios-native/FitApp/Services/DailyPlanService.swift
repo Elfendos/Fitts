@@ -14,7 +14,7 @@ final class DailyPlanService: ObservableObject {
     @Published private(set) var errorMessage: String?
 
     private let db = CloudKitManager.privateDatabase
-    private let dateKey: String
+    private var dateKey: String
     private var isAccountAvailable = false
 
     init(dateKey: String = DateKey.today) {
@@ -28,6 +28,16 @@ final class DailyPlanService: ObservableObject {
             isLoading = false
             return
         }
+        Task { await load() }
+    }
+
+    /// Re-points this service at a different day (see HomeView's date strip)
+    /// and reloads that day's plan.
+    func switchTo(dateKey: String) {
+        guard dateKey != self.dateKey else { return }
+        self.dateKey = dateKey
+        plan = .empty(dateKey: dateKey)
+        guard isAccountAvailable else { return }
         Task { await load() }
     }
 
@@ -56,6 +66,21 @@ final class DailyPlanService: ObservableObject {
     func toggleCompleted(plannedId: String) {
         guard let idx = plan.items.firstIndex(where: { $0.plannedId == plannedId }) else { return }
         plan.items[idx].completed.toggle()
+    }
+
+    func updateSets(plannedId: String, sets: Int) {
+        guard let idx = plan.items.firstIndex(where: { $0.plannedId == plannedId }) else { return }
+        plan.items[idx].sets = max(1, sets)
+    }
+
+    func updateReps(plannedId: String, reps: Int) {
+        guard let idx = plan.items.firstIndex(where: { $0.plannedId == plannedId }) else { return }
+        plan.items[idx].reps = max(1, reps)
+    }
+
+    func updateMaxWeight(plannedId: String, maxWeight: Double) {
+        guard let idx = plan.items.firstIndex(where: { $0.plannedId == plannedId }) else { return }
+        plan.items[idx].maxWeight = max(0, maxWeight)
     }
 
     func save() async {

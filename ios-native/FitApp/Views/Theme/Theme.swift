@@ -17,6 +17,12 @@ enum AppTheme {
     /// From app.json splash backgroundColor — used as the brand accent on
     /// auth/onboarding surfaces.
     static let brandAccent = Color(hex: "5A62F2")
+
+    /// Pastel tile backgrounds for the Home screen's start weight / goal /
+    /// daily calories stat row.
+    static let statGreen = Color(hex: "DDF3E4")
+    static let statBlue = Color(hex: "DCEEFB")
+    static let statOrange = Color(hex: "FCEAD2")
 }
 
 extension Color {

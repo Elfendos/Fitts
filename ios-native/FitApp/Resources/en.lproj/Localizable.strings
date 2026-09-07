@@ -62,6 +62,18 @@
 "home.lastWorkoutSub" = "{count} exercises completed";
 "home.daysAgo" = "{count} days ago";
 "home.yesterday" = "Yesterday";
+"home.startWeight" = "Start weight";
+"home.goal" = "Goal";
+"home.dailyCalories" = "Daily calories";
+
+/* workout (Today's Workout detail) */
+"workout.progress" = "Progress";
+"workout.exercisesCompleted" = "exercises completed";
+"workout.of" = "of";
+"workout.maxWeight" = "Max Weight";
+"workout.save" = "Save";
+"workout.markAsDone" = "Mark as Done";
+"workout.addMoreExercises" = "Add More Exercises";
 
 /* exercises */
 "exercises.title" = "Exercises";
