@@ -8,6 +8,11 @@ struct ExerciseDetailView: View {
     let exercise: Exercise
     @State private var selectedVariation: ExerciseVariation?
     @State private var showingRestTimer = false
+    @StateObject private var todayPlan = DailyPlanService(dateKey: DateKey.today)
+
+    private var isAddedToday: Bool {
+        todayPlan.plan.items.contains { $0.id == exercise.id }
+    }
 
     var body: some View {
         ScrollView {
@@ -29,6 +34,54 @@ struct ExerciseDetailView: View {
                 }
                 .font(.footnote)
                 .foregroundColor(AppTheme.subtext)
+
+                if exercise.equipment.isEmpty {
+                    Label(L("exercises.noEquipment"), systemImage: "checkmark.circle.fill")
+                        .font(.footnote.weight(.semibold))
+                        .foregroundColor(.green)
+                        .padding(.horizontal, 12)
+                        .padding(.vertical, 6)
+                        .background(Color.green.opacity(0.12))
+                        .cornerRadius(10)
+                }
+
+                if !exercise.muscles.isEmpty {
+                    VStack(alignment: .leading, spacing: 8) {
+                        sectionTitle(L("exercises.targetMuscles"))
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 8) {
+                                ForEach(exercise.muscles, id: \.self) { muscle in
+                                    Text(muscle)
+                                        .font(.footnote.weight(.semibold))
+                                        .padding(.horizontal, 12)
+                                        .padding(.vertical, 6)
+                                        .background(AppTheme.brandAccent.opacity(0.12))
+                                        .foregroundColor(AppTheme.brandAccent)
+                                        .cornerRadius(14)
+                                }
+                            }
+                        }
+                    }
+                }
+
+                Button {
+                    if !isAddedToday {
+                        todayPlan.addExercise(exercise)
+                        Task { await todayPlan.save() }
+                    }
+                } label: {
+                    Label(
+                        isAddedToday ? L("exercises.alreadyAdded") : L("exercises.addToToday"),
+                        systemImage: isAddedToday ? "checkmark.circle.fill" : "plus.circle.fill"
+                    )
+                    .font(.subheadline.weight(.semibold))
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 12)
+                }
+                .background(isAddedToday ? Color.green : AppTheme.brandAccent)
+                .foregroundColor(.white)
+                .cornerRadius(12)
+                .disabled(isAddedToday)
 
                 Button {
                     showingRestTimer = true
@@ -74,6 +127,7 @@ struct ExerciseDetailView: View {
         .background(AppTheme.background.ignoresSafeArea())
         .navigationTitle(exercise.title)
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear { todayPlan.start(isAccountAvailable: true) }
     }
 
     private func sectionTitle(_ text: String) -> some View {

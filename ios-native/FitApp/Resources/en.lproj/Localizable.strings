@@ -75,6 +75,67 @@
 "workout.markAsDone" = "Mark as Done";
 "workout.addMoreExercises" = "Add More Exercises";
 
+/* onboarding */
+"onboarding.sectionBasics" = "Basics";
+"onboarding.sectionBody" = "About Your Body";
+"onboarding.sectionAssessment" = "Fitness Assessment";
+"onboarding.basicsTitle" = "Tell us about yourself";
+"onboarding.age" = "Age";
+"onboarding.gender" = "Gender";
+"onboarding.female" = "Female";
+"onboarding.male" = "Male";
+"onboarding.height" = "Height";
+"onboarding.currentWeightTitle" = "What's your current weight?";
+"onboarding.yourBmi" = "Your BMI";
+"onboarding.bmiUnder" = "Underweight";
+"onboarding.bmiUnderMsg" = "Let's help you build healthy weight.";
+"onboarding.bmiNormal" = "Normal";
+"onboarding.bmiNormalMsg" = "You've got a great figure! Keep it up!";
+"onboarding.bmiOver" = "Overweight";
+"onboarding.bmiOverMsg" = "A balanced plan can help you get back on track.";
+"onboarding.bmiObese" = "Obese";
+"onboarding.bmiObeseMsg" = "We'll build a safe, gradual plan for you.";
+"onboarding.targetWeightTitle" = "What's your target weight?";
+"onboarding.goalMaintain" = "Maintaining your weight";
+"onboarding.goalChallenging" = "Challenging goal!";
+"onboarding.goalGreat" = "Great start!";
+"onboarding.willGain" = "You will gain %.1f%% of body weight";
+"onboarding.willLose" = "You will lose %.1f%% of body weight";
+"onboarding.projectionLead" = "Based on your body data, you'll reach";
+"onboarding.on" = "on";
+"onboarding.greatStart" = "Great start!";
+"onboarding.greatStartMsg" = "With your body data in mind, let's elevate your custom plan for even better results.";
+"onboarding.workoutLevelTitle" = "Choose your preferred workout level";
+"onboarding.easyToStart" = "Easy to start";
+"onboarding.dontWorry" = "Don't worry!";
+"onboarding.dontWorryMsg" = "We'll provide beginner-friendly exercises to help you make a smooth start and keep going.";
+"onboarding.breakSweat" = "Break a light sweat";
+"onboarding.bitChallenging" = "A bit challenging";
+"onboarding.concernsTitle" = "Any discomfort or concerns with your body?";
+"onboarding.concernsMsg" = "This helps us focus on areas needing extra care and customize your fitness journey.";
+"onboarding.none" = "None";
+"onboarding.knee" = "Knee";
+"onboarding.lowerBack" = "Lower back";
+"onboarding.shoulder" = "Shoulder";
+"onboarding.activityLevelTitle" = "What's your activity level?";
+"onboarding.sedentary" = "Sedentary";
+"onboarding.active" = "Active";
+"onboarding.activitySedentaryDesc" = "I mostly sit and rarely exercise";
+"onboarding.activityLightDesc" = "I occasionally exercise or walk for 30 minutes";
+"onboarding.activityModerateDesc" = "I exercise a few times a week";
+"onboarding.activityActiveDesc" = "I exercise most days of the week";
+"onboarding.activityVeryActiveDesc" = "I train intensely almost every day";
+"onboarding.coachCreating" = "Your coach is creating your plan...";
+"onboarding.analyzingBody" = "Analyzing body data";
+"onboarding.calculatingMetabolism" = "Calculating metabolism";
+"onboarding.pickingExercises" = "Picking targeted exercises";
+"onboarding.fullBody" = "Full Body";
+"onboarding.firstPlanName" = "My First Plan";
+
+/* smart plan generator */
+"smartPlan.title" = "Smart Plan Generator";
+"smartPlan.subtitle" = "Preview and save";
+
 /* exercises */
 "exercises.title" = "Exercises";
 "exercises.searchPlaceholder" = "Search exercises...";

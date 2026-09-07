@@ -5,17 +5,25 @@ import SwiftUI
 struct RootView: View {
     @EnvironmentObject private var account: CloudKitAccountService
     @StateObject private var profileService = UserProfileService()
+    @StateObject private var workoutPlanService = WorkoutPlanService()
 
     var body: some View {
         Group {
-            if account.isLoading {
+            if account.isLoading || (account.isAvailable && profileService.isLoading) {
                 ProgressView()
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(AppTheme.background)
             } else if account.isAvailable {
-                MainTabView()
-                    .environmentObject(profileService)
-                    .onAppear { profileService.start(isAccountAvailable: true) }
+                if profileService.profile?.healthProfile == nil {
+                    OnboardingView(onFinished: { Task { await profileService.load() } })
+                        .environmentObject(profileService)
+                        .environmentObject(workoutPlanService)
+                } else {
+                    MainTabView()
+                        .environmentObject(profileService)
+                        .environmentObject(workoutPlanService)
+                        .onAppear { workoutPlanService.start(isAccountAvailable: true) }
+                }
             } else {
                 LoginView()
             }

@@ -42,6 +42,10 @@
 		FA0000000000000000100061 /* WorkoutHistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100060 /* WorkoutHistoryService.swift */; };
 		FA0000000000000000100063 /* TodayWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100062 /* TodayWorkoutView.swift */; };
 		FA0000000000000000100065 /* WorkoutHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100064 /* WorkoutHistoryView.swift */; };
+		FA0000000000000000100067 /* WorkoutPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100066 /* WorkoutPlan.swift */; };
+		FA0000000000000000100069 /* WorkoutPlanService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100068 /* WorkoutPlanService.swift */; };
+		FA000000000000000010006B /* WorkoutTemplateGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA000000000000000010006A /* WorkoutTemplateGenerator.swift */; };
+		FA000000000000000010006E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA000000000000000010006D /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +88,10 @@
 		FA0000000000000000100060 /* WorkoutHistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHistoryService.swift; sourceTree = "<group>"; };
 		FA0000000000000000100062 /* TodayWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWorkoutView.swift; sourceTree = "<group>"; };
 		FA0000000000000000100064 /* WorkoutHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHistoryView.swift; sourceTree = "<group>"; };
+		FA0000000000000000100066 /* WorkoutPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlan.swift; sourceTree = "<group>"; };
+		FA0000000000000000100068 /* WorkoutPlanService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlanService.swift; sourceTree = "<group>"; };
+		FA000000000000000010006A /* WorkoutTemplateGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTemplateGenerator.swift; sourceTree = "<group>"; };
+		FA000000000000000010006D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +133,7 @@
 				FA0000000000000000100008 /* DailyPlan.swift */,
 				FA000000000000000010000A /* Exercise.swift */,
 				FA000000000000000010000C /* UserProfile.swift */,
+				FA0000000000000000100066 /* WorkoutPlan.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -143,6 +152,8 @@
 				FA000000000000000010001F /* UserProfileService.swift */,
 				FA0000000000000000100021 /* AuthService.swift */,
 				FA0000000000000000100060 /* WorkoutHistoryService.swift */,
+				FA0000000000000000100068 /* WorkoutPlanService.swift */,
+				FA000000000000000010006A /* WorkoutTemplateGenerator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -152,6 +163,7 @@
 			children = (
 				FA0000000000000000100023 /* Auth */,
 				FA0000000000000000100026 /* Main */,
+				FA000000000000000010006C /* Onboarding */,
 				FA0000000000000000100039 /* Root */,
 				FA000000000000000010003C /* Theme */,
 			);
@@ -182,6 +194,14 @@
 				FA0000000000000000100064 /* WorkoutHistoryView.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		FA000000000000000010006C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				FA000000000000000010006D /* OnboardingView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		FA0000000000000000100039 /* Root */ = {
@@ -357,6 +377,10 @@
 				FA0000000000000000100061 /* WorkoutHistoryService.swift in Sources */,
 				FA0000000000000000100063 /* TodayWorkoutView.swift in Sources */,
 				FA0000000000000000100065 /* WorkoutHistoryView.swift in Sources */,
+				FA0000000000000000100067 /* WorkoutPlan.swift in Sources */,
+				FA0000000000000000100069 /* WorkoutPlanService.swift in Sources */,
+				FA000000000000000010006B /* WorkoutTemplateGenerator.swift in Sources */,
+				FA000000000000000010006E /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

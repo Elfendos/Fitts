@@ -23,6 +23,7 @@ enum CloudKitManager {
 enum CloudKitRecordType {
     static let userProfile = "UserProfile"
     static let dailyPlan = "DailyPlan"
+    static let workoutPlans = "WorkoutPlans"
 }
 
 enum CloudKitError: LocalizedError {

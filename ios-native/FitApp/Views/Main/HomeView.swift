@@ -8,6 +8,7 @@ import SwiftUI
 /// floating pill tab bar are not ported yet.
 struct HomeView: View {
     @EnvironmentObject private var profileService: UserProfileService
+    @EnvironmentObject private var planService: WorkoutPlanService
     @StateObject private var dailyPlan = DailyPlanService(dateKey: DateKey.today)
     @State private var selectedDate = Date()
 
@@ -44,6 +45,7 @@ struct HomeView: View {
         }
         .onAppear {
             dailyPlan.start(isAccountAvailable: true)
+            planService.start(isAccountAvailable: true)
         }
     }
 
@@ -301,29 +303,56 @@ struct HomeView: View {
                     .foregroundColor(AppTheme.brandAccent)
             }
 
-            NavigationLink(destination: WeeklyPlanView()) {
-                HStack {
-                    Image(systemName: "calendar")
-                        .foregroundColor(.white)
-                        .frame(width: 40, height: 40)
-                        .background(AppTheme.brandAccent)
-                        .cornerRadius(10)
-                    Text(L("home.weeklyPlanLabel"))
-                        .font(.subheadline.weight(.semibold))
-                        .foregroundColor(AppTheme.text)
-                    Spacer()
-                    Text(L("home.active"))
-                        .font(.caption.weight(.semibold))
-                        .foregroundColor(.green)
-                        .padding(.horizontal, 10)
-                        .padding(.vertical, 4)
-                        .background(Color.green.opacity(0.12))
-                        .cornerRadius(8)
+            if planService.plans.isEmpty {
+                NavigationLink(destination: WeeklyPlanView()) {
+                    HStack {
+                        Image(systemName: "calendar.badge.plus")
+                            .foregroundColor(.white)
+                            .frame(width: 40, height: 40)
+                            .background(AppTheme.brandAccent)
+                            .cornerRadius(10)
+                        Text(L("home.createFirstPlan"))
+                            .font(.subheadline.weight(.semibold))
+                            .foregroundColor(AppTheme.text)
+                        Spacer()
+                    }
+                    .padding()
+                    .overlay(RoundedRectangle(cornerRadius: 14).stroke(AppTheme.border))
+                    .cornerRadius(14)
                 }
-                .padding()
-                .overlay(RoundedRectangle(cornerRadius: 14).stroke(AppTheme.brandAccent, lineWidth: 1.5))
-                .cornerRadius(14)
+            } else {
+                ForEach(planService.plans.prefix(3)) { plan in
+                    NavigationLink(destination: WeeklyPlanView()) {
+                        planRow(plan)
+                    }
+                }
             }
         }
+    }
+
+    private func planRow(_ plan: WorkoutPlan) -> some View {
+        HStack {
+            Image(systemName: "calendar")
+                .foregroundColor(.white)
+                .frame(width: 40, height: 40)
+                .background(AppTheme.brandAccent)
+                .cornerRadius(10)
+            Text(plan.name)
+                .font(.subheadline.weight(.semibold))
+                .foregroundColor(AppTheme.text)
+            Spacer()
+            if plan.isActive {
+                Text(L("home.active"))
+                    .font(.caption.weight(.semibold))
+                    .foregroundColor(.green)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 4)
+                    .background(Color.green.opacity(0.12))
+                    .cornerRadius(8)
+            }
+        }
+        .padding()
+        .overlay(RoundedRectangle(cornerRadius: 14).stroke(plan.isActive ? AppTheme.brandAccent : AppTheme.border, lineWidth: plan.isActive ? 1.5 : 1))
+        .cornerRadius(14)
     }
 }

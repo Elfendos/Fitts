@@ -75,6 +75,67 @@
 "workout.markAsDone" = "Tamamlandı Olarak İşaretle";
 "workout.addMoreExercises" = "Daha Fazla Egzersiz Ekle";
 
+/* onboarding */
+"onboarding.sectionBasics" = "Temel Bilgiler";
+"onboarding.sectionBody" = "Vücudun Hakkında";
+"onboarding.sectionAssessment" = "Fitness Değerlendirmesi";
+"onboarding.basicsTitle" = "Kendinden bahset";
+"onboarding.age" = "Yaş";
+"onboarding.gender" = "Cinsiyet";
+"onboarding.female" = "Kadın";
+"onboarding.male" = "Erkek";
+"onboarding.height" = "Boy";
+"onboarding.currentWeightTitle" = "Şu anki kilon nedir?";
+"onboarding.yourBmi" = "VKİ Değerin";
+"onboarding.bmiUnder" = "Zayıf";
+"onboarding.bmiUnderMsg" = "Sağlıklı kilo almana yardımcı olalım.";
+"onboarding.bmiNormal" = "Normal";
+"onboarding.bmiNormalMsg" = "Harika bir formun var! Böyle devam et!";
+"onboarding.bmiOver" = "Fazla Kilolu";
+"onboarding.bmiOverMsg" = "Dengeli bir plan seni yoluna geri döndürebilir.";
+"onboarding.bmiObese" = "Obez";
+"onboarding.bmiObeseMsg" = "Senin için güvenli, kademeli bir plan oluşturacağız.";
+"onboarding.targetWeightTitle" = "Hedef kilon nedir?";
+"onboarding.goalMaintain" = "Kilonu koruyorsun";
+"onboarding.goalChallenging" = "Zorlu bir hedef!";
+"onboarding.goalGreat" = "Harika bir başlangıç!";
+"onboarding.willGain" = "Vücut ağırlığının %%%.1f kadarını alacaksın";
+"onboarding.willLose" = "Vücut ağırlığının %%%.1f kadarını vereceksin";
+"onboarding.projectionLead" = "Vücut verilerine göre şu tarihte ulaşacaksın:";
+"onboarding.on" = "-";
+"onboarding.greatStart" = "Harika bir başlangıç!";
+"onboarding.greatStartMsg" = "Vücut verilerini göz önünde bulundurarak, daha iyi sonuçlar için planını bir üst seviyeye taşıyalım.";
+"onboarding.workoutLevelTitle" = "Tercih ettiğin antrenman seviyesini seç";
+"onboarding.easyToStart" = "Kolay başlangıç";
+"onboarding.dontWorry" = "Merak etme!";
+"onboarding.dontWorryMsg" = "Yumuşak bir başlangıç yapıp devam edebilmen için başlangıç seviyesine uygun egzersizler sunacağız.";
+"onboarding.breakSweat" = "Hafif terleme";
+"onboarding.bitChallenging" = "Biraz zorlayıcı";
+"onboarding.concernsTitle" = "Vücudunla ilgili bir rahatsızlığın veya endişen var mı?";
+"onboarding.concernsMsg" = "Bu, ekstra özen gerektiren alanlara odaklanmamıza ve fitness yolculuğunu kişiselleştirmemize yardımcı olur.";
+"onboarding.none" = "Yok";
+"onboarding.knee" = "Diz";
+"onboarding.lowerBack" = "Bel";
+"onboarding.shoulder" = "Omuz";
+"onboarding.activityLevelTitle" = "Aktivite seviyen nedir?";
+"onboarding.sedentary" = "Hareketsiz";
+"onboarding.active" = "Aktif";
+"onboarding.activitySedentaryDesc" = "Çoğunlukla oturuyorum, nadiren egzersiz yapıyorum";
+"onboarding.activityLightDesc" = "Ara sıra egzersiz yapıyorum veya 30 dakika yürüyorum";
+"onboarding.activityModerateDesc" = "Haftada birkaç kez egzersiz yapıyorum";
+"onboarding.activityActiveDesc" = "Haftanın çoğu günü egzersiz yapıyorum";
+"onboarding.activityVeryActiveDesc" = "Neredeyse her gün yoğun antrenman yapıyorum";
+"onboarding.coachCreating" = "Koçun planını hazırlıyor...";
+"onboarding.analyzingBody" = "Vücut verileri analiz ediliyor";
+"onboarding.calculatingMetabolism" = "Metabolizma hesaplanıyor";
+"onboarding.pickingExercises" = "Hedefe uygun egzersizler seçiliyor";
+"onboarding.fullBody" = "Tüm Vücut";
+"onboarding.firstPlanName" = "İlk Planım";
+
+/* smart plan generator */
+"smartPlan.title" = "Akıllı Plan Oluşturucu";
+"smartPlan.subtitle" = "Önizle ve kaydet";
+
 /* exercises */
 "exercises.title" = "Egzersizler";
 "exercises.searchPlaceholder" = "Egzersiz ara...";
