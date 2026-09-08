@@ -50,6 +50,8 @@
 "home.workoutLabel" = "Workout";
 "home.history" = "History";
 "home.thisMonth" = "This Month";
+"home.muscleMap" = "Muscle Map";
+"home.muscleMapSubtitle" = "What's trained";
 "home.myPlans" = "My Plans";
 "home.seeAll" = "See All";
 "home.activePlan" = "Active plan";

@@ -36,7 +36,7 @@ struct MainTabView: View {
 
     var body: some View {
         ZStack(alignment: .bottom) {
-            HomeView()
+            HomeView(isActive: selectedTab == .home)
                 .bottomBarInset()
                 .opacity(selectedTab == .home ? 1 : 0)
                 .allowsHitTesting(selectedTab == .home)
@@ -45,7 +45,7 @@ struct MainTabView: View {
                 .opacity(selectedTab == .exercises ? 1 : 0)
                 .allowsHitTesting(selectedTab == .exercises)
             NavigationStack {
-                TodayWorkoutView(dateKey: DateKey.today)
+                TodayWorkoutView(dateKey: DateKey.today, isActive: selectedTab == .today)
             }
             .bottomBarInset()
             .opacity(selectedTab == .today ? 1 : 0)

@@ -50,6 +50,8 @@
 "home.workoutLabel" = "Antrenman";
 "home.history" = "Geçmiş";
 "home.thisMonth" = "Bu Ay";
+"home.muscleMap" = "Kas Haritası";
+"home.muscleMapSubtitle" = "Neler çalıştı";
 "home.myPlans" = "Planlarım";
 "home.seeAll" = "Tümünü Gör";
 "home.activePlan" = "Aktif plan";

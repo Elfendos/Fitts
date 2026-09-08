@@ -12,6 +12,13 @@ struct HomeView: View {
     @StateObject private var dailyPlan = DailyPlanService(dateKey: DateKey.today)
     @State private var selectedDate = Date()
 
+    /// MainTabView keeps every tab mounted (opacity toggle, not a real
+    /// TabView), so a plain `.onAppear` only fires once at launch — editing
+    /// today's plan from the Today tab or Exercises never showed up back
+    /// here. Passing whether this tab is currently selected lets `.task(id:)`
+    /// reload every time the user returns to Home, not just the first time.
+    var isActive: Bool = true
+
     private var selectedDateKey: String { DateKey.from(selectedDate) }
 
     private var weekDates: [Date] {
@@ -43,7 +50,8 @@ struct HomeView: View {
             .background(AppTheme.background.ignoresSafeArea())
             .navigationBarHidden(true)
         }
-        .onAppear {
+        .task(id: isActive) {
+            guard isActive else { return }
             dailyPlan.start(isAccountAvailable: true)
             planService.start(isAccountAvailable: true)
         }
@@ -244,24 +252,35 @@ struct HomeView: View {
                 .font(.headline)
                 .foregroundColor(AppTheme.text)
 
-            HStack(spacing: 12) {
-                NavigationLink(destination: TodayWorkoutView(dateKey: DateKey.today)) {
-                    quickActionCard(
-                        icon: "heart.text.square.fill",
-                        iconBackground: AppTheme.brandAccent.opacity(0.12),
-                        iconColor: AppTheme.brandAccent,
-                        title: L("home.workoutLabel"),
-                        subtitle: L("home.todaysWorkout")
-                    )
-                }
-                NavigationLink(destination: WorkoutHistoryView()) {
-                    quickActionCard(
-                        icon: "clock.fill",
-                        iconBackground: Color.orange.opacity(0.12),
-                        iconColor: .orange,
-                        title: L("home.history"),
-                        subtitle: L("home.thisMonth")
-                    )
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 12) {
+                    NavigationLink(destination: TodayWorkoutView(dateKey: DateKey.today)) {
+                        quickActionCard(
+                            icon: "heart.text.square.fill",
+                            iconBackground: AppTheme.brandAccent.opacity(0.12),
+                            iconColor: AppTheme.brandAccent,
+                            title: L("home.workoutLabel"),
+                            subtitle: L("home.todaysWorkout")
+                        )
+                    }
+                    NavigationLink(destination: WorkoutHistoryView()) {
+                        quickActionCard(
+                            icon: "clock.fill",
+                            iconBackground: Color.orange.opacity(0.12),
+                            iconColor: .orange,
+                            title: L("home.history"),
+                            subtitle: L("home.thisMonth")
+                        )
+                    }
+                    NavigationLink(destination: MuscleMapView()) {
+                        quickActionCard(
+                            icon: "figure.arms.open",
+                            iconBackground: Color.green.opacity(0.12),
+                            iconColor: .green,
+                            title: L("home.muscleMap"),
+                            subtitle: L("home.muscleMapSubtitle")
+                        )
+                    }
                 }
             }
         }
@@ -282,7 +301,7 @@ struct HomeView: View {
                 .font(.caption)
                 .foregroundColor(AppTheme.subtext)
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
+        .frame(width: 140, alignment: .leading)
         .padding()
         .background(AppTheme.cardBackground)
         .overlay(RoundedRectangle(cornerRadius: 14).stroke(AppTheme.border))

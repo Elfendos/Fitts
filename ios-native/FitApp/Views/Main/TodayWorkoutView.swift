@@ -9,8 +9,17 @@ struct TodayWorkoutView: View {
     @StateObject private var dailyPlan: DailyPlanService
     @State private var showingExercisePicker = false
 
-    init(dateKey: String) {
+    /// True by default (a fresh push from Home always loads once on
+    /// appear). MainTabView's "Today" tab passes whether it's the currently
+    /// selected tab instead — that tab instance stays mounted the whole
+    /// session (see HomeView's isActive for why), so without this, edits
+    /// made elsewhere (Exercises' Add to Today, Quick Start packages)
+    /// wouldn't show up here until the app restarted.
+    var isActive: Bool = true
+
+    init(dateKey: String, isActive: Bool = true) {
         _dailyPlan = StateObject(wrappedValue: DailyPlanService(dateKey: dateKey))
+        self.isActive = isActive
     }
 
     private var completedCount: Int { dailyPlan.plan.items.filter(\.completed).count }
@@ -51,7 +60,10 @@ struct TodayWorkoutView: View {
                 Task { await dailyPlan.save() }
             }
         }
-        .onAppear { dailyPlan.start(isAccountAvailable: true) }
+        .task(id: isActive) {
+            guard isActive else { return }
+            dailyPlan.start(isAccountAvailable: true)
+        }
     }
 
     private var progressCard: some View {

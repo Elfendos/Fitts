@@ -385,28 +385,34 @@ struct ExercisePickerSheet: View {
 
     var body: some View {
         NavigationStack {
-            VStack(spacing: 8) {
-                categoryChips
-
-                List(filtered) { exercise in
-                    let isAdded = addedIds.contains(exercise.id)
-                    Button {
-                        onPick(exercise)
-                        addedIds.insert(exercise.id)
-                    } label: {
-                        HStack {
-                            Text(exercise.title)
-                                .foregroundColor(AppTheme.text)
-                            Spacer()
-                            Image(systemName: isAdded ? "checkmark.circle.fill" : "plus.circle")
-                                .foregroundColor(isAdded ? .green : AppTheme.brandAccent)
-                        }
+            List(filtered) { exercise in
+                let isAdded = addedIds.contains(exercise.id)
+                Button {
+                    onPick(exercise)
+                    addedIds.insert(exercise.id)
+                } label: {
+                    HStack {
+                        Text(exercise.title)
+                            .foregroundColor(AppTheme.text)
+                        Spacer()
+                        Image(systemName: isAdded ? "checkmark.circle.fill" : "plus.circle")
+                            .foregroundColor(isAdded ? .green : AppTheme.brandAccent)
                     }
                 }
-                .listStyle(.plain)
             }
-            .searchable(text: $searchText, prompt: L("common.search"))
+            .listStyle(.plain)
+            .safeAreaInset(edge: .top) {
+                categoryChips
+                    .padding(.vertical, 8)
+                    .background(AppTheme.background)
+            }
+            .searchable(
+                text: $searchText,
+                placement: .navigationBarDrawer(displayMode: .always),
+                prompt: L("common.search")
+            )
             .navigationTitle(L("home.addExercise"))
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(L("common.done")) { dismiss() }
