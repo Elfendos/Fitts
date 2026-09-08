@@ -88,7 +88,9 @@ final class WorkoutPlanService: ObservableObject {
 
     func addExercise(_ exercise: Exercise, planId: String, day: String, sets: Int = 3, reps: Int = 8) {
         guard let idx = plans.firstIndex(where: { $0.id == planId }) else { return }
-        plans[idx].days[day, default: []].append(PlannedExercise(from: exercise, sets: sets, reps: reps))
+        var item = PlannedExercise(from: exercise, sets: sets, reps: reps)
+        item.maxWeight = ExerciseMaxWeightService.shared.weight(for: exercise.id)
+        plans[idx].days[day, default: []].append(item)
         Task { await save() }
     }
 

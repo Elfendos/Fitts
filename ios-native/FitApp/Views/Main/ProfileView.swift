@@ -22,6 +22,7 @@ struct ProfileView: View {
                     achievementsPreview
                 }
                 .padding()
+                .padding(.bottom, 90)
             }
             .background(AppTheme.background.ignoresSafeArea())
             .navigationTitle(L("home.profile"))

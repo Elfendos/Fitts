@@ -231,6 +231,7 @@ struct WeeklyPlanView: View {
                     }
                 }
                 .padding()
+                .padding(.bottom, 90)
             }
         )
     }

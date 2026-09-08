@@ -38,6 +38,7 @@ struct MuscleMapView: View {
                     }
                 }
                 .padding()
+                .padding(.bottom, 90)
             }
             .background(AppTheme.background.ignoresSafeArea())
             .navigationTitle("Kas Haritası")

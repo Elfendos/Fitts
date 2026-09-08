@@ -43,6 +43,7 @@ struct TodayWorkoutView: View {
                 addMoreButton
             }
             .padding()
+            .padding(.bottom, 90)
         }
         .background(AppTheme.background.ignoresSafeArea())
         .navigationTitle(L("home.todaysWorkout"))
@@ -122,40 +123,28 @@ struct TodayWorkoutView: View {
                 HStack(spacing: 12) {
                     stepperField(label: L("exercises.sets"), value: item.sets) { newValue in
                         dailyPlan.updateSets(plannedId: item.plannedId, sets: newValue)
+                        Task { await dailyPlan.save() }
                     }
                     stepperField(label: L("exercises.reps"), value: item.reps) { newValue in
                         dailyPlan.updateReps(plannedId: item.plannedId, reps: newValue)
+                        Task { await dailyPlan.save() }
                     }
                 }
 
                 maxWeightField(item: item)
 
-                HStack(spacing: 12) {
-                    Button {
-                        Task { await dailyPlan.save() }
-                    } label: {
-                        Label(L("workout.save"), systemImage: "checkmark")
-                            .font(.subheadline.weight(.semibold))
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 10)
-                    }
-                    .background(AppTheme.brandAccent.opacity(0.12))
-                    .foregroundColor(AppTheme.brandAccent)
-                    .cornerRadius(12)
-
-                    Button {
-                        dailyPlan.toggleCompleted(plannedId: item.plannedId)
-                        Task { await dailyPlan.save() }
-                    } label: {
-                        Label(L("workout.markAsDone"), systemImage: "checkmark.circle.fill")
-                            .font(.subheadline.weight(.semibold))
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 10)
-                    }
-                    .background(item.completed ? Color.green : Color.green.opacity(0.12))
-                    .foregroundColor(item.completed ? .white : .green)
-                    .cornerRadius(12)
+                Button {
+                    dailyPlan.toggleCompleted(plannedId: item.plannedId)
+                    Task { await dailyPlan.save() }
+                } label: {
+                    Label(L("workout.markAsDone"), systemImage: "checkmark.circle.fill")
+                        .font(.subheadline.weight(.semibold))
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 10)
                 }
+                .background(item.completed ? Color.green : AppTheme.border.opacity(0.4))
+                .foregroundColor(item.completed ? .white : AppTheme.subtext)
+                .cornerRadius(12)
             }
             .padding()
         }
@@ -182,6 +171,10 @@ struct TodayWorkoutView: View {
         .frame(maxWidth: .infinity)
     }
 
+    /// 2.5 kg steps (0, 2.5, 5, 7.5, 10, 12.5, ...) — matches how weight
+    /// plates actually stack, unlike a plain +1 kg counter.
+    private static let maxWeightStep: Double = 2.5
+
     private func maxWeightField(item: PlannedExercise) -> some View {
         HStack {
             Label(L("workout.maxWeight"), systemImage: "scalemass")
@@ -189,13 +182,13 @@ struct TodayWorkoutView: View {
                 .foregroundColor(AppTheme.text)
             Spacer()
             stepButton(systemImage: "minus") {
-                dailyPlan.updateMaxWeight(plannedId: item.plannedId, maxWeight: (item.maxWeight ?? 0) - 1)
+                setMaxWeight(item: item, to: (item.maxWeight ?? 0) - Self.maxWeightStep)
             }
-            Text("\(Int(item.maxWeight ?? 0))")
+            Text(formatWeight(item.maxWeight ?? 0))
                 .font(.subheadline.weight(.semibold))
-                .frame(minWidth: 32)
+                .frame(minWidth: 40)
             stepButton(systemImage: "plus") {
-                dailyPlan.updateMaxWeight(plannedId: item.plannedId, maxWeight: (item.maxWeight ?? 0) + 1)
+                setMaxWeight(item: item, to: (item.maxWeight ?? 0) + Self.maxWeightStep)
             }
             Text("kg").font(.caption).foregroundColor(AppTheme.subtext)
         }
@@ -203,6 +196,19 @@ struct TodayWorkoutView: View {
         .background(AppTheme.background)
         .overlay(RoundedRectangle(cornerRadius: 10).stroke(AppTheme.border))
         .cornerRadius(10)
+    }
+
+    private func setMaxWeight(item: PlannedExercise, to newValue: Double) {
+        let clamped = max(0, newValue)
+        dailyPlan.updateMaxWeight(plannedId: item.plannedId, maxWeight: clamped)
+        ExerciseMaxWeightService.shared.record(exerciseId: item.id, weight: clamped)
+        Task { await dailyPlan.save() }
+    }
+
+    private func formatWeight(_ value: Double) -> String {
+        value.truncatingRemainder(dividingBy: 1) == 0
+            ? String(Int(value))
+            : String(format: "%.1f", value)
     }
 
     private func stepButton(systemImage: String, action: @escaping () -> Void) -> some View {

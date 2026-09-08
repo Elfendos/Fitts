@@ -38,6 +38,7 @@ struct WorkoutHistoryView: View {
                 footerNote
             }
             .padding()
+            .padding(.bottom, 90)
         }
         .background(AppTheme.background.ignoresSafeArea())
         .navigationTitle(L("home.history"))

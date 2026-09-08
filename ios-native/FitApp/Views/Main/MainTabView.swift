@@ -58,6 +58,7 @@ struct MainTabView: View {
             floatingBar
         }
         .background(AppTheme.background.ignoresSafeArea())
+        .task { await ExerciseMaxWeightService.shared.loadIfNeeded() }
     }
 
     private var floatingBar: some View {

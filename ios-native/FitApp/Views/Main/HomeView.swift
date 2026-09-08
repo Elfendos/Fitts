@@ -46,6 +46,7 @@ struct HomeView: View {
                     myPlansSection
                 }
                 .padding()
+                .padding(.bottom, 90)
             }
             .background(AppTheme.background.ignoresSafeArea())
             .navigationBarHidden(true)

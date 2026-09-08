@@ -32,6 +32,33 @@ Bilinçli olarak ertelenen / basitleştirilen konular. Sırayla ele alınacak.
       tamamlamak `UserProfile.stats` (Workouts/Streak/Calories) veya
       Achievements'ı otomatik artırmıyor — hiçbir yerde bu bağlantı kurulmamış.
 
+## Sıradaki istek turu (kullanıcıdan gelen, uygulandı — teyit bekliyor)
+
+- [x] **Max Weight artık 2.5 kg adımlarla ilerliyor** (0, 2.5, 5, 7.5, 10...)
+      — önceden 1 kg adımdı.
+- [x] **"Save" butonu kaldırıldı, her değişiklik otomatik kaydediliyor**
+      (sets/reps/max weight steplarının her biri artık kendi başına
+      `dailyPlan.save()` tetikliyor).
+- [x] **"Mark as Done" artık tamamlanmadan önce nötr (gri) görünüyor**,
+      sadece gerçekten işaretlenince yeşile dönüyor — önceden her zaman
+      hafif yeşildi, kafa karıştırıyordu.
+- [x] **Today ekranında "Add More Exercises" butonu artık alt menünün
+      altında kalmıyor** (Home, Exercises, Profile, Weekly Plan, Workout
+      History, Muscle Map ekranlarına da aynı düzeltme uygulandı).
+- [x] **Max Weight artık hatırlanıyor** — bir harekete bugün girdiğiniz
+      ağırlık, o hareketi başka bir güne eklediğinizde otomatik geliyor
+      (yeni `ExerciseMaxWeightService`, CloudKit'te ayrı bir kayıt).
+- [x] **Exercises sayfası artık tek parça kayıyor** — önceden sadece
+      "All Exercises" listesinden aşağı sürüklenebiliyordu, Quick Start
+      kısmından da tüm sayfa kayıyor artık.
+- [ ] **Bu turun testi yarım kaldı** — simülatörde Mark as Done'ı tekrar
+      test ederken koordinat hesaplamalarım tutarsız çıktı (muhtemelen
+      benim tıklama noktası hesaplamamdan kaynaklı, kodda bulduğum somut
+      bir hata yok), ayrıca ekranda 9 egzersizden 7'si daha önceki
+      testlerden zaten "tamamlandı" işaretliydi. Kaldığımız yerden devam
+      ederken Mark as Done'ı ve otomatik kaydetmeyi bir kez daha, temiz
+      bir günlük planla test etmek lazım.
+
 ## Bu oturumda düzeltilen bug
 
 - [x] **Onboarding "baştan başlıyor" bug'ı** — `UserProfileService.setHealthProfile`

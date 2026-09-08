@@ -46,6 +46,7 @@
 		FA0000000000000000100069 /* WorkoutPlanService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000100068 /* WorkoutPlanService.swift */; };
 		FA000000000000000010006B /* WorkoutTemplateGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA000000000000000010006A /* WorkoutTemplateGenerator.swift */; };
 		FA000000000000000010006E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA000000000000000010006D /* OnboardingView.swift */; };
+		FA0000000000000000100070 /* ExerciseMaxWeightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA000000000000000010006F /* ExerciseMaxWeightService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		FA0000000000000000100068 /* WorkoutPlanService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlanService.swift; sourceTree = "<group>"; };
 		FA000000000000000010006A /* WorkoutTemplateGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTemplateGenerator.swift; sourceTree = "<group>"; };
 		FA000000000000000010006D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		FA000000000000000010006F /* ExerciseMaxWeightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseMaxWeightService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				FA0000000000000000100060 /* WorkoutHistoryService.swift */,
 				FA0000000000000000100068 /* WorkoutPlanService.swift */,
 				FA000000000000000010006A /* WorkoutTemplateGenerator.swift */,
+				FA000000000000000010006F /* ExerciseMaxWeightService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				FA0000000000000000100069 /* WorkoutPlanService.swift in Sources */,
 				FA000000000000000010006B /* WorkoutTemplateGenerator.swift in Sources */,
 				FA000000000000000010006E /* OnboardingView.swift in Sources */,
+				FA0000000000000000100070 /* ExerciseMaxWeightService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

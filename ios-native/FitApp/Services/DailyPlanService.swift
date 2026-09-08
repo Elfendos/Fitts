@@ -55,8 +55,10 @@ final class DailyPlanService: ObservableObject {
         isLoading = false
     }
 
-    func addExercise(_ exercise: Exercise, sets: Int = 3, reps: Int = 8) {
-        plan.items.append(PlannedExercise(from: exercise, sets: sets, reps: reps))
+    func addExercise(_ exercise: Exercise, sets: Int = 3, reps: Int = 8, maxWeight: Double? = nil) {
+        var item = PlannedExercise(from: exercise, sets: sets, reps: reps)
+        item.maxWeight = maxWeight ?? ExerciseMaxWeightService.shared.weight(for: exercise.id)
+        plan.items.append(item)
     }
 
     func removeExercise(plannedId: String) {

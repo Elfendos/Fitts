@@ -20,29 +20,40 @@ struct ExercisesView: View {
 
     var body: some View {
         NavigationStack {
-            VStack(spacing: 0) {
-                quickStartSection
+            ScrollView {
+                VStack(spacing: 0) {
+                    quickStartSection
 
-                Text(L("quickStart.allExercises"))
-                    .font(.headline)
-                    .foregroundColor(AppTheme.text)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.horizontal)
-                    .padding(.top, 12)
+                    Text(L("quickStart.allExercises"))
+                        .font(.headline)
+                        .foregroundColor(AppTheme.text)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal)
+                        .padding(.top, 12)
 
-                categoryChips
-                    .padding(.top, 8)
+                    categoryChips
+                        .padding(.top, 8)
+                        .padding(.bottom, 4)
 
-                List(filtered) { exercise in
-                    NavigationLink(destination: ExerciseDetailView(exercise: exercise)) {
-                        ExerciseRow(exercise: exercise)
+                    LazyVStack(spacing: 0) {
+                        ForEach(filtered) { exercise in
+                            NavigationLink(destination: ExerciseDetailView(exercise: exercise)) {
+                                ExerciseRow(exercise: exercise)
+                            }
+                            Divider().padding(.leading)
+                        }
                     }
+                    .padding(.horizontal)
                 }
-                .listStyle(.plain)
-                .searchable(text: $searchText, prompt: L("common.search"))
+                .padding(.bottom, 90)
             }
             .background(AppTheme.background.ignoresSafeArea())
             .navigationTitle(L("home.exercises"))
+            .searchable(
+                text: $searchText,
+                placement: .navigationBarDrawer(displayMode: .always),
+                prompt: L("common.search")
+            )
             .sheet(item: $selectedPackage) { package in
                 DayPackageDetailSheet(package: package)
             }
