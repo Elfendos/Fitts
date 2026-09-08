@@ -11,6 +11,7 @@ struct OnboardingView: View {
     @EnvironmentObject private var profileService: UserProfileService
     @EnvironmentObject private var workoutPlanService: WorkoutPlanService
     let onFinished: () -> Void
+    let onSkip: () -> Void
 
     private enum Step: Int, CaseIterable {
         case basics, weight, targetWeight, projection, workoutLevel, concerns, activityLevel, generating
@@ -131,7 +132,9 @@ struct OnboardingView: View {
                     .font(.footnote.weight(.semibold))
                     .foregroundColor(AppTheme.brandAccent)
                 Spacer()
-                Color.clear.frame(width: 20, height: 20)
+                Button(L("onboarding.skip")) { onSkip() }
+                    .font(.footnote.weight(.semibold))
+                    .foregroundColor(AppTheme.subtext)
             }
 
             HStack(spacing: 6) {
@@ -533,6 +536,9 @@ struct OnboardingView: View {
                             .background(AppTheme.text)
                             .cornerRadius(24)
                     }
+                    Button(L("onboarding.skipForNow")) { onSkip() }
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundColor(AppTheme.subtext)
                 }
                 .padding(.top, 8)
             }

@@ -131,6 +131,8 @@
 "onboarding.pickingExercises" = "Picking targeted exercises";
 "onboarding.fullBody" = "Full Body";
 "onboarding.firstPlanName" = "My First Plan";
+"onboarding.skip" = "Skip";
+"onboarding.skipForNow" = "Skip for now";
 
 /* smart plan generator */
 "smartPlan.title" = "Smart Plan Generator";

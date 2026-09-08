@@ -131,6 +131,8 @@
 "onboarding.pickingExercises" = "Hedefe uygun egzersizler seçiliyor";
 "onboarding.fullBody" = "Tüm Vücut";
 "onboarding.firstPlanName" = "İlk Planım";
+"onboarding.skip" = "Atla";
+"onboarding.skipForNow" = "Şimdilik geç";
 
 /* smart plan generator */
 "smartPlan.title" = "Akıllı Plan Oluşturucu";

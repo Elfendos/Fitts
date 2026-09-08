@@ -7,6 +7,13 @@ struct RootView: View {
     @StateObject private var profileService = UserProfileService()
     @StateObject private var workoutPlanService = WorkoutPlanService()
 
+    /// Lets onboarding be bypassed on this device — e.g. while the
+    /// CloudKit container's production schema hasn't been deployed yet, so
+    /// setHealthProfile() can't actually persist. Doesn't touch CloudKit;
+    /// just a local escape hatch until that's sorted out. See OnboardingView's
+    /// "Skip for now" link.
+    @AppStorage("onboarding.skipped") private var hasSkippedOnboarding = false
+
     var body: some View {
         Group {
             if account.isLoading || (account.isAvailable && profileService.isLoading) {
@@ -14,8 +21,11 @@ struct RootView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(AppTheme.background)
             } else if account.isAvailable {
-                if profileService.profile?.healthProfile == nil {
-                    OnboardingView(onFinished: { Task { await profileService.load() } })
+                if profileService.profile?.healthProfile == nil && !hasSkippedOnboarding {
+                    OnboardingView(
+                        onFinished: { Task { await profileService.load() } },
+                        onSkip: { hasSkippedOnboarding = true }
+                    )
                         .environmentObject(profileService)
                         .environmentObject(workoutPlanService)
                 } else {
