@@ -38,6 +38,30 @@ enum WorkoutTemplateGenerator {
         .init(title: "Plank Hold", sets: 3, reps: 10),
     ]
 
+    static let shoulderDay: [TemplateExercise] = [
+        .init(title: "Overhead Shoulder Press", sets: 4, reps: 8),
+        .init(title: "Dumbbell Lateral Raise", sets: 3, reps: 12),
+        .init(title: "Front Raise", sets: 3, reps: 12),
+        .init(title: "Face Pull", sets: 3, reps: 12),
+        .init(title: "Arnold Press", sets: 3, reps: 10),
+    ]
+
+    static let coreDay: [TemplateExercise] = [
+        .init(title: "Plank Hold", sets: 3, reps: 1),
+        .init(title: "Russian Twists", sets: 3, reps: 20),
+        .init(title: "Bicycle Crunches", sets: 3, reps: 20),
+        .init(title: "Lying Leg Raises", sets: 3, reps: 15),
+        .init(title: "Dead Bug", sets: 3, reps: 12),
+    ]
+
+    static let fullBodyDay: [TemplateExercise] = [
+        .init(title: "Push-ups", sets: 3, reps: 12),
+        .init(title: "Pull-ups", sets: 3, reps: 8),
+        .init(title: "Bodyweight Squats", sets: 3, reps: 15),
+        .init(title: "Plank Hold", sets: 3, reps: 1),
+        .init(title: "Jumping Jacks", sets: 3, reps: 30),
+    ]
+
     /// Mon/Wed/Fri push-pull-legs, Tue/Thu/Sat/Sun rest.
     static func weeklySplit() -> [String: [TemplateExercise]] {
         [
@@ -46,6 +70,25 @@ enum WorkoutTemplateGenerator {
             "Fri": legDay,
         ]
     }
+
+    /// One ready-made "day" of exercises — shown as a square Quick Start
+    /// card at the top of ExercisesView (most people train by body-part
+    /// split rather than browsing the full 160-exercise catalog).
+    struct DayPackage: Identifiable {
+        var id: String
+        var title: String
+        var icon: String
+        var exercises: [TemplateExercise]
+    }
+
+    static let dayPackages: [DayPackage] = [
+        DayPackage(id: "chestTriceps", title: "Chest & Triceps", icon: "figure.strengthtraining.traditional", exercises: pushDay),
+        DayPackage(id: "backBiceps", title: "Back & Biceps", icon: "figure.strengthtraining.functional", exercises: pullDay),
+        DayPackage(id: "legDay", title: "Leg Day", icon: "figure.run", exercises: legDay),
+        DayPackage(id: "shoulders", title: "Shoulders", icon: "figure.arms.open", exercises: shoulderDay),
+        DayPackage(id: "core", title: "Core", icon: "figure.core.training", exercises: coreDay),
+        DayPackage(id: "fullBody", title: "Full Body", icon: "figure.mixed.cardio", exercises: fullBodyDay),
+    ]
 
     /// Resolves each template entry against the bundled catalog by exact
     /// (case-insensitive) title match, skipping any that aren't found.

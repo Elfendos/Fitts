@@ -134,6 +134,18 @@
 "onboarding.skip" = "Skip";
 "onboarding.skipForNow" = "Skip for now";
 
+/* quick start day packages (ExercisesView) */
+"quickStart.title" = "Quick Start";
+"quickStart.allExercises" = "All Exercises";
+"quickStart.chestTriceps" = "Chest & Triceps";
+"quickStart.backBiceps" = "Back & Biceps";
+"quickStart.legDay" = "Leg Day";
+"quickStart.shoulders" = "Shoulders";
+"quickStart.core" = "Core";
+"quickStart.fullBody" = "Full Body";
+"quickStart.addAllToToday" = "Add All to Today";
+"quickStart.addedToToday" = "Added to Today";
+
 /* smart plan generator */
 "smartPlan.title" = "Smart Plan Generator";
 "smartPlan.subtitle" = "Preview and save";

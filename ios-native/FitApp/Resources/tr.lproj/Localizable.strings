@@ -134,6 +134,18 @@
 "onboarding.skip" = "Atla";
 "onboarding.skipForNow" = "Şimdilik geç";
 
+/* quick start day packages (ExercisesView) */
+"quickStart.title" = "Hızlı Başlangıç";
+"quickStart.allExercises" = "Tüm Egzersizler";
+"quickStart.chestTriceps" = "Göğüs & Triceps";
+"quickStart.backBiceps" = "Sırt & Biceps";
+"quickStart.legDay" = "Bacak Günü";
+"quickStart.shoulders" = "Omuz";
+"quickStart.core" = "Karın";
+"quickStart.fullBody" = "Tüm Vücut";
+"quickStart.addAllToToday" = "Hepsini Bugüne Ekle";
+"quickStart.addedToToday" = "Bugüne Eklendi";
+
 /* smart plan generator */
 "smartPlan.title" = "Akıllı Plan Oluşturucu";
 "smartPlan.subtitle" = "Önizle ve kaydet";
