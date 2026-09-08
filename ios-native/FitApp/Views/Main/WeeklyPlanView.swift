@@ -363,28 +363,88 @@ private struct IdentifiableString: Identifiable {
     var id: String { value }
 }
 
-/// Shared by WeeklyPlanView and TodayWorkoutView.
+/// Shared by WeeklyPlanView and TodayWorkoutView. Searchable/filterable, and
+/// stays open across multiple picks — `onPick` is called once per tap, the
+/// row just shows an "added" checkmark instead of dismissing, so several
+/// exercises can be queued in one visit before tapping Done.
 struct ExercisePickerSheet: View {
     @ObservedObject private var store = ExerciseDataStore.shared
     @Environment(\.dismiss) private var dismiss
     let onPick: (Exercise) -> Void
 
+    @State private var searchText = ""
+    @State private var selectedCategory: ExerciseCategory?
+    @State private var addedIds: Set<String> = []
+
+    private var filtered: [Exercise] {
+        let base = store.exercises(in: selectedCategory)
+        guard !searchText.isEmpty else { return base }
+        let lowered = searchText.lowercased()
+        return base.filter { $0.title.lowercased().contains(lowered) }
+    }
+
     var body: some View {
         NavigationStack {
-            List(store.all) { exercise in
-                Button {
-                    onPick(exercise)
-                    dismiss()
-                } label: {
-                    Text(exercise.title).foregroundColor(AppTheme.text)
+            VStack(spacing: 8) {
+                categoryChips
+
+                List(filtered) { exercise in
+                    let isAdded = addedIds.contains(exercise.id)
+                    Button {
+                        onPick(exercise)
+                        addedIds.insert(exercise.id)
+                    } label: {
+                        HStack {
+                            Text(exercise.title)
+                                .foregroundColor(AppTheme.text)
+                            Spacer()
+                            Image(systemName: isAdded ? "checkmark.circle.fill" : "plus.circle")
+                                .foregroundColor(isAdded ? .green : AppTheme.brandAccent)
+                        }
+                    }
                 }
+                .listStyle(.plain)
             }
+            .searchable(text: $searchText, prompt: L("common.search"))
             .navigationTitle(L("home.addExercise"))
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(L("common.close")) { dismiss() }
+                    Button(L("common.done")) { dismiss() }
+                        .fontWeight(.semibold)
                 }
             }
+        }
+    }
+
+    private var categoryChips: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 8) {
+                chip(title: L("common.all"), isSelected: selectedCategory == nil) {
+                    selectedCategory = nil
+                }
+                ForEach(ExerciseCategory.allCases) { category in
+                    chip(
+                        title: category.rawValue.capitalized,
+                        isSelected: selectedCategory == category
+                    ) {
+                        selectedCategory = category
+                    }
+                }
+            }
+            .padding(.horizontal)
+        }
+    }
+
+    private func chip(title: String, isSelected: Bool, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Text(title)
+                .font(.footnote.weight(.semibold))
+                .padding(.horizontal, 14)
+                .padding(.vertical, 8)
+                .background(isSelected ? AppTheme.tint : AppTheme.cardBackground)
+                .foregroundColor(isSelected ? .white : AppTheme.text)
+                .overlay(RoundedRectangle(cornerRadius: 20).stroke(isSelected ? Color.clear : AppTheme.border))
+                .cornerRadius(20)
         }
     }
 }

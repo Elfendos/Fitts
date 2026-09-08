@@ -5,17 +5,18 @@ import SwiftUI
 /// FloatingTabBar). All four tabs stay mounted in a ZStack (shown/hidden via
 /// opacity) rather than recreated on each switch, so per-tab state
 /// (scroll position, loaded CloudKit data) survives tab changes the same
-/// way TabView's did. "Create" maps to the Weekly Plan screen — the RN
-/// app's dedicated create-workout hub behind that tab isn't ported.
+/// way TabView's did. "Today" shows the daily program (TodayWorkoutView) —
+/// Weekly Plan is still reachable from Home's "My Plans" section, just not
+/// from the tab bar itself anymore.
 struct MainTabView: View {
     private enum Tab: CaseIterable, Hashable {
-        case home, exercises, create, profile
+        case home, exercises, today, profile
 
         var icon: String {
             switch self {
             case .home: return "house.fill"
             case .exercises: return "figure.strengthtraining.traditional"
-            case .create: return "plus.circle.fill"
+            case .today: return "checklist"
             case .profile: return "person.fill"
             }
         }
@@ -25,7 +26,7 @@ struct MainTabView: View {
             switch self {
             case .home: return LocalizationManager.shared.language == .tr ? "Ana Sayfa" : "Home"
             case .exercises: return L("home.exercises")
-            case .create: return LocalizationManager.shared.language == .tr ? "Oluştur" : "Create"
+            case .today: return L("common.today")
             case .profile: return L("home.profile")
             }
         }
@@ -43,10 +44,12 @@ struct MainTabView: View {
                 .bottomBarInset()
                 .opacity(selectedTab == .exercises ? 1 : 0)
                 .allowsHitTesting(selectedTab == .exercises)
-            WeeklyPlanView()
-                .bottomBarInset()
-                .opacity(selectedTab == .create ? 1 : 0)
-                .allowsHitTesting(selectedTab == .create)
+            NavigationStack {
+                TodayWorkoutView(dateKey: DateKey.today)
+            }
+            .bottomBarInset()
+            .opacity(selectedTab == .today ? 1 : 0)
+            .allowsHitTesting(selectedTab == .today)
             ProfileView()
                 .bottomBarInset()
                 .opacity(selectedTab == .profile ? 1 : 0)

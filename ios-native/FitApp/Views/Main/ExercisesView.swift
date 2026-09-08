@@ -58,7 +58,7 @@ struct ExercisesView: View {
                 .padding(.top, 12)
 
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 12) {
+                LazyHGrid(rows: [GridItem(.fixed(128), spacing: 12), GridItem(.fixed(128), spacing: 12)], spacing: 12) {
                     ForEach(WorkoutTemplateGenerator.dayPackages) { package in
                         Button {
                             selectedPackage = package
@@ -69,6 +69,7 @@ struct ExercisesView: View {
                 }
                 .padding(.horizontal)
             }
+            .frame(height: 268)
         }
     }
 
