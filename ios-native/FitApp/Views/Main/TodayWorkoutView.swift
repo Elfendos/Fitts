@@ -160,6 +160,7 @@ struct TodayWorkoutView: View {
                 stepButton(systemImage: "minus") { onChange(max(1, value - 1)) }
                 Text("\(value)")
                     .font(.subheadline.weight(.semibold))
+                    .foregroundColor(AppTheme.text)
                     .frame(maxWidth: .infinity)
                 stepButton(systemImage: "plus") { onChange(value + 1) }
             }
@@ -186,6 +187,7 @@ struct TodayWorkoutView: View {
             }
             Text(formatWeight(item.maxWeight ?? 0))
                 .font(.subheadline.weight(.semibold))
+                .foregroundColor(AppTheme.text)
                 .frame(minWidth: 40)
             stepButton(systemImage: "plus") {
                 setMaxWeight(item: item, to: (item.maxWeight ?? 0) + Self.maxWeightStep)

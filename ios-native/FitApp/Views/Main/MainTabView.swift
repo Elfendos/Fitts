@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 /// Custom floating pill tab bar, replacing the plain TabView this port
 /// originally shipped with (see the old comment here about the RN app's
@@ -33,6 +34,7 @@ struct MainTabView: View {
     }
 
     @State private var selectedTab: Tab = .home
+    @State private var isKeyboardVisible = false
 
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -55,10 +57,18 @@ struct MainTabView: View {
                 .opacity(selectedTab == .profile ? 1 : 0)
                 .allowsHitTesting(selectedTab == .profile)
 
-            floatingBar
+            if !isKeyboardVisible {
+                floatingBar
+            }
         }
         .background(AppTheme.background.ignoresSafeArea())
         .task { await ExerciseMaxWeightService.shared.loadIfNeeded() }
+        .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { _ in
+            isKeyboardVisible = true
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification)) { _ in
+            isKeyboardVisible = false
+        }
     }
 
     private var floatingBar: some View {
@@ -80,7 +90,7 @@ struct MainTabView: View {
         }
         .padding(.vertical, 10)
         .padding(.horizontal, 8)
-        .background(RoundedRectangle(cornerRadius: 28).fill(AppTheme.text))
+        .background(RoundedRectangle(cornerRadius: 28).fill(AppTheme.tabBarBackground))
         .padding(.horizontal, 16)
         .padding(.bottom, 8)
     }

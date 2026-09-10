@@ -163,6 +163,7 @@ private struct ExerciseRow: View {
                 Text(exercise.title)
                     .font(.body.weight(.semibold))
                     .foregroundColor(AppTheme.text)
+                    .lineLimit(1)
                 Text(exercise.muscles.joined(separator: ", "))
                     .font(.footnote)
                     .foregroundColor(AppTheme.subtext)

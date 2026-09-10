@@ -59,6 +59,34 @@ Bilinçli olarak ertelenen / basitleştirilen konular. Sırayla ele alınacak.
       ederken Mark as Done'ı ve otomatik kaydetmeyi bir kez daha, temiz
       bir günlük planla test etmek lazım.
 
+## Karanlık mod / kontrast turu (kullanıcı ekran görüntüsüyle bildirdi)
+
+- [x] **Dark Mode'da yazılar görünmüyordu (Add Exercise, Quick Start önizleme,
+      Today's Workout'taki sayılar).** Kök sebep: `AppTheme` tüm renkleri
+      sabit (hep açık) hex değerlerle tanımlıyordu, ama `List`, klavye gibi
+      sistem bileşenleri cihazın Dark Mode ayarını takip ediyordu — sonuç
+      koyu yazı + koyu zemin. Kullanıcının isteği üzerine ekranı açık moda
+      zorlamak yerine `AppTheme`'in nötr renkleri (text/background/subtext/
+      border/cardBackground) artık UIKit'in `label`/`systemBackground`/
+      `secondaryLabel`/`separator` gibi **uyarlanabilir** renklerine taşındı;
+      bunlar sistemin açık/koyu ayarını otomatik takip ediyor. Stat kutuları
+      (Start weight/Goal/Daily calories) için de açık/koyu ayrı pastel tonlar
+      eklendi. Floating tab bar ve onboarding'in koyu "Next" butonları bilerek
+      sabit koyu bırakıldı (`AppTheme.tabBarBackground`) çünkü onlar zaten
+      beyaz yazıyla eşleşiyor — `AppTheme.text`'e bağlı kalsalardı Dark
+      Mode'da beyaz-üstüne-beyaz olurlardı.
+- [x] **Exercises listesinde bazı satırlar 2 satıra taşıp hizası bozuluyordu**
+      (uzun isimler, ör. "Incline Dumbbell Press") — başlık artık tek satırla
+      sınırlı (`.lineLimit(1)`), tüm satırlar aynı yükseklikte/hizada.
+- [x] **Klavye açıkken alt menü (floating tab bar) klavyenin üstünde
+      görünüyordu.** Artık klavye açıldığında menü tamamen gizleniyor,
+      kapanınca geri geliyor.
+- [ ] **Not:** Bu turun düzeltmelerini simülatörde son kez görsel olarak
+      teyit edemedim — test sırasında simülatörün iCloud hesabı beklenmedik
+      şekilde "erişim kısıtlı" durumuna düştü (kod değişikliğiyle ilgisi yok).
+      Kaldığımız yerden devam ederken hem açık hem karanlık modda bir kez
+      daha göz gezdirmek iyi olur.
+
 ## Bu oturumda düzeltilen bug
 
 - [x] **Onboarding "baştan başlıyor" bug'ı** — `UserProfileService.setHealthProfile`

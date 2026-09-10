@@ -158,7 +158,7 @@ struct OnboardingView: View {
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 16)
-                .background(AppTheme.text)
+                .background(AppTheme.tabBarBackground)
                 .cornerRadius(28)
         }
     }
@@ -533,7 +533,7 @@ struct OnboardingView: View {
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 14)
-                            .background(AppTheme.text)
+                            .background(AppTheme.tabBarBackground)
                             .cornerRadius(24)
                     }
                     Button(L("onboarding.skipForNow")) { onSkip() }
