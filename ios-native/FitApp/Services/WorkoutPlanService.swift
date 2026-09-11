@@ -14,15 +14,31 @@ final class WorkoutPlanService: ObservableObject {
 
     private let db = CloudKitManager.privateDatabase
     private var isAccountAvailable = false
+    private var hasLoadedOnce = false
 
     var activePlan: WorkoutPlan? { plans.first(where: \.isActive) }
 
+    /// WeeklyPlanView/HomeView call this on every `.onAppear`, not just
+    /// once — without the `hasLoadedOnce` guard, a plan created right after
+    /// the screen appears could lose the race against that appearance's own
+    /// `load()`: the append happens locally and its `save()` is queued, but
+    /// if the older `load()` Task resolves afterward, it overwrites
+    /// `plans` with the pre-append server state, erasing the new plan
+    /// in memory — and the *next* save then persists that emptier state,
+    /// erasing it from CloudKit too. Loading once per session (this object
+    /// is a long-lived singleton for the whole app session, not re-created
+    /// per screen) removes the second, competing `load()` entirely.
     func start(isAccountAvailable: Bool) {
         self.isAccountAvailable = isAccountAvailable
         guard isAccountAvailable else {
             isLoading = false
             return
         }
+        guard !hasLoadedOnce else {
+            isLoading = false
+            return
+        }
+        hasLoadedOnce = true
         Task { await load() }
     }
 
