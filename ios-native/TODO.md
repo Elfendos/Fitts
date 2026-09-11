@@ -59,6 +59,19 @@ Bilinçli olarak ertelenen / basitleştirilen konular. Sırayla ele alınacak.
       ederken Mark as Done'ı ve otomatik kaydetmeyi bir kez daha, temiz
       bir günlük planla test etmek lazım.
 
+## Plan kaybolma bug'ı (kullanıcı bildirdi)
+
+- [x] **Yeni oluşturulan Weekly Plan, ekrandan çıkıp geri gelince kayboluyordu.**
+      `WorkoutPlanService`, WeeklyPlanView/HomeView her göründüğünde
+      (`.onAppear`) sunucudan yeniden yüklüyordu. Bu servis tüm oturum
+      boyunca tek bir paylaşılan nesne olduğu için, ekran açılır açılmaz
+      plan oluşturulursa, o ekranın kendi yükleme isteği (henüz bitmemiş)
+      daha sonra sonuçlanıp yerel listeyi sunucudaki ESKİ (plan eklenmeden
+      önceki) haliyle eziyordu — yeni plan hafızadan siliniyor, ardından
+      gelen kayıt işlemi de bu eksik hali sunucuya yazıp planı CloudKit'ten
+      de siliyordu. Artık `start()` oturum başına sadece bir kez yüklüyor
+      (`ExerciseMaxWeightService`'teki gibi), yarış durumu ortadan kalktı.
+
 ## Karanlık mod / kontrast turu (kullanıcı ekran görüntüsüyle bildirdi)
 
 - [x] **Dark Mode'da yazılar görünmüyordu (Add Exercise, Quick Start önizleme,
